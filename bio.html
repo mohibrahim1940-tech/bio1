@@ -1,0 +1,2312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BioPrep Academy | Online EST & ACT Biology</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>
+window.__bpErr=function(m){var d=document.getElementById('bpFail');if(!d){d=document.createElement('div');d.id='bpFail';d.style.cssText='position:fixed;inset:auto 12px 12px 12px;z-index:99999;background:#fff3f3;color:#7a0d0d;border:1px solid #f1b5b5;border-radius:14px;padding:14px 16px;font:14px/1.5 system-ui,sans-serif;box-shadow:0 8px 30px rgba(0,0,0,.15)';(document.body||document.documentElement).appendChild(d);}d.innerHTML='<b>The page could not start.</b><br>'+m+'<br><small>Try refreshing. If it keeps happening, upload index.html again using GitHub "Add file → Upload files" (not by pasting the text).</small>';};
+window.addEventListener('error',function(e){window.__bpErr(String(e.message||'Script error'));});
+window.addEventListener('unhandledrejection',function(e){window.__bpErr(String((e.reason&&e.reason.message)||e.reason));});
+window.addEventListener('load',function(){setTimeout(function(){if(!window.__bpReady)window.__bpErr('The page did not finish starting (the file may be incomplete, or the browser blocked its storage).');},9000);});
+</script>
+<style>
+  /* ====== EDIT COLORS HERE ====== */
+  :root{
+    --bg:#f5f7f6; --ink:#0c1a14; --muted:#5f6f68; --card:#ffffff; --line:#e3ebe7;
+    --brand:#10b981; --brand2:#06b6d4; --dark:#06110d;
+    --grad:linear-gradient(135deg,#10b981 0%,#06b6d4 100%);
+    --radius:22px; --shadow:0 10px 30px -12px rgba(6,17,13,.18);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .hidden{display:none!important}
+  .muted{color:var(--muted)}
+  .wrap{max-width:1160px;margin:auto;padding:0 20px}
+  section{padding:90px 0}
+  .eyebrow{display:inline-block;font-size:.78rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);background:rgba(16,185,129,.1);padding:6px 14px;border-radius:99px;margin-bottom:14px}
+  h2{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800;letter-spacing:-.03em;line-height:1.15;margin-bottom:12px}
+  .head{text-align:center;max-width:620px;margin:0 auto 48px}
+  .head p{color:var(--muted)}
+  .grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+  /* ===== NAV ===== */
+  nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);width:calc(100% - 28px);max-width:1160px;z-index:50;background:rgba(255,255,255,.72);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.6);border-radius:99px;box-shadow:var(--shadow)}
+  .nav-in{display:flex;align-items:center;justify-content:space-between;padding:10px 12px 10px 22px}
+  .logo{font-weight:800;font-size:1.15rem;letter-spacing:-.02em}
+  .logo b{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .links{display:flex;gap:4px;list-style:none;align-items:center}
+  .links a{padding:8px 14px;border-radius:99px;font-weight:600;font-size:.9rem;color:#33443d;transition:.2s;cursor:pointer}
+  .links a:hover{background:rgba(16,185,129,.1);color:var(--ink)}
+  .links .cta{background:var(--ink);color:#fff}
+  .links .cta:hover{background:var(--brand);color:#fff}
+  .menu-btn{display:none;background:var(--ink);color:#fff;border:none;width:42px;height:42px;border-radius:50%;font-size:1.2rem;cursor:pointer}
+
+  /* ===== HERO ===== */
+  .hero{position:relative;background:var(--dark);color:#fff;padding:170px 0 110px;overflow:hidden;border-radius:0 0 40px 40px}
+  .blob{position:absolute;border-radius:50%;filter:blur(80px);opacity:.55;animation:float 12s ease-in-out infinite;pointer-events:none}
+  .b1{width:420px;height:420px;background:#10b981;top:-120px;left:-80px}
+  .b2{width:380px;height:380px;background:#06b6d4;bottom:-140px;right:-60px;animation-delay:-4s}
+  .b3{width:260px;height:260px;background:#a3e635;top:40%;left:55%;opacity:.25;animation-delay:-8s}
+  @keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(40px,-30px) scale(1.08)}}
+  .grid-bg{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse at center,#000 30%,transparent 75%)}
+  .hero-in{position:relative;text-align:center;max-width:820px;margin:auto}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:7px 16px;border-radius:99px;font-size:.85rem;margin-bottom:24px}
+  .dot{width:8px;height:8px;border-radius:50%;background:#34d399;box-shadow:0 0 0 4px rgba(52,211,153,.25)}
+  .hero h1{font-size:clamp(2.4rem,6.5vw,4.4rem);font-weight:800;letter-spacing:-.04em;line-height:1.05;margin-bottom:20px}
+  .hero p{font-size:1.1rem;color:#b9c9c2;max-width:620px;margin:0 auto 34px}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:99px;font-weight:700;transition:.25s;margin:5px;border:none;cursor:pointer;font-family:inherit;font-size:1rem}
+  .btn-main{background:var(--grad);color:#fff;box-shadow:0 10px 30px -8px rgba(16,185,129,.6)}
+  .btn-main:hover{transform:translateY(-3px)}
+  .btn-ghost{border:1px solid rgba(255,255,255,.25);color:#fff;background:transparent}
+  .btn-ghost:hover{background:rgba(255,255,255,.1)}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:720px;margin:60px auto 0}
+  .stat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:18px 8px}
+  .stat b{display:block;font-size:1.7rem;font-weight:800}
+  .stat span{font-size:.8rem;color:#9fb3ab}
+
+  /* ===== LANDING CARDS ===== */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px;transition:.3s}
+  .card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+  .ic{width:56px;height:56px;border-radius:16px;background:var(--grad);display:grid;place-items:center;font-size:1.6rem;margin-bottom:18px}
+  .tag{display:inline-block;font-size:.75rem;font-weight:700;padding:5px 12px;border-radius:99px;background:rgba(6,182,212,.1);color:#0891b2;margin-bottom:16px}
+  .card h3{font-size:1.3rem;font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
+  .card > p{color:var(--muted);margin-bottom:16px}
+  .checks{list-style:none;margin-bottom:22px}
+  .checks li{padding:6px 0 6px 30px;position:relative;font-size:.95rem}
+  .checks li::before{content:"✓";position:absolute;left:0;top:6px;width:20px;height:20px;border-radius:50%;background:rgba(16,185,129,.12);color:var(--brand);font-size:.75rem;font-weight:800;display:grid;place-items:center}
+  .tabs{display:flex;justify-content:center;gap:8px;margin-bottom:30px;flex-wrap:wrap}
+  .tab{padding:11px 24px;border-radius:99px;border:1px solid var(--line);background:#fff;font-weight:700;cursor:pointer;font-family:inherit;font-size:.95rem}
+  .tab.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .units{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .unit{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 20px;transition:.25s}
+  .unit:hover{border-color:var(--brand);transform:translateX(4px)}
+  .num{flex:none;width:44px;height:44px;border-radius:14px;background:rgba(16,185,129,.12);color:var(--brand);display:grid;place-items:center;font-weight:800}
+  .unit b{display:block}.unit small{color:var(--muted)}
+  .unit .lock{margin-left:auto}
+  .steps3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:s}
+  .step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;counter-increment:s}
+  .step::before{content:counter(s);width:44px;height:44px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:800;margin-bottom:16px}
+  .step h3{font-weight:800;margin-bottom:6px}.step p{color:var(--muted)}
+  .price{font-size:2.6rem;font-weight:800;letter-spacing:-.03em;margin:10px 0 4px}
+  .price small{font-size:.95rem;color:var(--muted);font-weight:500}
+  .featured{background:var(--ink);color:#fff;border:none}
+  .featured .price small{color:#9fb3ab}
+  .featured .tag{background:var(--grad);color:#fff}
+  .featured .checks li::before{background:rgba(255,255,255,.12)}
+  .btn-dark{display:block;text-align:center;background:var(--ink);color:#fff;padding:13px;border-radius:99px;font-weight:700;transition:.25s;cursor:pointer}
+  .btn-dark:hover{background:var(--brand)}
+  .featured .btn-dark{background:var(--grad)}
+  .book{display:grid;grid-template-columns:1.2fr 1fr;gap:24px}
+  .form{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px}
+  .form h3{font-size:1.4rem;font-weight:800;margin-bottom:18px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  label{display:block;font-size:.85rem;font-weight:600;margin-bottom:6px;color:var(--muted)}
+  input,select,textarea{width:100%;padding:12px 15px;border:1px solid var(--line);border-radius:14px;font-family:inherit;font-size:.95rem;background:var(--bg);margin-bottom:14px;transition:.2s;color:var(--ink)}
+  textarea{min-height:90px;resize:vertical}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--brand);background:#fff}
+  .form .btn{width:100%;justify-content:center;margin:6px 0 0}
+  .info{background:var(--dark);color:#fff;border-radius:var(--radius);padding:30px;position:relative;overflow:hidden}
+  .info h3{font-size:1.4rem;font-weight:800;margin-bottom:18px;position:relative}
+  .info-item{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.1);position:relative}
+  .info-item:last-of-type{border:none}
+  .info-item span{font-size:1.4rem}.info-item b{display:block}.info-item small{color:#9fb3ab}
+  .faq{max-width:780px;margin:auto}
+  details{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px 24px;margin-bottom:12px}
+  details[open]{box-shadow:var(--shadow);border-color:transparent}
+  summary{font-weight:700;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-size:1.4rem;color:var(--brand);transition:.3s}
+  details[open] summary::after{transform:rotate(45deg)}
+  details p{margin-top:10px;color:var(--muted)}
+  footer{padding:60px 0 30px;border-top:1px solid var(--line);margin-top:30px}
+  .foot{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px}
+  footer h4{font-size:.85rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:14px}
+  footer a{display:block;margin:7px 0;font-weight:500;cursor:pointer}
+  footer a:hover{color:var(--brand)}
+  .copy{text-align:center;font-size:.85rem;color:var(--muted);margin-top:40px}
+  .wa{position:fixed;bottom:22px;right:22px;width:58px;height:58px;border-radius:50%;background:#25d366;color:#fff;display:grid;place-items:center;font-size:1.6rem;box-shadow:0 10px 25px -5px rgba(37,211,102,.6);z-index:60}
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.show{opacity:1;transform:none}
+
+  /* ===== LOGIN / REGISTER ===== */
+  .auth{min-height:100vh;display:grid;place-items:center;background:var(--dark);padding:30px 16px;position:relative;overflow:hidden}
+  .auth-box{background:#fff;border-radius:28px;padding:32px;width:100%;max-width:460px;position:relative;box-shadow:0 30px 60px -20px rgba(0,0,0,.5)}
+  .seg{display:flex;background:var(--bg);border-radius:99px;padding:4px;margin:20px 0}
+  .seg button{flex:1;border:none;background:none;padding:10px;border-radius:99px;font-weight:700;cursor:pointer;font-family:inherit;color:var(--muted);font-size:.92rem}
+  .seg button.active{background:#fff;color:var(--ink);box-shadow:0 2px 8px rgba(0,0,0,.08)}
+  .auth-box .btn{width:100%;justify-content:center;margin:4px 0 0}
+  .err{color:#b42318;font-weight:600;font-size:.9rem;min-height:1.2em;margin-top:8px;text-align:center}
+  .note{font-size:.85rem;color:var(--muted);text-align:center;margin-top:10px}
+  .note a{color:var(--brand);font-weight:700;cursor:pointer}
+
+  /* ===== APP (student + admin) ===== */
+  .app{display:grid;grid-template-columns:250px 1fr;min-height:100vh}
+  .side{background:var(--dark);color:#fff;padding:24px 14px;position:sticky;top:0;height:100vh;display:flex;flex-direction:column;gap:4px;overflow-y:auto}
+  .side .logo{color:#fff;margin:0 10px 22px;display:block}
+  .side button{border:none;background:none;font:inherit;cursor:pointer;padding:11px 14px;border-radius:12px;font-weight:600;color:#b9c9c2;display:flex;gap:12px;align-items:center;text-align:left;transition:.2s}
+  .side button.active,.side button:hover{background:rgba(255,255,255,.09);color:#fff}
+  .side .grow{flex:1}
+  .main{padding:30px;max-width:1100px;width:100%}
+  .topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;gap:12px;flex-wrap:wrap}
+  .topbar h1{font-size:1.8rem;font-weight:800;letter-spacing:-.03em;line-height:1.2}
+  .avatar{width:44px;height:44px;border-radius:50%;background:var(--grad);color:#fff;display:grid;place-items:center;font-weight:800}
+  .panel{background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;margin-bottom:18px}
+  .panel h3{font-weight:800;margin-bottom:14px;font-size:1.15rem}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:18px}
+  .kpi{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px}
+  .kpi b{font-size:1.8rem;font-weight:800;display:block;line-height:1.2}
+  .kpi span{color:var(--muted);font-size:.85rem}
+  .kpi.g{background:var(--grad);color:#fff;border:none}.kpi.g span{color:rgba(255,255,255,.88)}
+  .kpi.d{background:var(--ink);color:#fff;border:none}.kpi.d span{color:#9fb3ab}
+  .bar{height:9px;background:var(--bg);border-radius:99px;overflow:hidden}
+  .bar i{display:block;height:100%;background:var(--grad);border-radius:99px}
+  .prow{display:grid;grid-template-columns:1.2fr 2fr 48px;gap:12px;align-items:center;padding:8px 0;font-size:.92rem;font-weight:600}
+  .filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px;align-items:center}
+  .filters select,.filters input{width:auto;margin:0;padding:10px 14px;background:#fff}
+  .list{display:grid;gap:10px}
+  .item{display:flex;align-items:center;gap:14px;border:1px solid var(--line);border-radius:16px;padding:14px 16px;background:#fff;flex-wrap:wrap}
+  .item .t{flex:1;min-width:180px}
+  .item b{display:block;line-height:1.35}
+  .item small{color:var(--muted)}
+  .item .acts{display:flex;gap:6px;flex-wrap:wrap}
+  .fi{font-size:1.6rem}
+  .badge{display:inline-block;font-size:.72rem;font-weight:700;padding:3px 10px;border-radius:99px;background:rgba(16,185,129,.12);color:#047857;margin:4px 4px 0 0}
+  .badge.c{background:rgba(6,182,212,.12);color:#0e7490}
+  .badge.r{background:#fde8e8;color:#b42318}
+  .badge.y{background:#fef3c7;color:#92400e}
+  .badge.k{background:var(--ink);color:#fff}
+  .sbtn{padding:9px 16px;border-radius:99px;border:1px solid var(--line);background:#fff;font-weight:700;cursor:pointer;font-family:inherit;font-size:.86rem;color:var(--ink);display:inline-flex;align-items:center;gap:6px}
+  .sbtn:hover{border-color:var(--brand)}
+  .sbtn.p{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .sbtn.g{background:var(--grad);color:#fff;border:none}
+  .sbtn.d{color:#b42318}
+  .sbtn[disabled]{opacity:.4;cursor:default}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:0 14px}
+  .opt{display:block;width:100%;text-align:left;padding:14px 16px;border:1.5px solid var(--line);border-radius:14px;background:#fff;margin-bottom:10px;cursor:pointer;font-family:inherit;font-size:.98rem;color:var(--ink);transition:.15s}
+  .opt:hover{border-color:var(--brand)}
+  .opt[disabled]{cursor:default}
+  .opt.sel{border-color:var(--ink);background:#eef3f1}
+  .opt.ok{border-color:#10b981;background:#ecfdf5}
+  .opt.no{border-color:#ef4444;background:#fef2f2}
+  .qnum{color:var(--muted);font-size:.88rem}
+  .qtext{font-size:1.1rem;font-weight:600;margin:10px 0 18px}
+  .qimg{max-width:100%;border-radius:14px;margin-bottom:14px}
+  .expl{background:var(--bg);border-radius:14px;padding:14px 16px;margin-top:6px}
+  .expl p{margin-top:6px;color:var(--muted)}
+  .navrow{display:flex;justify-content:space-between;margin-top:16px;gap:10px;flex-wrap:wrap}
+  .dots{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+  .dots button{width:36px;height:36px;border-radius:10px;border:1px solid var(--line);background:#fff;cursor:pointer;font-weight:700;font-family:inherit}
+  .dots button.ans{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .dots button.cur{outline:3px solid var(--brand);outline-offset:1px}
+  .timer{font-weight:800;font-size:1.2rem;padding:8px 18px;background:var(--ink);color:#fff;border-radius:99px;font-variant-numeric:tabular-nums}
+  .ring{width:160px;height:160px;border-radius:50%;display:grid;place-items:center;margin:0 auto 14px}
+  .ring span{width:128px;height:128px;background:#fff;border-radius:50%;display:grid;place-items:center;font-size:2.1rem;font-weight:800}
+  .pick{display:flex;gap:10px;align-items:flex-start;padding:10px 4px;border-bottom:1px solid var(--line);font-weight:500;color:var(--ink);font-size:.92rem;margin:0;cursor:pointer}
+  .pick input{width:18px;height:18px;margin:2px 0 0;flex:none}
+  .pick span{flex:1}
+  .picklist{max-height:380px;overflow-y:auto;border:1px solid var(--line);border-radius:14px;padding:4px 12px;margin-bottom:14px}
+  .empty{text-align:center;color:var(--muted);padding:28px}
+  .notice{background:#fef3c7;border:1px solid #fcd34d;color:#78350f;border-radius:16px;padding:14px 18px;margin-bottom:18px;font-size:.92rem}
+  .notice b{color:#78350f}
+  .code{font-family:ui-monospace,Consolas,monospace;font-weight:700;background:var(--bg);padding:3px 8px;border-radius:8px}
+  .toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:12px 22px;border-radius:99px;z-index:200;font-weight:600;box-shadow:var(--shadow)}
+  .hint{font-size:.85rem;color:var(--muted);margin:-6px 0 14px}
+  .side button{position:relative}
+  .cnt{margin-left:auto;background:#ef4444;color:#fff;font-size:.7rem;font-weight:800;padding:1px 8px;border-radius:99px;line-height:1.6}
+  .anote{background:#eef6ff;border:1px solid #cfe3ff;border-radius:14px;padding:12px 16px;margin-top:10px}
+  .anote b{color:#1e40af}.anote p{margin-top:4px;color:#334155}.anote small{color:#64748b}
+  .opt.mine{border-color:#ef4444;background:#fef2f2}
+  .ask{background:var(--bg);border-radius:14px;padding:14px;margin-top:12px}
+  .ask textarea{background:#fff;min-height:60px;margin-bottom:10px}
+  .steps-mini{padding-left:20px;line-height:2}
+  .qimg{max-width:100%;max-height:420px;display:block;background:#fff;border:1px solid var(--line)}
+  .zoom{cursor:zoom-in}
+  .oimg{display:block;max-width:100%;max-height:220px;border-radius:10px;margin-top:8px;background:#fff}
+  .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:300;display:grid;place-items:center;padding:20px;cursor:zoom-out}
+  .lightbox img{max-width:100%;max-height:100%;border-radius:12px;background:#fff}
+  .imgbox{border:2px dashed var(--line);border-radius:14px;padding:12px;margin-bottom:14px;text-align:center;cursor:pointer;background:var(--bg);transition:.2s;outline:none}
+  .imgbox:hover{border-color:#9adbc2}
+  .imgbox.act{border-color:var(--brand);background:#ecfdf5}
+  .imgbox img{max-width:100%;max-height:220px;border-radius:10px;display:block;margin:0 auto 8px;background:#fff}
+  .imgbox .ph{color:var(--muted);font-size:.86rem;display:block;padding:6px 4px 10px}
+  .imgbox .acts2{display:flex;gap:6px;justify-content:center;flex-wrap:wrap}
+  .imgbox .sbtn{padding:6px 12px;font-size:.8rem}
+  .imgbox.sm{padding:8px;margin:-6px 0 14px}.imgbox.sm img{max-height:110px}.imgbox.sm .ph{padding:2px 4px 6px;font-size:.78rem}
+  .who{display:flex;gap:12px;align-items:center;background:var(--bg);border-radius:14px;padding:12px 16px;margin-bottom:14px;flex-wrap:wrap}
+
+  /* ===== MOBILE ===== */
+  @media(max-width:900px){
+    .cards,.book,.steps3{grid-template-columns:1fr}
+    .units{grid-template-columns:1fr}
+    .foot{grid-template-columns:1fr 1fr}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    .app{grid-template-columns:1fr}
+    .side{position:fixed;bottom:0;top:auto;left:0;height:auto;width:100%;flex-direction:row;overflow-x:auto;padding:8px;z-index:40;gap:2px}
+    .side .logo,.side .grow{display:none}
+    .side button{flex-direction:column;gap:2px;font-size:.68rem;padding:8px 12px;white-space:nowrap;flex:none}
+    .side button span:first-child{font-size:1.2rem}
+    .cnt{position:absolute;top:2px;right:2px;margin:0}
+    .main{padding:20px 16px 110px}
+    .kpis{grid-template-columns:repeat(2,1fr)}
+    .grid2,.grid3{grid-template-columns:1fr}
+    .prow{grid-template-columns:1fr 1.4fr 42px}
+  }
+  @media(max-width:760px){
+    .menu-btn{display:block}
+    nav{border-radius:24px}
+    .links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;align-items:stretch;background:#fff;border-radius:22px;padding:12px;box-shadow:var(--shadow)}
+    .links.open{display:flex}
+    .links a{padding:12px 16px}
+    .row{grid-template-columns:1fr}
+    section{padding:70px 0}
+    .topbar h1{font-size:1.45rem}
+  }
+</style>
+</head>
+<body>
+
+<!-- =====================================================================
+     1) PUBLIC LANDING PAGE
+     ===================================================================== -->
+<div id="vLanding">
+<nav>
+  <div class="nav-in">
+    <a href="#home" class="logo">🧬 BioPrep<b>Academy</b></a>
+    <button class="menu-btn" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
+    <ul class="links">
+      <li><a href="#inside">What's Inside</a></li>
+      <li><a href="#library">Library</a></li>
+      <li><a href="#how">How it works</a></li>
+      <li><a href="#plans">Plans</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a onclick="openAuth('login')">Login</a></li>
+      <li><a onclick="openAuth('register')" class="cta">Register</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="grid-bg"></div>
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="wrap hero-in">
+    <div class="pill"><span class="dot"></span> 100% online · Study anytime, anywhere</div>
+    <h1>All your biology prep.<br><span class="grad-text">One subscription.</span></h1>
+    <p>PDFs, question banks, classified exams and real past exams for EST & ACT Biology, with your own progress dashboard.</p>
+    <a onclick="openAuth('register')" class="btn btn-main">Register now →</a>
+    <a onclick="openAuth('login')" class="btn btn-ghost">Student Login</a>
+    <div class="stats">
+      <div class="stat"><b id="stP">0</b><span>PDFs</span></div>
+      <div class="stat"><b id="stQ">1353</b><span>Questions</span></div>
+      <div class="stat"><b id="stE">1</b><span>Exams</span></div>
+      <div class="stat"><b id="stU">11</b><span>Units</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="inside">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">What's inside</span>
+      <h2>Everything you get</h2>
+      <p>Self-study resources, organized unit by unit.</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal"><div class="ic">📄</div><h3>PDF Library</h3><p>Notes, summaries, homework sheets and answer keys for every unit.</p></div>
+      <div class="card reveal"><div class="ic">❓</div><h3>Question Bank</h3><p>Practice questions with instant answers and clear explanations.</p></div>
+      <div class="card reveal"><div class="ic">🗂️</div><h3>Classified & Real Exams</h3><p>Exams sorted by unit, plus real past exams timed like test day.</p></div>
+      <div class="card reveal"><div class="ic">📝</div><h3>Mock Tests</h3><p>Full-length mock tests built by the academy to get you exam-ready.</p></div>
+      <div class="card reveal"><div class="ic">🔁</div><h3>Mistake Help</h3><p>Every wrong answer is saved. Ask an assistant and get a clear explanation.</p></div>
+      <div class="card reveal"><div class="ic">📈</div><h3>Your Dashboard</h3><p>Scores, accuracy and progress for every unit in one place.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="library" style="background:#fff">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Library</span>
+      <h2>Organized by exam & unit</h2>
+      <p>Subscribe to unlock every unit.</p>
+    </div>
+    <div class="tabs">
+      <button class="tab active" data-lt="EST" onclick="landTab('EST')">🧪 EST Biology</button>
+      <button class="tab" data-lt="ACT" onclick="landTab('ACT')">📊 ACT Science</button>
+    </div>
+    <div class="units" id="landUnits"></div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">How it works</span>
+      <h2>Start in 3 easy steps</h2>
+    </div>
+    <div class="steps3">
+      <div class="step reveal"><h3>Register</h3><p>Create your account, choose your plan and send your request on WhatsApp.</p></div>
+      <div class="step reveal"><h3>Get approved</h3><p>After payment, the academy approves your account for your plan's period.</p></div>
+      <div class="step reveal"><h3>Study</h3><p>Log in and open skills, questions, exams and mocks from your dashboard.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="plans" style="background:#fff">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Plans</span>
+      <h2>Simple subscription plans</h2>
+      <p>Full access on every plan.</p>
+    </div>
+    <!-- EDIT: prices -->
+    <div class="cards">
+      <div class="card reveal">
+        <span class="tag">Flexible</span><h3>Monthly</h3>
+        <p class="price">--- <small>EGP / month</small></p>
+        <ul class="checks"><li>All PDFs</li><li>Classified questions</li><li>Classified exams</li></ul>
+        <a class="btn-dark" onclick="pickPlan('Monthly')">Register</a>
+      </div>
+      <div class="card featured reveal">
+        <span class="tag">Most popular</span><h3>Term</h3>
+        <p class="price">--- <small>EGP / 3 months</small></p>
+        <ul class="checks"><li>Everything in Monthly</li><li>Real past exams</li><li>Save more</li></ul>
+        <a class="btn-dark" onclick="pickPlan('Term')">Register</a>
+      </div>
+      <div class="card reveal">
+        <span class="tag">Best value</span><h3>Full Year</h3>
+        <p class="price">--- <small>EGP / year</small></p>
+        <ul class="checks"><li>Everything in Term</li><li>EST + ACT libraries</li><li>Biggest saving</li></ul>
+        <a class="btn-dark" onclick="pickPlan('Full Year')">Register</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="join">
+  <div class="wrap">
+    <div class="head reveal">
+      <span class="eyebrow">Subscribe</span>
+      <h2>Join the academy</h2>
+      <p>Register, send your request on WhatsApp, and we'll approve your account after payment.</p>
+    </div>
+    <div class="info reveal" style="max-width:640px;margin:auto">
+      <div class="blob b2" style="opacity:.3;width:250px;height:250px"></div>
+      <h3>💡 How joining works</h3>
+      <div class="info-item"><span>📝</span><div><b>1. Register</b><small>Your name, phone, exam and plan — takes 1 minute</small></div></div>
+      <div class="info-item"><span>💬</span><div><b>2. Send your request</b><small>Your request opens in WhatsApp — just press send</small></div></div>
+      <div class="info-item"><span>✅</span><div><b>3. Get approved</b><small>After payment your account opens for your plan's period</small></div></div>
+      <a class="btn btn-main" style="position:relative;margin:14px 0 0" onclick="openAuth('register')">Register now →</a>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="background:#fff">
+  <div class="wrap">
+    <div class="head reveal"><span class="eyebrow">FAQ</span><h2>Questions? Answered.</h2></div>
+    <div class="faq reveal">
+      <details><summary>Are there live teachers?</summary><p>No. The academy is a self-study platform: PDFs, question banks, exams and mock tests you can use anytime. If you get a question wrong, our assistants explain it for you.</p></details>
+      <details><summary>How do I get help with a mistake?</summary><p>Open <b>My Mistakes</b>, tap <b>Ask an assistant</b> on any question, and send the message on WhatsApp. An assistant replies with an explanation, which is also added under the question in the academy.</p></details>
+      <details><summary>How long is my account open?</summary><p>For your plan's period (for example one month or three months). When it ends your account closes, and you can renew anytime from the login screen.</p></details>
+      <details><summary>Is ACT Science only biology?</summary><p>No — it mixes biology, chemistry, physics and earth science, but biology passages are very common. Our ACT units train the data skills that work for all of them.</p></details>
+      <details><summary>Can I use it on my phone?</summary><p>Yes. Note that your account and scores are saved on the device you register on, so use the same phone or browser each time.</p></details>
+      <details><summary>How do I pay?</summary><p>Send your request on WhatsApp and we'll share the payment options.</p></details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <a href="#home" class="logo">🧬 BioPrep<b>Academy</b></a>
+      <p style="color:var(--muted);margin-top:8px;max-width:280px">Online EST & ACT Biology resources, all in one subscription.</p>
+    </div>
+    <div><h4>Academy</h4><a href="#inside">What's Inside</a><a href="#library">Library</a><a href="#plans">Plans</a></div>
+    <div><h4>Account</h4><a onclick="openAuth('login')">Student Login</a><a onclick="openAuth('register')">Register</a><a onclick="openAuth('assistant')">Assistant</a><a onclick="openAuth('admin')">Admin</a></div>
+    <div><h4>Follow</h4><a href="#" target="_blank">Facebook</a><a href="#" target="_blank">Instagram</a><a href="#" target="_blank">TikTok</a></div>
+  </div>
+  <p class="copy">© 2026 BioPrep Academy. All rights reserved.</p>
+</footer>
+<a href="#" target="_blank" class="wa" id="waBtn" aria-label="WhatsApp">💬</a>
+</div>
+
+<!-- =====================================================================
+     2) LOGIN / REGISTER / ADMIN LOGIN
+     ===================================================================== -->
+<div id="vAuth" class="auth hidden">
+  <div class="grid-bg"></div><div class="blob b1"></div><div class="blob b2"></div>
+  <div class="auth-box">
+    <a class="logo" style="cursor:pointer" onclick="show('vLanding')">🧬 BioPrep<b>Academy</b></a>
+    <div class="seg">
+      <button data-a="login" onclick="openAuth('login')">Login</button>
+      <button data-a="register" onclick="openAuth('register')">Register</button>
+      <button data-a="assistant" onclick="openAuth('assistant')">Assistant</button>
+      <button data-a="admin" onclick="openAuth('admin')">Admin</button>
+    </div>
+
+    <form id="fLogin" onsubmit="doLogin(event)">
+      <label>Email</label><input id="lEmail" type="email" required>
+      <label>Password</label><input id="lPass" type="password" required>
+      <button class="btn btn-main" type="submit">Login →</button>
+    </form>
+
+    <form id="fReg" onsubmit="doReg(event)">
+      <label>Full name</label><input id="rName" required>
+      <div class="row">
+        <div><label>Email</label><input id="rEmail" type="email" required></div>
+        <div><label>Phone</label><input id="rPhone" required></div>
+      </div>
+      <div class="row">
+        <div><label>Exam</label><select id="rExam"><option>EST</option><option>ACT</option><option>Both</option></select></div>
+        <div><label>Password</label><input id="rPass" type="password" minlength="6" required></div>
+      </div>
+      <label>Plan</label><select id="rPlan"><option>Monthly</option><option>Term</option><option>Full Year</option></select>
+      <button class="btn btn-main" type="submit">Register & send request →</button>
+      <p class="note">Your account opens after the academy approves it. It is saved on this device and browser.</p>
+    </form>
+
+    <form id="fAst" onsubmit="doAsst(event)">
+      <label>Phone</label><input id="asPhone" required placeholder="01X XXXX XXXX">
+      <label>Password</label><input id="asPass" type="password" required>
+      <button class="btn btn-main" type="submit">Open assistant panel →</button>
+    </form>
+
+    <form id="fAdm" onsubmit="doAdmin(event)">
+      <label>Admin password</label><input id="aPass" type="password" required>
+      <button class="btn btn-main" type="submit">Open admin panel →</button>
+    </form>
+
+    <p class="err" id="authErr"></p>
+    <p class="note">New here? <a onclick="openAuth('register')">Register</a></p>
+  </div>
+</div>
+
+<!-- =====================================================================
+     3) STUDENT AREA  &  4) ADMIN PANEL  (filled by the script)
+     ===================================================================== -->
+<div id="vGate" class="auth hidden"><div class="grid-bg"></div><div class="blob b1"></div><div class="blob b2"></div><div class="auth-box" id="gateBox"></div></div>
+<div id="vStudent" class="app hidden"><aside class="side" id="sSide"></aside><main class="main" id="sMain"></main></div>
+<div id="vAdmin" class="app hidden"><aside class="side" id="aSide"></aside><main class="main" id="aMain"></main></div>
+<div id="vAsst" class="app hidden"><aside class="side" id="tSide"></aside><main class="main" id="tMain"></main></div>
+
+<script>
+/* =====================================================================
+   HOW THIS WORKS (no database):
+   - Content, accounts and progress are stored in Supabase (project bioprep-academy).
+     Admin changes save automatically.
+   - Students' accounts, scores and progress are saved on their own device.
+   - Default admin password: admin123  (change it in Admin > Settings)
+   ===================================================================== */
+
+/* ---------- small helpers ---------- */
+const $ = s => document.querySelector(s);
+const v = s => $(s).value;
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const fmtText = s => esc(s).replace(/\n/g,'<br>');
+const uid = () => Math.random().toString(36).slice(2,10);
+const LS = {
+  get(k,d){ try{ const x = localStorage.getItem(k); return x===null ? d : JSON.parse(x); }catch(e){ return d; } },
+  set(k,val){ try{ localStorage.setItem(k, JSON.stringify(val)); }catch(e){} if(typeof progressChanged==='function') progressChanged(k); },
+  del(k){ try{ localStorage.removeItem(k); }catch(e){} }
+};
+/* =====================================================================
+   DATABASE (Supabase) — questions, accounts and progress live here
+   ===================================================================== */
+const SB_URL = 'https://nkynderrsfzhwgdzyavq.supabase.co';
+const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5reW5kZXJyc2Z6aHdnZHp5YXZxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTM1NDg2MjcsImV4cCI6MjEwOTEyNDYyN30.Oyzzj-HwWB6v7wuqJJZ0y3X6OFFYbS2mCVNMCkl9NoU';
+async function rpc(fn, args){
+  let r;
+  try{ r = await fetch(SB_URL + '/rest/v1/rpc/' + fn, {method:'POST', headers:{'apikey':SB_KEY, 'Authorization':'Bearer '+SB_KEY, 'Content-Type':'application/json'}, body:JSON.stringify(args||{})}); }
+  catch(e){ throw new Error('offline'); }
+  const t = await r.text(); let j = null; try{ j = t ? JSON.parse(t) : null; }catch(e){}
+  if(!r.ok) throw new Error((j && (j.message || j.hint)) || ('error_' + r.status));
+  return j;
+}
+const ERRS = {wrong_login:'Wrong email or password.', email_taken:'This email is already registered. Please login.', bad_email:'Please write a valid email.',
+  short_password:'Password: at least 6 characters.', not_allowed:'Your login expired. Please login again.', offline:'No internet connection. Check it and try again.', not_active:'Your account is not open.'};
+const errMsg = e => ERRS[e && e.message] || ('Something went wrong (' + ((e && e.message) || 'error') + '). Try again.');
+const getTok = () => LS.get('bp_tok', null);
+const setTok = t => LS.set('bp_tok', t);
+const clearTok = () => { const t = getTok(); if(t) rpc('bio_logout', {p_token:t.token}).catch(()=>{}); LS.del('bp_tok'); };
+/* pictures are stored once in the database and referenced as "@key" inside questions */
+let IMGS = {}, IMGKEY = new Map();
+const imgIn = v => (typeof v==='string' && v[0]==='@') ? (IMGS[v.slice(1)] || '') : v;
+function qIn(q){ q = Object.assign({}, q); q.img = imgIn(q.img||''); if(Array.isArray(q.optImgs)) q.optImgs = q.optImgs.map(imgIn); if(q.explImg) q.explImg = imgIn(q.explImg); return q; }
+function imgOut(v, fresh){
+  if(typeof v!=='string' || !v.startsWith('data:')) return v;
+  let k = IMGKEY.get(v);
+  if(!k){ k = 'u' + hash(v) + v.length.toString(36); IMGKEY.set(v, k); IMGS[k] = v; fresh[k] = v; }
+  return '@' + k;
+}
+function qOut(q, fresh){ const o = Object.assign({}, q); if(o.img) o.img = imgOut(o.img, fresh); if(Array.isArray(o.optImgs)) o.optImgs = o.optImgs.map(x=>imgOut(x, fresh)); if(o.explImg) o.explImg = imgOut(o.explImg, fresh); return o; }
+function useMain(m){
+  const st = C && C.students, qs = C && C.questions;
+  C = Object.assign(DEF(), m || {});
+  KEYS.forEach(k => C[k] = C[k] || []); C.boards = C.boards || {};
+  C.settings = Object.assign({}, DEF().settings, C.settings || {});
+  C.students = st || []; C.questions = qs || [];
+}
+/* the full academy (all questions + pictures) — cached on the device, only re-downloaded when something changed */
+async function loadFull(){
+  const t = getTok(); if(!t) throw new Error('not_allowed');
+  let cache = await IDB.get('full_' + t.kind);
+  const r = await rpc('bio_content_get', {p_token:t.token, p_have_ver: cache && cache.ver ? cache.ver : 0});
+  if(!r.same){ cache = {ver:r.ver, main:r.main, questions:r.questions, images:r.images}; IDB.set('full_' + t.kind, cache); }
+  IMGS = cache.images || {}; IMGKEY = new Map(Object.entries(IMGS).map(([k,v]) => [v,k]));
+  const st = C.students; useMain(cache.main); C.students = st;
+  C.questions = (cache.questions || []).map(qIn);
+  C.qcount = C.questions.length;
+}
+/* ---------- admin: everything you change is saved to the database automatically ---------- */
+let SNAP = null, syncTimer = null, syncing = false, syncAgain = false, SYNC = 'ok';
+const mainOf = () => { const m = Object.assign({}, C); ['questions','students','qcount','qunits'].forEach(k => delete m[k]); delete m.settings.adminHash; return m; };
+const stPatch = r => ({status:r.status, renew:!!r.renew, plan:r.plan, exam:r.exam, name:r.name||'', phone:r.phone||'', start:r.start||'', until:r.until||''});
+function takeSnap(){
+  const fresh = {};
+  SNAP = {main: JSON.stringify(mainOf()), q: new Map(C.questions.map(q => [q.id, JSON.stringify(qOut(q, fresh))])), st: new Map(C.students.filter(r=>r.db).map(r => [r.id, JSON.stringify(stPatch(r))]))};
+}
+async function loadAdmin(){
+  await loadFull();
+  C.students = await rpc('bio_admin_students', {p_token:getTok().token});
+  takeSnap();
+}
+async function refreshStudents(){
+  try{ C.students = await rpc('bio_admin_students', {p_token:getTok().token}); SNAP.st = new Map(C.students.map(r => [r.id, JSON.stringify(stPatch(r))])); }catch(e){ toast(errMsg(e)); }
+}
+function setSync(s){ SYNC = s; const el = document.getElementById('syncSt'); if(el) el.innerHTML = syncHTML(); }
+const syncHTML = () => ({saving:'<span class="badge y">⏳ Saving…</span>', ok:'<span class="badge">✓ All changes saved</span>', fail:'<span class="badge r">⚠️ Not saved — check your internet</span> <a style="cursor:pointer;text-decoration:underline" onclick="syncNow()">Try again</a>'})[SYNC];
+function saveDraft(){
+  const t = getTok(); if(!t || t.kind!=='admin' || !SNAP) return;
+  setSync('saving'); clearTimeout(syncTimer); syncTimer = setTimeout(syncNow, 900);
+}
+async function syncNow(){
+  if(syncing){ syncAgain = true; return; }
+  syncing = true; syncAgain = false; setSync('saving');
+  const tk = getTok().token;
+  try{
+    const fresh = {}, cur = new Map(C.questions.map(q => [q.id, JSON.stringify(qOut(q, fresh))]));
+    const up = [], gone = [];
+    cur.forEach((s, id) => { if(SNAP.q.get(id) !== s) up.push(s); });
+    SNAP.q.forEach((s, id) => { if(!cur.has(id)) gone.push(id); });
+    // new pictures first (in parcels of about 1.5 MB)
+    let pack = {}, size = 0;
+    for(const [k, v] of Object.entries(fresh)){
+      pack[k] = v; size += v.length;
+      if(size > 1500000){ await rpc('bio_admin_save_images', {p_token:tk, p_images:pack}); pack = {}; size = 0; }
+    }
+    if(size) await rpc('bio_admin_save_images', {p_token:tk, p_images:pack});
+    for(let i = 0; i < Math.max(up.length, gone.length ? 1 : 0); i += 150){
+      await rpc('bio_admin_save_questions', {p_token:tk, p_upsert:JSON.parse('[' + up.slice(i, i+150).join(',') + ']'), p_delete: i===0 ? gone : []});
+    }
+    up.forEach(s => { const o = JSON.parse(s); SNAP.q.set(o.id, s); }); gone.forEach(id => SNAP.q.delete(id));
+    const m = JSON.stringify(mainOf());
+    if(m !== SNAP.main){ await rpc('bio_admin_save_main', {p_token:tk, p_main:JSON.parse(m)}); SNAP.main = m; }
+    for(const r of C.students.filter(r => r.db)){
+      const s = JSON.stringify(stPatch(r));
+      if(SNAP.st.get(r.id) !== s){ await rpc('bio_admin_update_student', {p_token:tk, p_id:r.id, p:JSON.parse(s)}); SNAP.st.set(r.id, s); }
+    }
+    IDB.del('full_admin');
+    setSync('ok');
+  }catch(e){ setSync('fail'); if(/not_allowed/.test(e.message)){ alert('Your admin login expired. Please login again.'); clearTok(); location.reload(); } }
+  syncing = false;
+  if(syncAgain) syncNow();
+}
+window.addEventListener('beforeunload', e => { if(SYNC!=='ok' && getTok() && getTok().kind==='admin'){ e.preventDefault(); e.returnValue = ''; } });
+/* ---------- student progress (scores, mistakes, saved…) follows the student to any device ---------- */
+const PROG = ['att','res','wans','asked','goal','saved'];
+let progTimer = null;
+function progressIn(p){ if(!me || !p) return; PROG.forEach(k => { if(p[k] !== undefined){ try{ localStorage.setItem('bp_'+k+'_'+me.id, JSON.stringify(p[k])); }catch(e){} } }); }
+function progressOut(){ const o = {}; PROG.forEach(k => { const v = LS.get('bp_'+k+'_'+me.id, undefined); if(v !== undefined) o[k] = v; }); return o; }
+function progressChanged(k){
+  if(!me || !me.db || !k.endsWith('_' + me.id) || !PROG.some(p => k.startsWith('bp_'+p+'_'))) return;
+  clearTimeout(progTimer); progTimer = setTimeout(() => { const t = getTok(); if(t && t.kind==='student') rpc('bio_save_progress', {p_token:t.token, p_progress:progressOut()}).catch(()=>{}); }, 1500);
+}
+function hash(str){ // simple one-way hash for passwords/codes
+  let h1=0xdeadbeef, h2=0x41c6ce57;
+  for(let i=0;i<str.length;i++){ const ch=str.charCodeAt(i); h1=Math.imul(h1^ch,2654435761); h2=Math.imul(h2^ch,1597334677); }
+  h1=Math.imul(h1^(h1>>>16),2246822507); h1^=Math.imul(h2^(h2>>>13),3266489909);
+  h2=Math.imul(h2^(h2>>>16),2246822507); h2^=Math.imul(h1^(h1>>>13),3266489909);
+  return (4294967296*(2097151&h2)+(h1>>>0)).toString(36);
+}
+const shuffle = a => { a=[...a]; for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; };
+const fmtDate = d => new Date(d).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
+const pct = (a,b) => b ? Math.round(a/b*100) : 0;
+function toast(m){ document.querySelectorAll('.toast').forEach(x=>x.remove()); const t=document.createElement('div'); t.className='toast'; t.textContent=m; document.body.appendChild(t); setTimeout(()=>t.remove(),2400); }
+function opts(arr, sel){ return arr.map(o => { const [val,lab] = Array.isArray(o)?o:[o,o]; return `<option value="${esc(val)}"${String(val)===String(sel)?' selected':''}>${esc(lab)}</option>`; }).join(''); }
+function unitOpts(exam, all){ return (all?[['','All units']]:[]).concat(C.units.filter(u=>!exam||exam==='Both'||u.exam===exam).map(u=>[u.id,(!exam||exam==='Both'?u.exam+' · ':'')+u.name])); }
+const unitName = id => (C.units.find(u=>u.id===id)||{}).name || 'All units';
+const waNum = p => { let d = String(p||'').replace(/\D/g,''); if(d.startsWith('00')) d = d.slice(2); if(d.length===11 && d.startsWith('01')) d = '2'+d; return d; };
+const waLink = (num, text) => 'https://wa.me/' + waNum(num) + (text ? '?text=' + encodeURIComponent(text) : '');
+const helpNum = () => C.settings.helpWhatsapp || C.settings.whatsapp;
+const qById = id => C.questions.find(q=>q.id===id);
+/* ---------- photos in questions / answers / explanations ---------- */
+const optImg = (q,k) => (q.optImgs||[])[k] || '';
+const hasOpt = (q,k) => !!(String(q.options[k]||'').trim() || optImg(q,k));
+const optLabel = (q,k) => q.options[k] || '(picture answer)';
+function optInner(q,k){ const im = optImg(q,k); return `<b>${'ABCDE'[k]}.</b> ${esc(q.options[k]||'')}${im?`<img class="oimg" src="${esc(im)}" alt="Answer ${'ABCDE'[k]} picture">`:''}`; }
+const qImgHTML = q => q.img ? `<img class="qimg zoom" src="${esc(q.img)}" alt="Question picture" onclick="zoomImg(this.src)">` : '';
+const explBody = q => (q.explanation ? '<p>'+fmtText(q.explanation)+'</p>' : '') + (q.explImg ? `<img class="qimg zoom" style="margin:10px 0 0" src="${esc(q.explImg)}" alt="Explanation picture" onclick="zoomImg(this.src)">` : '');
+const explBox = (q,title,bg) => (q.explanation||q.explImg) ? `<div class="expl"${bg?` style="background:${bg}"`:''}><b>${title}</b>${explBody(q)}</div>` : '';
+function zoomImg(src){ const d = document.createElement('div'); d.className = 'lightbox'; d.innerHTML = `<img src="${esc(src)}" alt="">`; d.onclick = () => d.remove(); document.body.appendChild(d); }
+
+/* ---------- bigger storage (IndexedDB) for the admin's work, so photos fit ---------- */
+const IDB = {
+  db:null,
+  open(){ return this.db || (this.db = new Promise((res,rej) => { const tm = setTimeout(() => rej(new Error('storage timeout')), 4000); try{ const r = indexedDB.open('bioprep', 1); r.onupgradeneeded = () => r.result.createObjectStore('kv'); r.onsuccess = () => { clearTimeout(tm); res(r.result); }; r.onerror = () => { clearTimeout(tm); rej(r.error); }; r.onblocked = () => { clearTimeout(tm); rej(new Error('storage blocked')); }; }catch(e){ clearTimeout(tm); rej(e); } }).catch(e => { this.db = null; throw e; })); },
+  async get(k){ try{ const db = await this.open(); return await new Promise(res => { const t = db.transaction('kv').objectStore('kv').get(k); t.onsuccess = () => res(t.result); t.onerror = () => res(undefined); }); }catch(e){ return undefined; } },
+  async set(k,val){ try{ const db = await this.open(); await new Promise((res,rej) => { const tx = db.transaction('kv','readwrite'); tx.objectStore('kv').put(val,k); tx.oncomplete = res; tx.onerror = () => rej(tx.error); tx.onabort = () => rej(tx.error); }); return true; }catch(e){ return false; } },
+  async del(k){ try{ const db = await this.open(); await new Promise(res => { const tx = db.transaction('kv','readwrite'); tx.objectStore('kv').delete(k); tx.oncomplete = res; tx.onerror = res; }); }catch(e){} }
+};
+
+/* ---------- image compression (keeps content.json small) ---------- */
+function imgToData(blob, maxSide){
+  return new Promise((res, rej) => {
+    const url = URL.createObjectURL(blob), img = new Image();
+    img.onload = () => {
+      let w = img.naturalWidth, h = img.naturalHeight; const sc = Math.min(1, maxSide / Math.max(w, h)); w = Math.round(w*sc); h = Math.round(h*sc);
+      const c = document.createElement('canvas'); c.width = w; c.height = h; const x = c.getContext('2d');
+      x.fillStyle = '#fff'; x.fillRect(0,0,w,h); x.drawImage(img, 0, 0, w, h);
+      let d = c.toDataURL('image/webp', 0.82); if(!d.startsWith('data:image/webp')) d = c.toDataURL('image/jpeg', 0.85);
+      URL.revokeObjectURL(url); res(d);
+    };
+    img.onerror = () => { URL.revokeObjectURL(url); rej(new Error('bad image')); };
+    img.src = url;
+  });
+}
+const kb = s => Math.round((s||'').length * 3 / 4 / 1024);
+const kindIcon = k => k==='Real' ? '🏆' : k==='Mock' ? '📝' : '🗂️';
+const kindName = k => k==='Real' ? 'Real exam' : k==='Mock' ? 'Mock test' : 'Classified';
+const allTests = () => C.exams.concat(C.mocks);
+const testById = id => allTests().find(x=>x.id===id);
+function notesHTML(q, extra){
+  return (q.notes||[]).concat(extra||[]).map(n => `<div class="anote"><b>👩‍🏫 ${esc(n.name)} explains</b>${n.local?' <small>(not published yet)</small>':''}<p>${fmtText(n.text)}</p></div>`).join('');
+}
+function show(id){ ['vLanding','vAuth','vGate','vStudent','vAdmin','vAsst'].forEach(x=>$('#'+x).classList.toggle('hidden',x!==id)); window.scrollTo(0,0); }
+function copyText(t){ (navigator.clipboard ? navigator.clipboard.writeText(t) : Promise.reject()).then(()=>toast('Copied: '+t)).catch(()=>prompt('Copy this:',t)); }
+const PDF_TYPES = ['Notes','Summary','Homework','Worksheet','Real Exam Paper','Answer Key'];
+const DIFFS = ['Easy','Medium','Hard'];
+
+/* ---------- starting content (shown until you publish your own) ---------- */
+function DEF(){ return {
+  settings:{ whatsapp:'', helpWhatsapp:'', notifyEmail:'', adminHash:hash('admin123') },
+  units:[
+    {id:'e1',exam:'EST',name:'Cell Biology'},{id:'e2',exam:'EST',name:'Molecular Biology'},
+    {id:'e3',exam:'EST',name:'Genetics'},{id:'e4',exam:'EST',name:'Evolution'},
+    {id:'e5',exam:'EST',name:'Ecology'},{id:'e6',exam:'EST',name:'Human Body'},{id:'e7',exam:'EST',name:'Plants'},
+    {id:'a1',exam:'ACT',name:'Data Representation'},{id:'a2',exam:'ACT',name:'Research Summaries'},
+    {id:'a3',exam:'ACT',name:'Conflicting Viewpoints'},{id:'a4',exam:'ACT',name:'Biology Passages'}
+  ],
+  pdfs:[],
+  questions:[],
+  exams:[],
+  mocks:[],
+  assistants:[],
+  students:[],
+  lessons:[]
+}; }
+const KEYS = ['units','lessons','pdfs','questions','exams','mocks','assistants','students'];
+const lessonName = id => (C.lessons.find(l=>l.id===id)||{}).name || '';
+const lessonsOf = unit => C.lessons.filter(l=>l.unit===unit);
+const lessonQs = lid => lid.startsWith('gen_')
+  ? C.questions.filter(q => q.unit===lid.slice(4) && !C.lessons.some(l=>l.id===q.lesson && l.unit===q.unit))
+  : C.questions.filter(q => q.lesson===lid);
+
+const SEEDS = [];
+function applySeeds(){
+  C.seeds = C.seeds || []; let added = 0;
+  SEEDS.forEach(s => {
+    if(C.seeds.includes(s.id) && s.questions.some(q => qById(q.id))) return;
+    C.seeds = C.seeds.filter(x => x!==s.id);
+    (s.skills||[]).forEach(l => { if(!C.lessons.some(x=>x.id===l.id)) C.lessons.push(Object.assign({}, l)); });
+    s.questions.forEach(q => {
+      const old = qById(q.id), nq = JSON.parse(JSON.stringify(q)); delete nq.fix;
+      if(s.imgs && typeof nq.img==='string' && nq.img[0]==='@') nq.img = s.imgs[nq.img.slice(1)] || '';
+      if(!old){ C.questions.push(nq); added++; }
+      else if(q.fix && !old.edited){ Object.assign(old, nq); added++; }
+    });
+    if(s.exam && !C.exams.some(x=>x.id===s.exam.id)) C.exams.push(JSON.parse(JSON.stringify(s.exam)));
+    C.seeds.push(s.id);
+  });
+  return added;
+}
+/* ---------- load content: local draft (admin) → content.json → defaults ---------- */
+let C = null;
+async function load(){
+  C = DEF(); C.questions = []; C.students = [];
+  try{ const p = await rpc('bio_public'); useMain(p.main); C.qcount = p.qcount; C.qunits = p.qunits || {}; }
+  catch(e){ const cached = await IDB.get('public'); if(cached){ useMain(cached.main); C.qcount = cached.qcount; C.qunits = cached.qunits || {}; } return; }
+  IDB.set('public', {main:mainOf(), qcount:C.qcount, qunits:C.qunits});
+}
+/* removes the demo content that came with the first version of the site (only if you never edited it) */
+function removeSamples(){
+  if(C.samplesRemoved) return false;
+  const Q = ['q1','q2','q3','q4','q5','q6','q7'], L = ['l1','l2','l3','l4','l5','l6','l7'];
+  C.questions = C.questions.filter(q => !(Q.includes(q.id) && !q.edited));
+  const left = new Set(C.questions.map(q=>q.id));
+  C.lessons = C.lessons.filter(l => !L.includes(l.id) || C.questions.some(q=>q.lesson===l.id));
+  C.pdfs = C.pdfs.filter(p => !(['p1','p2'].includes(p.id) && !p.url));
+  C.exams = C.exams.filter(x => !['x1','x2'].includes(x.id));
+  C.mocks = C.mocks.filter(x => x.id!=='m1');
+  if(C.boards) delete C.boards.m1;
+  allTests().forEach(x => x.qids = x.qids.filter(id => left.has(id)));
+  C.samplesRemoved = true; return true;
+}
+
+/* =====================================================================
+   LANDING
+   ===================================================================== */
+let landExam = 'EST';
+function renderLanding(){
+  $('#stP').textContent = C.pdfs.length; $('#stQ').textContent = C.questions.length || C.qcount || 0;
+  $('#stE').textContent = C.exams.length + C.mocks.length; $('#stU').textContent = C.units.length;
+  $('#waBtn').href = 'https://wa.me/' + C.settings.whatsapp;
+  landTab(landExam);
+}
+function landTab(ex){
+  landExam = ex;
+  document.querySelectorAll('[data-lt]').forEach(b => b.classList.toggle('active', b.dataset.lt===ex));
+  const us = C.units.filter(u=>u.exam===ex);
+  $('#landUnits').innerHTML = us.length ? us.map((u,i) => {
+    const np = C.pdfs.filter(p=>p.unit===u.id).length, nq = C.questions.length ? C.questions.filter(q=>q.unit===u.id).length : ((C.qunits||{})[u.id]||0), nl = lessonsOf(u.id).length;
+    return `<div class="unit"><span class="num">${String(i+1).padStart(2,'0')}</span><div><b>${esc(u.name)}</b><small>${nl} skills · ${nq} questions · ${np} PDFs</small></div><span class="lock">🔒</span></div>`;
+  }).join('') : '<p class="empty">Units coming soon.</p>';
+}
+function pickPlan(p){ openAuth('register'); $('#rPlan').value = p; }
+
+/* =====================================================================
+   AUTH
+   ===================================================================== */
+const Students = { all:()=>LS.get('bp_students',[]), save:a=>LS.set('bp_students',a) };
+let me = null;
+/* ---------- account approval + period ---------- */
+const genReq = () => { const a='ABCDEFGHJKLMNPQRSTUVWXYZ23456789'; return 'S-' + Array.from({length:6},()=>a[Math.floor(Math.random()*a.length)]).join(''); };
+const recOf = (reqId, h) => { const k = h || (reqId ? hash(reqId) : ''); return k ? C.students.find(x => x.h===k || (reqId && x.h===hash(reqId))) : undefined; };
+function accessOf(s){
+  if(s && s.preview) return {state:'active', r:{until:addMonths(today(),12)}, days:365};
+  const r = s && (s.db ? s : recOf(s.reqId, s.h));
+  if(!r || r.status==='pending') return {state:'pending', r};
+  if(r.status==='rejected') return {state:'rejected', r};
+  const end = new Date(r.until+'T23:59:59');
+  if(r.status==='closed' || end < new Date()) return {state:'ended', r};
+  return {state:'active', r, days:Math.ceil((end - new Date())/864e5)};
+}
+function reqMsg(s, renew){
+  return `${renew?'🔄 Renewal':'📝 Registration'} - BioPrep Academy\nRequest ID: ${s.reqId}\nName: ${s.name}\nPhone: ${s.phone}\nEmail: ${s.email}\nExam: ${s.exam}\nPlan: ${s.plan||'Monthly'}`;
+}
+const waOk = () => /^\d{10,15}$/.test(waNum(C.settings.whatsapp));
+function openWA(url){ const w = window.open(url, '_blank'); if(!w) location.href = url; }
+/* sends the request to the admin's email automatically (free FormSubmit service) */
+async function notifyAdmin(subject, text){
+  const to = (C.settings.notifyEmail||'').trim(); if(!to) return 'off';
+  try{
+    const r = await fetch('https://formsubmit.co/ajax/' + encodeURIComponent(to), {method:'POST', headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify({_subject: subject, _template:'box', _captcha:'false', message: text})});
+    const j = await r.json().catch(()=>({}));
+    return (r.ok && String(j.success)!=='false') ? 'sent' : 'fail';
+  }catch(e){ return 'fail'; }
+}
+function setSendStatus(st){
+  if(me){ me.sent = st; LS.set('bp_sent_'+me.id, st); }
+  const el = document.getElementById('sendStat'); if(el) el.innerHTML = sendStatHTML();
+}
+function sendStatHTML(){
+  const st = me && me.sent;
+  if(st==='sent') return '<span class="badge">✓ Your request was sent to the academy</span>';
+  if(st==='fail') return '<span class="badge r">Could not send automatically — please send it on WhatsApp</span>';
+  if(st==='sending') return '<span class="badge y">Sending your request…</span>';
+  return '';
+}
+function sendReq(renew){
+  if(renew){ const p = document.getElementById('gPlan'); if(p) me.plan = p.value; const t = getTok(); if(t) rpc('bio_renew', {p_token:t.token, p_plan:me.plan}).catch(()=>{}); }
+  if(renew){ setSendStatus('sending'); notifyAdmin('🔄 Renewal request: ' + me.name, reqMsg(me, true)).then(r => setSendStatus(r==='off' ? '' : r)); }
+  if(!waOk()) return toast(renew ? 'Renewal request sent to the academy' : 'The academy WhatsApp number is not set yet');
+  openWA(waLink(C.settings.whatsapp, reqMsg(me, renew)));
+  toast('Opening WhatsApp — press send');
+}
+async function enterStudent(){
+  const a = accessOf(me);
+  if(a.state==='active'){
+    try{ toast('Loading your academy…'); await loadFull(); return openStudent(); }
+    catch(e){ if(e.message!=='not_active'){ show('vLanding'); return toast(errMsg(e)); } }
+  }
+  show('vGate');
+  const planSel = `<label style="text-align:left">Plan</label><select id="gPlan">${opts(['Monthly','Term','Full Year'], me.plan||'Monthly')}</select>`;
+  const body = {
+    pending: `<div class="ic" style="margin:0 auto 14px">⏳</div><h2 style="font-size:1.6rem">Waiting for approval</h2>
+      <p class="muted">Thanks ${esc(me.name.split(' ')[0])}! We received your registration. Your account opens as soon as the academy approves it (after payment).</p>
+      <p style="margin:16px 0 8px">Your request ID: <span class="code">${me.reqId}</span></p>
+      <p id="sendStat" style="margin-bottom:14px">${sendStatHTML()}</p>
+      ${waOk() ? `<button class="btn btn-main" onclick="sendReq(false)">💬 Also send on WhatsApp</button>` : ''}
+      <button class="btn" style="background:var(--bg)" onclick="location.reload()">🔄 Check again</button>`,
+    rejected: `<div class="ic" style="margin:0 auto 14px">✋</div><h2 style="font-size:1.6rem">Request not approved</h2>
+      <p class="muted">Your registration was not approved. Please contact the academy on WhatsApp.</p><br>
+      <a class="btn btn-main" target="_blank" href="${waLink(C.settings.whatsapp, 'Hello, my BioPrep Academy request ' + me.reqId + ' was not approved. Can you help?')}">💬 Contact the academy</a>`,
+    ended: `<div class="ic" style="margin:0 auto 14px">🔒</div><h2 style="font-size:1.6rem">Your account period has ended</h2>
+      <p class="muted">${a.r && a.r.until ? 'Your access ended on <b>' + fmtDate(a.r.until) + '</b>.' : ''} Renew your plan to continue — your progress and scores are kept.</p><br>
+      ${planSel}<p id="sendStat" style="margin-bottom:10px">${sendStatHTML()}</p><button class="btn btn-main" onclick="sendReq(true)">🔄 Send renewal request</button>
+      <button class="btn" style="background:var(--bg)" onclick="location.reload()">Check again</button>`
+  }[a.state];
+  $('#gateBox').innerHTML = `<a class="logo">🧬 BioPrep<b>Academy</b></a><div style="text-align:center;margin-top:20px">${body}
+    <p class="note" style="margin-top:18px"><a onclick="clearTok();me=null;show('vLanding')">Log out</a></p></div>`;
+}
+function openAuth(tab){
+  show('vAuth');
+  document.querySelectorAll('.seg button').forEach(b => b.classList.toggle('active', b.dataset.a===tab));
+  $('#fLogin').classList.toggle('hidden', tab!=='login');
+  $('#fReg').classList.toggle('hidden', tab!=='register');
+  $('#fAdm').classList.toggle('hidden', tab!=='admin');
+  $('#fAst').classList.toggle('hidden', tab!=='assistant');
+  $('#authErr').textContent = '';
+  if(tab==='admin') rpc('bio_admin_exists').then(x => { if(!x) authErr('First time: the password you type now (6+ characters) becomes your admin password.'); }).catch(()=>{});
+}
+const authErr = m => { $('#authErr').textContent = m; };
+async function doReg(e){
+  e.preventDefault();
+  const btn = e.submitter; if(btn) btn.disabled = true;
+  try{
+    const res = await rpc('bio_register', {p:{name:v('#rName').trim(), email:v('#rEmail').trim().toLowerCase(), phone:v('#rPhone').trim(), exam:v('#rExam'), plan:v('#rPlan'), pass:v('#rPass')}});
+    setTok({kind:'student', token:res.token}); me = res.me; progressIn(res.progress);
+    const auto = !!(C.settings.notifyEmail||'').trim();
+    if(auto){ me.sent = 'sending'; notifyAdmin('📝 New registration: ' + me.name + ' (' + me.plan + ')', reqMsg(me, false) + '\n\nOpen Admin → Students to approve or reject.').then(r => setSendStatus(r)); }
+    enterStudent();
+  }catch(err){ authErr(errMsg(err)); }
+  if(btn) btn.disabled = false;
+}
+async function doLogin(e){
+  e.preventDefault();
+  const btn = e.submitter; if(btn) btn.disabled = true;
+  try{
+    const res = await rpc('bio_login', {p_email:v('#lEmail').trim().toLowerCase(), p_pass:v('#lPass')});
+    setTok({kind:'student', token:res.token}); me = res.me; me.sent = LS.get('bp_sent_'+me.id, ''); progressIn(res.progress);
+    await enterStudent();
+  }catch(err){ authErr(errMsg(err)); }
+  if(btn) btn.disabled = false;
+}
+async function doAdmin(e){
+  e.preventDefault();
+  try{
+    const res = await rpc('bio_admin_login', {p_pass:v('#aPass')});
+    setTok({kind:'admin', token:res.token}); $('#aPass').value=''; toast('Loading…');
+    await loadAdmin(); openAdmin();
+  }catch(err){ authErr(err.message==='wrong_login' ? 'Wrong admin password.' : errMsg(err)); }
+}
+async function doAsst(e){
+  e.preventDefault();
+  try{
+    const res = await rpc('bio_asst_login', {p_phone:v('#asPhone'), p_passhash:hash(v('#asPass'))});
+    setTok({kind:'assistant', token:res.token, a:res.assistant}); $('#asPass').value=''; A = res.assistant;
+    await loadFull(); openAsst();
+  }catch(err){ authErr(err.message==='wrong_login' ? 'Wrong phone or password. Ask the admin to check your assistant account.' : errMsg(err)); }
+}
+
+/* =====================================================================
+   STUDENT AREA
+   ===================================================================== */
+let sTab = 'dash', E = null, P = null;
+let LF = {exam:'',unit:'',type:'',q:''}, PF = {exam:'',unit:'',diff:'',mode:'all'}, XF = {exam:'',kind:''};
+const myEx = () => me.exam==='Both' ? ['EST','ACT'] : [me.exam];
+const getAtt = () => LS.get('bp_att_'+me.id, {});
+const setAtt = a => LS.set('bp_att_'+me.id, a);
+const getRes = () => LS.get('bp_res_'+me.id, []);
+const setRes = r => LS.set('bp_res_'+me.id, r);
+const getWA = () => LS.get('bp_wans_'+me.id, {});
+const setWA = w => LS.set('bp_wans_'+me.id, w);
+const getAsked = () => LS.get('bp_asked_'+me.id, {});
+const myMistakes = () => { const att = getAtt(); return C.questions.filter(q => myEx().includes(q.exam) && att[q.id]===false); };
+let MF = {unit:''};
+const examFilterOpts = sel => me.exam==='Both' ? opts([['','EST + ACT'],'EST','ACT'], sel) : opts([me.exam], me.exam);
+
+function openStudent(){ show('vStudent'); sTab='dash'; sRender(); }
+function sSide(){
+  const nm = myMistakes().length;
+  const items = [['dash','🏠','Dashboard'],['library','📄','PDFs'],['classified','🗂️','Classified Questions'],['exams','⏱️','Exams'],['mocks','📝','Mocks'],['mistakes','🔁','My Mistakes'],['saved','⭐','Saved'],['results','📈','My Results']];
+  $('#sSide').innerHTML = `<a class="logo">🧬 BioPrep<b>Academy</b></a>` +
+    items.map(([k,ic,l]) => `<button class="${k===sTab||(k==='classified'&&['practice','lesson','skill'].includes(sTab))?'active':''}" onclick="sGo('${k}')"><span>${ic}</span><span>${l}</span>${k==='mistakes'&&nm?`<span class="cnt">${nm}</span>`:''}</button>`).join('') +
+    `<div class="grow"></div><button onclick="sGo('logout')"><span>🚪</span><span>Logout</span></button>`;
+}
+function sGo(k){
+  if(E && !confirm('Leave the exam? Your answers will be lost.')) return;
+  if(E){ clearInterval(E.t); E = null; }
+  if(k==='logout'){ const pv = me && me.preview; if(pv){ me = null; openAdmin(); return; } clearTimeout(progTimer); const t = getTok(); if(t && me && me.db) rpc('bio_save_progress', {p_token:t.token, p_progress:progressOut()}).catch(()=>{}); clearTok(); me=null; location.reload(); return; }
+  sTab = k; sRender();
+}
+function sRender(){
+  sSide();
+  ({dash:sDash, library:sLibrary, classified:sClassified, lesson:()=>openSkill(SK.lid, SK.mode), skill:()=>openSkill(SK.lid, SK.mode), practice:sPractice, exams:sExams, mocks:sMocks, mistakes:sMistakes, saved:sSaved, results:sResults})[sTab]();
+  window.scrollTo(0,0);
+}
+function sTop(title, sub){
+  return `<div class="topbar"><div><p class="muted">${sub||''}</p><h1>${title}</h1></div><div class="avatar" title="${esc(me.name)}">${esc(me.name.charAt(0).toUpperCase())}</div></div>`;
+}
+
+/* ---------- #2 WEAK-UNIT COACH ---------- */
+function unitStats(){
+  const att = getAtt();
+  return C.units.filter(u=>myEx().includes(u.exam)).map(u => {
+    const uq = C.questions.filter(q=>q.unit===u.id), tried = uq.filter(q=>q.id in att), ok = tried.filter(q=>att[q.id]===true).length;
+    return {u, total:uq.length, tried:tried.length, ok, acc: tried.length ? ok/tried.length : null, wrong: tried.length - ok};
+  }).filter(s => s.total);
+}
+function dashCoach(){
+  const st = unitStats(); if(!st.length) return '';
+  const tried = st.filter(s => s.tried >= 1).sort((a,b) => a.acc-b.acc || b.wrong-a.wrong);
+  const weak = tried[0], fresh = st.find(s => !s.tried);
+  let s, title, why;
+  if(weak && weak.acc < 0.8){ s = weak; title = `Focus on ${esc(s.u.name)}`; why = `Your weakest unit: <b>${Math.round(s.acc*100)}%</b> accuracy (${s.ok}/${s.tried} correct).`; }
+  else if(fresh){ s = fresh; title = `Start ${esc(s.u.name)}`; why = `You haven't practiced this unit yet — ${s.total} questions are waiting.`; }
+  else if(weak){ s = weak; title = `Great work! 🎉`; why = `Every unit is above 80%. Keep it sharp with <b>${esc(s.u.name)}</b> (${Math.round(s.acc*100)}%) or take a mock.`; }
+  else return '';
+  const nPdf = C.pdfs.filter(p=>p.unit===s.u.id).length, nWrong = myMistakes().filter(q=>q.unit===s.u.id).length;
+  return `<div class="panel" style="background:var(--grad);color:#fff;border:none">
+    <h3 style="margin-bottom:6px">💡 Coach: ${title}</h3><p style="opacity:.92;margin-bottom:14px">${why}</p>
+    <div class="filters" style="margin:0">
+      <button class="sbtn" onclick="CF={exam:'',unit:'${s.u.id}'};sGo('classified')">🗂️ ${esc(s.u.name)} skills</button>
+      ${nPdf?`<button class="sbtn" onclick="LF={exam:'',unit:'${s.u.id}',type:'',q:''};sGo('library')">📄 ${nPdf} PDF${nPdf>1?'s':''}</button>`:''}
+      ${nWrong?`<button class="sbtn" onclick="MF.unit='${s.u.id}';sGo('mistakes')">🔁 ${nWrong} mistake${nWrong>1?'s':''} here</button>`:''}
+    </div></div>`;
+}
+
+/* ---------- #8 EXAM COUNTDOWN + WEEKLY PLAN ---------- */
+const getGoal = () => LS.get('bp_goal_'+me.id, {date:'', target:{}});
+function saveGoal(){
+  const g = getGoal(); g.date = v('#gDate');
+  myEx().forEach(ex => { const el = document.getElementById('gT'+ex); if(el) g.target[ex] = el.value ? +el.value : ''; });
+  LS.set('bp_goal_'+me.id, g); sDash(); toast('Goal saved');
+}
+function dashGoal(){
+  const g = getGoal(), edit = !g.date || DG.edit;
+  const form = `<div class="row">
+      <div><label>My exam date</label><input id="gDate" type="date" value="${esc(g.date)}"></div>
+      ${myEx().map(ex => `<div><label>Target ${ex} score (${ex==='EST'?'200–800':'1–36'})</label><input id="gT${ex}" type="number" min="${ex==='EST'?200:1}" max="${ex==='EST'?800:36}" value="${esc(g.target[ex]||'')}"></div>`).join('')}
+    </div><button class="sbtn g" onclick="DG.edit=false;saveGoal()">Save my goal</button>${g.date?` <button class="sbtn" onclick="DG.edit=false;sDash()">Cancel</button>`:''}`;
+  if(edit) return `<div class="panel"><h3>⏳ Exam countdown</h3><p class="muted" style="margin-bottom:12px">Add your exam date to get a countdown and a weekly study plan.</p>${form}</div>`;
+  const days = Math.ceil((new Date(g.date+'T09:00:00') - new Date())/864e5);
+  if(days < 0) return `<div class="panel"><h3>⏳ Exam countdown</h3><p>Your exam date (${fmtDate(g.date)}) has passed. Good luck with your results! 🍀</p><br><button class="sbtn" onclick="DG.edit=true;sDash()">Set a new date</button></div>`;
+  const weeks = Math.max(1, Math.ceil(days/7)), plan = buildPlan(weeks);
+  return `<div class="panel"><h3>⏳ ${days} day${days===1?'':'s'} to your exam</h3>
+    <p class="muted">${fmtDate(g.date)} · about ${weeks} week${weeks>1?'s':''} left</p>
+    <div class="list" style="margin:14px 0">${plan.slice(0,3).map((w,i) => `<div class="item" style="${i===0?'border-color:var(--brand);background:#ecfdf5':''}"><div class="t"><b>${i===0?'📌 This week':'Week '+(i+1)}</b><small>${w}</small></div></div>`).join('')}</div>
+    ${plan.length>3?`<p class="muted" style="font-size:.85rem;margin-bottom:10px">+ ${plan.length-3} more week${plan.length-3>1?'s':''} in your plan</p>`:''}
+    <button class="sbtn" onclick="DG.edit=true;sDash()">✏️ Change date / target</button></div>`;
+}
+let DG = {edit:false};
+function buildPlan(weeks){
+  const st = unitStats().sort((a,b) => (a.acc===null?-1:a.acc) - (b.acc===null?-1:b.acc));
+  const names = st.map(s => s.u.name), mocks = C.mocks.filter(m=>myEx().includes(m.exam)).length;
+  if(weeks === 1) return [`Final week: take a full mock, redo <strong>My Mistakes</strong>, and review your weakest units (${esc(names.slice(0,2).join(', ')||'all units')}).`];
+  const studyWeeks = weeks - 1, per = Math.max(1, Math.ceil(names.length / studyWeeks)), out = [];
+  for(let i=0; i<studyWeeks; i++){
+    const part = names.slice(i*per, i*per+per);
+    out.push(part.length ? `Study <strong>${esc(part.join(' & '))}</strong>: PDFs + practice questions${i%2===1 && mocks ? ' · take 1 mock test' : ''}.`
+                         : `Review: redo <strong>My Mistakes</strong> and your saved questions${mocks?' · take 1 mock test':''}.`);
+  }
+  out.push('Final week: full mock tests under real timing, then review every mistake.');
+  return out;
+}
+
+/* ---------- #6 SCORE PREDICTOR ---------- */
+function estScore(ex, p){
+  if(ex==='EST'){ const s = Math.round((200 + 6*p)/10)*10; return {lo:Math.max(200,s-30), hi:Math.min(800,s+30), mid:s, max:800}; }
+  const s = Math.round(1 + 35*p/100); return {lo:Math.max(1,s-2), hi:Math.min(36,s+2), mid:s, max:36};
+}
+function dashPredict(){
+  const res = getRes(), g = getGoal();
+  const rows = myEx().map(ex => {
+    const rs = res.filter(r => (r.kind==='Mock'||r.kind==='Real') && ((r.exam||(testById(r.examId)||{}).exam)===ex)).slice(0,3);
+    if(!rs.length) return `<div class="expl" style="margin-bottom:10px"><b>${ex}</b><p>Take a mock or real exam to see your estimated score.</p></div>`;
+    const p = Math.round(rs.reduce((s,r)=>s+pct(r.score,r.total),0)/rs.length), e = estScore(ex,p), t = +g.target[ex] || 0;
+    const gap = t ? t - e.mid : null;
+    return `<div class="expl" style="margin-bottom:10px"><b>${ex} estimated score</b>
+      <p style="font-size:1.9rem;font-weight:800;color:var(--ink);margin:4px 0">${e.lo}–${e.hi}</p>
+      <div class="bar" style="margin:6px 0"><i style="width:${Math.round(e.mid/e.max*100)}%"></i></div>
+      <p>Based on your last ${rs.length} mock/real exam${rs.length>1?'s':''} (average ${p}%).${t ? (gap>0 ? ` <b>${gap} point${gap>1?'s':''}</b> to your target of ${t}.` : ` 🎯 You're at or above your target of ${t}!`) : ''}</p></div>`;
+  }).join('');
+  return `<div class="panel"><h3>📈 Score predictor</h3>${rows}<p class="hint" style="margin:6px 0 0">This is an estimate only. Real scores depend on each test's official scale.</p></div>`;
+}
+
+function sDash(){
+  const qs = C.questions.filter(q=>myEx().includes(q.exam)), att = getAtt(), res = getRes();
+  const tried = qs.filter(q=>q.id in att).length, right = qs.filter(q=>att[q.id]===true).length;
+  const avg = res.length ? Math.round(res.reduce((s,r)=>s+r.score/r.total*100,0)/res.length) : 0;
+  const best = res.length ? Math.max(...res.map(r=>pct(r.score,r.total))) : 0;
+  const acc = accessOf(me), days = acc.days;
+  const units = C.units.filter(u=>myEx().includes(u.exam));
+  $('#sMain').innerHTML = sTop(`Welcome back, ${esc(me.name.split(' ')[0])} 👋`, `${myEx().join(' + ')} Biology`) + `
+    <div class="kpis">
+      <div class="kpi g"><b>${tried}/${qs.length}</b><span>Questions practiced</span></div>
+      <div class="kpi"><b>${pct(right,tried)}%</b><span>Accuracy</span></div>
+      <div class="kpi"><b>${res.length}</b><span>Exams taken</span></div>
+      <div class="kpi d"><b>${avg}%</b><span>Average exam score</span></div>
+    </div>
+    ${dashCoach()}
+    <div class="grid2" style="gap:18px">${dashGoal()}${dashPredict()}</div>
+    <div class="grid2" style="gap:18px">
+      <div class="panel"><h3>📊 Progress by unit</h3>
+        ${units.map(u => { const uq = qs.filter(q=>q.unit===u.id), ok = uq.filter(q=>att[q.id]===true).length, p = pct(ok,uq.length);
+          return `<div class="prow"><span>${esc(u.name)}</span><div class="bar"><i style="width:${p}%"></i></div><span>${uq.length?p+'%':'—'}</span></div>`; }).join('') || '<p class="empty">No units yet.</p>'}
+      </div>
+      <div>
+        <div class="panel"><h3>🔑 Your access</h3>
+          <p>${acc.state==='active' ? `Active until <b>${fmtDate(acc.r.until)}</b> · ${days} day${days===1?'':'s'} left` : 'Closed'}</p>
+          ${acc.state==='active' && days <= 7 ? `<div class="notice" style="margin:12px 0 0">⚠️ <b>Your account closes in ${days} day${days===1?'':'s'}.</b> Renew now to keep studying.<br><button class="sbtn g" style="margin-top:8px" onclick="sendReq(true)">🔄 Send renewal request</button></div>` : ''}
+          <p class="muted" style="margin-top:6px">Best exam score: <b>${best}%</b></p>
+        </div>
+        <div class="panel"><h3>⚡ Continue</h3>
+          <div class="filters" style="margin:0">
+            <button class="sbtn g" onclick="CF={exam:'',unit:''};sGo('classified')">🗂️ Classified questions</button>
+            <button class="sbtn" onclick="sGo('exams')">⏱️ Take an exam</button>
+            <button class="sbtn" onclick="sGo('mocks')">📝 Take a mock</button>
+            <button class="sbtn" onclick="sGo('library')">📄 Open PDFs</button>
+            ${myMistakes().length ? `<button class="sbtn" onclick="sGo('mistakes')">🔁 My mistakes (${myMistakes().length})</button>` : ''}
+          </div>
+        </div>
+        <div class="panel"><h3>🕘 Recent results</h3>
+          ${res.slice(0,4).map(r=>`<div class="prow" style="grid-template-columns:1fr auto"><span>${esc(r.title)}<br><small class="muted">${fmtDate(r.date)}</small></span><span class="badge ${pct(r.score,r.total)>=70?'':'r'}">${pct(r.score,r.total)}%</span></div>`).join('') || '<p class="muted">No exams yet. Take your first one!</p>'}
+        </div>
+      </div>
+    </div>`;
+}
+
+function sLibrary(){
+  const list = C.pdfs.filter(p => myEx().includes(p.exam) && (!LF.exam||p.exam===LF.exam) && (!LF.unit||p.unit===LF.unit) && (!LF.type||p.type===LF.type) && (!LF.q||p.title.toLowerCase().includes(LF.q.toLowerCase())));
+  $('#sMain').innerHTML = sTop('📄 PDF Library', 'Notes, homework, summaries and papers') + `
+    <div class="filters">
+      <select onchange="LF.exam=this.value;LF.unit='';sLibrary()">${examFilterOpts(LF.exam)}</select>
+      <select onchange="LF.unit=this.value;sLibrary()">${opts(unitOpts(LF.exam||(me.exam==='Both'?'':me.exam),true),LF.unit)}</select>
+      <select onchange="LF.type=this.value;sLibrary()">${opts([['','All types'],...PDF_TYPES],LF.type)}</select>
+      <input placeholder="🔍 Search" value="${esc(LF.q)}" onchange="LF.q=this.value;sLibrary()">
+    </div>
+    <div class="list">${list.map(p => `
+      <div class="item"><span class="fi">📄</span>
+        <div class="t"><b>${esc(p.title)}</b><span class="badge c">${p.exam}</span><span class="badge">${esc(unitName(p.unit))}</span><span class="badge y">${esc(p.type)}</span></div>
+        ${p.url ? `<a class="sbtn p" href="${esc(p.url)}" target="_blank" rel="noopener">Open ↗</a>` : `<button class="sbtn" disabled>Coming soon</button>`}
+      </div>`).join('') || '<p class="empty">No PDFs match your filters.</p>'}</div>`;
+}
+
+function sPractice(){
+  $('#sMain').innerHTML = sTop('❓ Question Bank', 'Answer, check, and learn from explanations') + `
+    <div class="filters">
+      <select onchange="PF.exam=this.value;PF.unit='';sPractice()">${examFilterOpts(PF.exam)}</select>
+      <select onchange="PF.unit=this.value;sPractice()">${opts(unitOpts(PF.exam||(me.exam==='Both'?'':me.exam),true),PF.unit)}</select>
+      <select onchange="PF.diff=this.value;sPractice()">${opts([['','All levels'],...DIFFS],PF.diff)}</select>
+      <select onchange="PF.mode=this.value;sPractice()">${opts([['all','All questions'],['new','Not tried yet'],['wrong','My mistakes'],['saved','⭐ Saved questions']],PF.mode)}</select>
+    </div>
+    <div class="panel" id="pbox"></div>`;
+  const att = getAtt();
+  let pool = C.questions.filter(q => myEx().includes(q.exam) && (!PF.exam||q.exam===PF.exam) && (!PF.unit||q.unit===PF.unit) && (!PF.diff||q.diff===PF.diff));
+  if(PF.mode==='new') pool = pool.filter(q => !(q.id in att));
+  if(PF.mode==='wrong') pool = pool.filter(q => att[q.id]===false);
+  if(PF.mode==='saved'){ const sv = getSaved(); pool = pool.filter(q => q.id in sv); }
+  P = {pool:shuffle(pool), i:0, picked:null, right:0, done:0};
+  renderQ();
+}
+/* ---------- CLASSIFIED QUESTIONS: unit → skill → questions ---------- */
+let CF = {exam:'', unit:''}, CL = {id:'', mode:'all'};
+function lessonCards(u){
+  const att = getAtt(), cards = lessonsOf(u.id).map(l => ({id:l.id, name:l.name, qs:lessonQs(l.id)}));
+  const gen = lessonQs('gen_'+u.id); if(gen.length) cards.push({id:'gen_'+u.id, name:'General questions', qs:gen});
+  return cards.filter(c => c.qs.length).map((c,i) => {
+    const tried = c.qs.filter(q=>q.id in att).length, ok = c.qs.filter(q=>att[q.id]===true).length, p = pct(tried, c.qs.length);
+    const done = tried===c.qs.length;
+    return `<div class="unit" style="cursor:pointer;flex-wrap:wrap" onclick="if(QZ&&QZ.submitted)QZ=null;openSkill('${c.id}','all')">
+      <span class="num" style="${done?'background:var(--grad);color:#fff':''}">${done?'✓':String(i+1).padStart(2,'0')}</span>
+      <div style="flex:1;min-width:0"><b>${esc(c.name)}</b><small>${c.qs.length} question${c.qs.length>1?'s':''}${tried?` · ${tried}/${c.qs.length} answered · ${pct(ok,tried)}% correct`:''}</small>
+        <div class="bar" style="margin-top:8px;height:6px"><i style="width:${p}%"></i></div></div>
+      <span class="sbtn ${tried&&!done?'g':done?'':'p'}" style="flex:none">${done?'Quiz again':tried?'Continue':'Start quiz'} →</span></div>`;
+  }).join('');
+}
+function sClassified(){
+  const ex = CF.exam || (me.exam==='Both' ? '' : me.exam);
+  const units = C.units.filter(u => myEx().includes(u.exam) && (!ex || u.exam===ex) && (!CF.unit || u.id===CF.unit) && C.questions.some(q=>q.unit===u.id));
+  const att = getAtt();
+  $('#sMain').innerHTML = sTop('🗂️ Classified Questions', 'Choose a unit and tap a skill to start its quiz') + `
+    <div class="filters">
+      ${me.exam==='Both' ? `<select onchange="CF.exam=this.value;CF.unit='';sClassified()">${examFilterOpts(CF.exam)}</select>` : ''}
+      <select onchange="CF.unit=this.value;sClassified()">${opts(unitOpts(ex,true),CF.unit)}</select>
+      ${myMistakes().length ? `<button class="sbtn" onclick="sGo('mistakes')">🔁 My mistakes (${myMistakes().length})</button>` : ''}
+    </div>
+    ${units.map(u => { const uq = C.questions.filter(q=>q.unit===u.id), t = uq.filter(q=>q.id in att).length;
+      return `<div class="panel"><div class="navrow" style="margin:0 0 14px;align-items:center">
+          <h3 style="margin:0">${me.exam==='Both'?`<span class="badge c">${u.exam}</span> `:''}${esc(u.name)}</h3>
+          <small class="muted">${lessonsOf(u.id).length} skills · ${t}/${uq.length} answered</small></div>
+        <div class="units">${lessonCards(u)}</div></div>`; }).join('') || '<div class="panel"><p class="empty">No questions here yet.</p></div>'}`;
+}
+/* ---------- SKILL QUIZ: one question at a time, submit at the end, score counts only answered questions ---------- */
+let SK = {lid:'', mode:'all'}, QZ = null;
+const openLesson = (lid, mode) => openSkill(lid, mode);
+function openSkill(lid, mode){
+  const isGen = lid.startsWith('gen_'), unit = isGen ? lid.slice(4) : (C.lessons.find(l=>l.id===lid)||{}).unit;
+  if(!unit) return sGo('classified');
+  mode = mode || (QZ && QZ.lid===lid ? QZ.mode : 'all');
+  SK = {lid, mode}; sTab = 'skill'; sSide();
+  const att = getAtt(), all = lessonQs(lid);
+  if(!QZ || QZ.lid!==lid || QZ.mode!==mode){
+    let pool = all;
+    if(mode==='new') pool = all.filter(q => !(q.id in att));
+    if(mode==='wrong') pool = all.filter(q => att[q.id]===false);
+    QZ = {lid, mode, ids:pool.map(q=>q.id), ans:{}, i:0, submitted:false, review:false};
+  }
+  const name = isGen ? 'General questions' : lessonName(lid);
+  const nl = all.filter(q => !(q.id in att)).length, nw = all.filter(q => att[q.id]===false).length;
+  $('#sMain').innerHTML = sTop('🎯 ' + esc(name), `<a style="cursor:pointer;color:var(--brand);font-weight:700" onclick="sGo('classified')">← Classified Questions</a> · ${esc(unitName(unit))} · quiz`) + `
+    <div class="filters" id="qzTabs">
+      <button class="tab ${mode==='all'?'active':''}" onclick="qzNew('${lid}','all')">All questions ${all.length}</button>
+      ${nl && nl<all.length ? `<button class="tab ${mode==='new'?'active':''}" onclick="qzNew('${lid}','new')">Not answered yet ${nl}</button>` : ''}
+      ${nw ? `<button class="tab ${mode==='wrong'?'active':''}" onclick="qzNew('${lid}','wrong')">My mistakes ${nw}</button>` : ''}
+    </div>
+    ${PDF_LINK(unit)}
+    <div class="panel" id="qzBox"></div>`;
+  qzRender(); window.scrollTo(0,0);
+}
+function qzNew(lid, mode){
+  const n = QZ && !QZ.submitted ? Object.keys(QZ.ans).length : 0;
+  if(n && !confirm('Start again? Your ' + n + ' answer' + (n>1?'s':'') + ' in this quiz will be lost.')) return;
+  QZ = null; openSkill(lid, mode);
+}
+const qzQ = i => qById(QZ.ids[i]);
+function qzRender(){
+  const box = document.getElementById('qzBox'); if(!box) return;
+  const n = QZ.ids.length;
+  if(!n){ box.innerHTML = `<p class="empty">${QZ.mode==='wrong'?'No mistakes here 🎉':'You answered every question in this skill 🎉'}</p>
+      <div class="filters" style="justify-content:center"><button class="sbtn g" onclick="qzNew('${QZ.lid}','all')">Do the whole skill again</button></div>`; return; }
+  if(QZ.submitted && !QZ.review) return qzResult();
+  const q = qzQ(QZ.i), mine = QZ.ans[q.id], answered = Object.keys(QZ.ans).length, rv = QZ.review;
+  const dot = (id, k) => {
+    const a = QZ.ans[id], qq = qById(id);
+    let st = '';
+    if(rv) st = a===undefined ? 'background:#f1f5f4;color:var(--muted)' : a===qq.answer ? 'background:#10b981;color:#fff;border-color:#10b981' : 'background:#ef4444;color:#fff;border-color:#ef4444';
+    else if(a!==undefined) st = 'background:var(--ink);color:#fff;border-color:var(--ink)';
+    return `<button onclick="QZ.i=${k};qzRender()" title="Question ${k+1}" style="width:34px;height:34px;border-radius:10px;border:1.5px solid ${k===QZ.i?'var(--brand)':'var(--line)'};${k===QZ.i?'box-shadow:0 0 0 2px var(--brand);':''}font:600 .82rem inherit;cursor:pointer;background:#fff;${st}">${k+1}</button>`;
+  };
+  const optCls = k => rv ? (k===q.answer ? 'ok' : k===mine ? 'no' : '') : (k===mine ? 'sel' : '');
+  box.innerHTML = `
+    <div class="navrow" style="margin:0 0 10px;align-items:center">
+      <p class="qnum" style="margin:0"><b>Question ${QZ.i+1} of ${n}</b> · ${rv ? '<span class="badge c">Review</span>' : `<span class="muted">${answered} answered</span>`}</p>${starBtn(q.id)}</div>
+    <div class="bar" style="height:6px;margin-bottom:12px"><i style="width:${pct(rv?n:answered,n)}%"></i></div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px">${QZ.ids.map(dot).join('')}</div>
+    <div><span class="badge y">${esc(q.diff)}</span>${q.source==='Real exam'?`<span class="badge r">Real exam ${esc(q.year)}</span>`:''}</div>
+    <div class="qtext">${fmtText(q.text)}</div>${qImgHTML(q)}
+    ${q.options.map((o,k) => hasOpt(q,k) ? `<button class="opt ${optCls(k)}" ${rv?'disabled':`onclick="qzPick(${k})"`}>${optInner(q,k)}</button>` : '').join('')}
+    ${rv ? `<div class="expl"><b>${mine===undefined ? '⏭️ You skipped this one — the answer is '+'ABCDE'[q.answer]+'.' : mine===q.answer ? '✅ Correct!' : '❌ Your answer: '+'ABCDE'[mine]+' — the right answer is '+'ABCDE'[q.answer]+'.'}</b>${explBody(q)}</div>${notesHTML(q)}
+      ${mine!==undefined && mine!==q.answer ? `<div class="ask"><small class="muted">📌 Saved to <b>My Mistakes</b>.</small> <button class="sbtn g" style="margin-left:6px" onclick="askHelp('${q.id}')">💬 Ask an assistant</button></div>` : ''}`
+      : `<p class="hint" style="margin:4px 0 0">Tap an answer (tap it again to clear it). You can skip questions and come back — the answers show after you submit.</p>`}
+    <div class="navrow" style="margin-top:16px">
+      <button class="sbtn" ${QZ.i===0?'disabled style="opacity:.4"':''} onclick="QZ.i--;qzRender()">← Previous</button>
+      <span class="filters" style="margin:0">
+        ${rv ? `<button class="sbtn" onclick="QZ.review=false;qzRender()">📊 Back to my score</button>`
+             : `<button class="sbtn g" onclick="qzSubmit()">✅ Submit quiz</button>`}
+        ${QZ.i<n-1 ? `<button class="sbtn p" onclick="QZ.i++;qzRender()">Next →</button>` : ''}
+      </span></div>`;
+}
+function qzPick(k){
+  const q = qzQ(QZ.i);
+  if(QZ.ans[q.id]===k) delete QZ.ans[q.id]; else QZ.ans[q.id] = k;
+  if(QZ.ans[q.id]!==undefined && QZ.i < QZ.ids.length-1) setTimeout(() => { QZ.i++; qzRender(); }, 250);
+  qzRender();
+}
+function qzSubmit(){
+  const n = QZ.ids.length, done = Object.keys(QZ.ans).length;
+  if(!done) return toast('Answer at least one question first');
+  if(done < n && !confirm(`You answered ${done} of ${n} questions. The ${n-done} you skipped won't count in your score. Submit now?`)) return;
+  const a = getAtt(), w = getWA();
+  Object.entries(QZ.ans).forEach(([id, k]) => { const q = qById(id); a[id] = (k===q.answer); if(k!==q.answer) w[id] = {ans:k, date:Date.now()}; });
+  setAtt(a); setWA(w);
+  QZ.submitted = true; QZ.review = false; QZ.i = 0;
+  sSide(); qzRender(); window.scrollTo(0,0);
+}
+function qzResult(){
+  const n = QZ.ids.length, ids = Object.keys(QZ.ans), done = ids.length;
+  const right = ids.filter(id => QZ.ans[id]===qById(id).answer).length, wrong = done - right, p = pct(right, done);
+  const nx = nextLesson(QZ.lid), col = p>=80 ? '#10b981' : p>=50 ? '#f59e0b' : '#ef4444';
+  const msg = p>=90 ? 'Excellent work! 🌟' : p>=75 ? 'Great job! 💪' : p>=50 ? 'Good — review your mistakes to improve.' : 'Keep going — review the explanations and try again.';
+  document.getElementById('qzBox').innerHTML = `<div style="text-align:center;padding:10px 0 4px">
+      <div style="width:150px;height:150px;border-radius:50%;margin:0 auto 14px;display:grid;place-items:center;background:conic-gradient(${col} ${p*3.6}deg,#e8efec 0)">
+        <div style="width:118px;height:118px;border-radius:50%;background:#fff;display:grid;place-items:center"><div><b style="font-size:2.1rem;color:${col}">${p}%</b><br><small class="muted">score</small></div></div></div>
+      <h3 style="margin:0 0 6px">${right} / ${done} correct</h3>
+      <p class="muted" style="margin:0 0 4px">${msg}</p>
+      <p class="muted" style="margin:0 0 16px;font-size:.9rem">✅ ${right} correct · ❌ ${wrong} wrong · ⏭️ ${n-done} skipped (not counted)</p>
+      <div class="filters" style="justify-content:center">
+        <button class="sbtn p" onclick="QZ.review=true;QZ.i=0;qzRender()">👀 Review answers</button>
+        ${wrong ? `<button class="sbtn" onclick="QZ=null;openSkill('${QZ.lid}','wrong')">🔁 Redo my mistakes</button>` : ''}
+        <button class="sbtn" onclick="QZ=null;openSkill('${QZ.lid}','all')">↻ Try the whole skill again</button>
+        ${nx ? `<button class="sbtn g" onclick="QZ=null;openSkill('${nx}','all')">Next skill: ${esc(nx.startsWith('gen_')?'General questions':lessonName(nx))} →</button>` : ''}
+        <button class="sbtn" onclick="sGo('classified')">All skills</button>
+      </div></div>`;
+}
+const PDF_LINK = unit => { const n = C.pdfs.filter(p=>p.unit===unit && p.url).length; return n ? `<p style="margin:-4px 0 14px"><a style="cursor:pointer;color:var(--brand);font-weight:700" onclick="LF={exam:'',unit:'${unit}',type:'',q:''};sGo('library')">📄 ${n} PDF${n>1?'s':''} for this unit →</a></p>` : ''; };
+function nextLesson(lid){
+  const unit = lid.startsWith('gen_') ? lid.slice(4) : (C.lessons.find(l=>l.id===lid)||{}).unit;
+  const ids = lessonsOf(unit).map(l=>l.id).concat(lessonQs('gen_'+unit).length ? ['gen_'+unit] : []).filter(id => lessonQs(id).length);
+  return ids[ids.indexOf(lid)+1] || '';
+}
+function qBadges(q){ return `<span class="badge c">${q.exam}</span><span class="badge">${esc(unitName(q.unit))}</span>${lessonName(q.lesson)?`<span class="badge k">🎯 ${esc(lessonName(q.lesson))}</span>`:''}<span class="badge y">${esc(q.diff)}</span>${q.source==='Real exam'?`<span class="badge r">Real exam ${esc(q.year)}</span>`:''}`; }
+function renderQ(){
+  const box = $('#pbox');
+  if(!P.pool.length){ box.innerHTML = `<p class="empty">${(P.lesson?CL.mode:PF.mode)==='wrong'?'No mistakes to fix here 🎉':P.lesson?'You answered every question in this skill 🎉':'No questions match your filters yet.'}</p>`; return; }
+  if(P.i >= P.pool.length){
+    const nx = P.lesson ? nextLesson(P.lesson) : '';
+    box.innerHTML = `<div style="text-align:center;padding:20px"><h3>${P.lesson?'Skill complete 🎉':'Set complete 🎉'}</h3><p class="muted">You got <b>${P.right}</b> out of <b>${P.done}</b> right (${pct(P.right,P.done)}%).</p><br>
+      ${P.lesson ? `<div class="filters" style="justify-content:center">
+          ${nx?`<button class="sbtn g" onclick="openSkill('${nx}','all')">Next skill: ${esc(nx.startsWith('gen_')?'General questions':lessonName(nx))} →</button>`:''}
+          ${P.right<P.done?`<button class="sbtn" onclick="openLesson('${P.lesson}','wrong')">🔁 Redo my mistakes</button>`:''}
+          <button class="sbtn" onclick="openSkill('${P.lesson}','all')">📋 See all questions</button><button class="sbtn" onclick="sGo('classified')">All skills</button></div>`
+        : `<button class="sbtn g" onclick="sPractice()">Practice again</button>`}</div>`; return;
+  }
+  const q = P.pool[P.i], p = P.picked;
+  box.innerHTML = `<div class="bar" style="height:6px;margin-bottom:12px"><i style="width:${pct(P.i+(p===null?0:1),P.pool.length)}%"></i></div>
+    <div class="navrow" style="margin:0 0 6px;align-items:center"><p class="qnum">Question ${P.i+1} of ${P.pool.length}</p>${starBtn(q.id)}</div><div>${qBadges(q)}</div>
+    <div class="qtext">${fmtText(q.text)}</div>${qImgHTML(q)}
+    ${q.options.map((o,k) => hasOpt(q,k) ? `<button class="opt ${p===null?'':k===q.answer?'ok':k===p?'no':''}" ${p===null?`onclick="pickQ(${k})"`:'disabled'}>${optInner(q,k)}</button>` : '').join('')}
+    ${p!==null ? `<div class="expl"><b>${p===q.answer?'✅ Correct!':'❌ Not quite — the answer is '+'ABCDE'[q.answer]+'.'}</b>${explBody(q)}</div>${notesHTML(q)}
+      ${p!==q.answer ? `<div class="ask"><small class="muted">📌 Saved to <b>My Mistakes</b>.</small> <button class="sbtn g" style="margin-left:6px" onclick="askHelp('${q.id}')">💬 Ask an assistant</button></div>` : ''}
+      <div class="navrow"><span class="muted">Score: ${P.right}/${P.done}</span><button class="sbtn p" onclick="P.i++;P.picked=null;renderQ()">Next →</button></div>` : ''}`;
+}
+function pickQ(k){
+  const q = P.pool[P.i]; P.picked = k; P.done++; if(k===q.answer) P.right++;
+  const a = getAtt(); a[q.id] = (k===q.answer); setAtt(a);
+  if(k!==q.answer){ const w = getWA(); w[q.id] = {ans:k, date:Date.now()}; setWA(w); }
+  sSide(); renderQ();
+}
+
+/* ---------- MY MISTAKES ---------- */
+function sMistakes(){
+  const wa = getWA(), asked = getAsked();
+  const list = myMistakes().filter(q => !MF.unit || q.unit===MF.unit);
+  $('#sMain').innerHTML = sTop('🔁 My Mistakes', 'Every question you got wrong — learn it, then fix it') + `
+    <div class="filters">
+      <select onchange="MF.unit=this.value;sMistakes()">${opts(unitOpts(me.exam==='Both'?'':me.exam,true),MF.unit)}</select>
+      ${list.length ? `<button class="sbtn g" onclick="PF={exam:'',unit:MF.unit,diff:'',mode:'wrong'};sGo('practice')">🔁 Redo ${list.length} mistake${list.length>1?'s':''}</button>` : ''}
+      <span class="muted" style="font-size:.88rem">Answer a question correctly to remove it from this list.</span>
+    </div>
+    ${list.map(q => { const w = wa[q.id], my = w ? w.ans : null, sent = asked[q.id];
+      return `<div class="panel"><div class="navrow" style="margin:0;align-items:center"><div>${qBadges(q)}</div>${starBtn(q.id)}</div>
+        <div class="qtext">${fmtText(q.text)}</div>${qImgHTML(q)}
+        ${q.options.map((o,k) => hasOpt(q,k) ? `<div class="opt ${k===q.answer?'ok':k===my?'mine':''}" style="cursor:default">${optInner(q,k)} ${k===my?' <small>← your answer</small>':''}${k===q.answer?' <small>✓ correct</small>':''}</div>` : '').join('')}
+        ${explBox(q,'Explanation')}
+        ${notesHTML(q)}
+        <div class="ask">
+          ${sent ? `<p style="margin-bottom:8px"><span class="badge c">✓ Asked on ${fmtDate(sent)}</span> <small class="muted">The assistant's answer comes to your WhatsApp and will appear here.</small></p>` : ''}
+          <textarea id="ask_${q.id}" placeholder="What didn't you understand? (optional)"></textarea>
+          <button class="sbtn g" onclick="askHelp('${q.id}')">💬 ${sent?'Ask again':'Ask an assistant'}</button>
+        </div></div>`; }).join('') || '<div class="panel"><p class="empty">No mistakes here 🎉 Keep practicing!</p></div>'}`;
+}
+/* ---------- #5 SAVED QUESTIONS ---------- */
+const getSaved = () => LS.get('bp_saved_'+me.id, {});
+function starBtn(qid){ const on = qid in getSaved(); return `<button class="sbtn" data-star="${qid}" onclick="toggleSave('${qid}')">${on?'⭐ Saved':'☆ Save for later'}</button>`; }
+function toggleSave(qid){
+  const s = getSaved(); if(qid in s) delete s[qid]; else s[qid] = Date.now(); LS.set('bp_saved_'+me.id, s);
+  if(sTab==='saved') return sSaved();
+  document.querySelectorAll(`[data-star="${qid}"]`).forEach(b => b.textContent = qid in s ? '⭐ Saved' : '☆ Save for later');
+  toast(qid in s ? 'Saved for later ⭐' : 'Removed from saved');
+}
+function sSaved(){
+  const sv = getSaved(), list = Object.keys(sv).sort((a,b)=>sv[b]-sv[a]).map(qById).filter(q => q && myEx().includes(q.exam));
+  $('#sMain').innerHTML = sTop('⭐ Saved Questions', 'Questions you want to review later') + `
+    ${list.length ? `<div class="filters"><button class="sbtn g" onclick="PF={exam:'',unit:'',diff:'',mode:'saved'};sGo('practice')">❓ Practice all ${list.length} saved</button></div>` : ''}
+    ${list.map(q => `<div class="panel"><div class="navrow" style="margin:0;align-items:center"><div>${qBadges(q)}</div><button class="sbtn d" onclick="toggleSave('${q.id}')">Remove</button></div>
+      <div class="qtext">${fmtText(q.text)}</div>${qImgHTML(q)}
+      <details style="margin:0;padding:12px 16px;background:var(--bg);border:none"><summary>👀 Show answer & explanation</summary>
+        <div style="margin-top:12px">${q.options.map((o,k) => hasOpt(q,k) ? `<div class="opt ${k===q.answer?'ok':''}" style="cursor:default">${optInner(q,k)}</div>` : '').join('')}
+        ${explBox(q,'Explanation','#fff')}${notesHTML(q)}</div>
+      </details></div>`).join('') || '<div class="panel"><p class="empty">No saved questions yet. Tap <b>☆ Save for later</b> on any question.</p></div>'}`;
+}
+
+function askHelp(qid){
+  const q = qById(qid); if(!q) return;
+  const w = getWA()[qid], el = document.getElementById('ask_'+qid), note = el ? el.value.trim() : '';
+  const my = w && hasOpt(q,w.ans) ? 'ABCDE'[w.ans]+'. '+optLabel(q,w.ans) : '-';
+  const msg = `❓ Mistake help - BioPrep Academy\nStudent: ${me.name}\nPhone: ${me.phone}\nQuestion ID: ${q.id}\nUnit: ${unitName(q.unit)}\nQuestion: ${q.text}\nMy answer: ${my}\nCorrect answer: ${'ABCDE'[q.answer]}. ${optLabel(q,q.answer)}\nMy question: ${note || 'Please explain why my answer is wrong.'}`;
+  window.open(waLink(helpNum(), msg), '_blank');
+  const a = getAsked(); a[qid] = Date.now(); LS.set('bp_asked_'+me.id, a);
+  if(sTab==='mistakes') sMistakes(); else toast('Opening WhatsApp — send the message to the assistants');
+}
+
+/* ---------- MOCKS ---------- */
+function sMocks(){
+  const res = getRes();
+  const list = C.mocks.filter(x => myEx().includes(x.exam));
+  $('#sMain').innerHTML = sTop('📝 Mock Tests', 'Full mock tests made by the academy') + `
+    <div class="list">${list.map(x => {
+      const mine = res.filter(r=>r.examId===x.id), best = mine.length ? Math.max(...mine.map(r=>pct(r.score,r.total))) : null;
+      return `<div class="item"><span class="fi">📝</span>
+        <div class="t"><b>${esc(x.title)}</b><span class="badge k">Mock</span><span class="badge c">${x.exam}</span>
+          <br><small>${x.qids.length} questions · ${x.minutes?x.minutes+' min':'no time limit'} · ${mine.length} attempt${mine.length===1?'':'s'}${best!==null?` · Best: <b>${best}%</b>`:''}</small></div>
+        <div class="acts"><button class="sbtn" onclick="document.getElementById('lb_${x.id}').classList.toggle('hidden')">🏆 Top 10</button>${x.pdf?`<a class="sbtn" href="${esc(x.pdf)}" target="_blank" rel="noopener">📄 Paper</a>`:''}
+          ${x.qids.length?`<button class="sbtn g" onclick="openTest('${x.id}')">Start →</button>`:''}</div>
+        <div id="lb_${x.id}" class="hidden" style="width:100%;border-top:1px solid var(--line);padding-top:10px"><b>🏆 Leaderboard</b>${boardHTML(x.id)}</div></div>`;
+    }).join('') || '<p class="empty">No mock tests yet. Check back soon!</p>'}</div>`;
+}
+function openTest(id){
+  const ex = testById(id); if(!ex) return;
+  if(!ex.instructions) return startExam(id);
+  $('#sMain').innerHTML = sTop(esc(ex.title), kindIcon(ex.kind)+' '+kindName(ex.kind)) + `
+    <div class="panel"><h3>📋 Before you start</h3>
+      <p>${fmtText(ex.instructions)}</p><br>
+      <div class="who"><span>❓ <b>${ex.qids.length}</b> questions</span><span>⏱️ <b>${ex.minutes?ex.minutes+' minutes':'No time limit'}</b></span></div>
+      <button class="sbtn g" onclick="startExam('${ex.id}')">Start now →</button> <button class="sbtn" onclick="sRender()">Back</button>
+    </div>`;
+}
+
+function sExams(){
+  const res = getRes();
+  const list = C.exams.filter(x => myEx().includes(x.exam) && (!XF.exam||x.exam===XF.exam) && (!XF.kind||x.kind===XF.kind));
+  $('#sMain').innerHTML = sTop('⏱️ Exams', 'Classified exams by unit and real past exams') + `
+    <div class="filters">
+      <select onchange="XF.exam=this.value;sExams()">${examFilterOpts(XF.exam)}</select>
+      <select onchange="XF.kind=this.value;sExams()">${opts([['','All exams'],['Classified','🗂️ Classified'],['Real','🏆 Real exams']],XF.kind)}</select>
+    </div>
+    <div class="list">${list.map(x => {
+      const mine = res.filter(r=>r.examId===x.id), best = mine.length ? Math.max(...mine.map(r=>pct(r.score,r.total))) : null;
+      return `<div class="item"><span class="fi">${x.kind==='Real'?'🏆':'🗂️'}</span>
+        <div class="t"><b>${esc(x.title)}</b>
+          <span class="badge ${x.kind==='Real'?'r':'k'}">${x.kind==='Real'?'Real exam':'Classified'}</span><span class="badge c">${x.exam}</span>
+          <span class="badge">${esc(unitName(x.unit))}</span>${x.year?`<span class="badge y">${esc(x.year)}</span>`:''}
+          <br><small>${x.qids.length} questions · ${x.minutes?x.minutes+' min':'no time limit'}${best!==null?` · Best: <b>${best}%</b>`:''}</small></div>
+        <div class="acts">${x.pdf?`<a class="sbtn" href="${esc(x.pdf)}" target="_blank" rel="noopener">📄 Paper</a>`:''}
+          ${x.qids.length?`<button class="sbtn g" onclick="openTest('${x.id}')">Start →</button>`:''}</div></div>`;
+    }).join('') || '<p class="empty">No exams here yet.</p>'}</div>`;
+}
+const fmtTime = ms => { const s = Math.max(0,Math.ceil(ms/1000)); return Math.floor(s/60)+':'+String(s%60).padStart(2,'0'); };
+function startExam(id){
+  const ex = testById(id); if(!ex) return;
+  const qs = ex.qids.map(qById).filter(Boolean);
+  if(!qs.length) return toast('This exam has no questions yet.');
+  E = {ex, qs, i:0, ans:Array(qs.length).fill(null), start:Date.now(), end: ex.minutes ? Date.now()+ex.minutes*60000 : 0};
+  if(E.end) E.t = setInterval(tick, 1000);
+  renderRun();
+}
+function tick(){
+  if(!E) return;
+  const left = E.end - Date.now(), el = $('#timer');
+  if(el) el.textContent = fmtTime(left);
+  if(left <= 0){ toast("Time's up!"); submitExam(true); }
+}
+function renderRun(){
+  const {ex, qs, i, ans} = E, q = qs[i];
+  $('#sMain').innerHTML = `<div class="topbar"><div><p class="muted">${kindIcon(ex.kind)} ${kindName(ex.kind)}</p><h1>${esc(ex.title)}</h1></div>${E.end?`<span class="timer" id="timer">${fmtTime(E.end-Date.now())}</span>`:''}</div>
+    <div class="panel">
+      <div class="dots">${qs.map((_,k)=>`<button class="${ans[k]!==null?'ans':''} ${k===i?'cur':''}" onclick="E.i=${k};renderRun()">${k+1}</button>`).join('')}</div>
+      <p class="qnum">Question ${i+1} of ${qs.length}</p>
+      <div class="qtext">${fmtText(q.text)}</div>${qImgHTML(q)}
+      ${q.options.map((o,k)=> hasOpt(q,k) ? `<button class="opt ${ans[i]===k?'sel':''}" onclick="E.ans[E.i]=${k};renderRun()">${optInner(q,k)}</button>` : '').join('')}
+      <div class="navrow">
+        <button class="sbtn" ${i?'':'disabled'} onclick="E.i--;renderRun()">← Previous</button>
+        ${i<qs.length-1 ? `<button class="sbtn p" onclick="E.i++;renderRun()">Next →</button>` : `<button class="sbtn g" onclick="submitExam()">Submit exam ✓</button>`}
+      </div>
+    </div>
+    <p style="text-align:center"><button class="sbtn" onclick="submitExam()">Submit now</button></p>`;
+}
+function submitExam(auto){
+  if(!E) return;
+  if(!auto){ const un = E.ans.filter(a=>a===null).length; if(!confirm(un ? `You have ${un} unanswered question(s). Submit anyway?` : 'Submit your exam?')) return; }
+  clearInterval(E.t);
+  const {ex, qs, ans} = E, att = getAtt(), wa = getWA(); let score = 0;
+  qs.forEach((q,k) => { const ok = ans[k]===q.answer; if(ok) score++; if(ans[k]!==null){ att[q.id] = ok; if(!ok) wa[q.id] = {ans:ans[k], date:Date.now()}; } });
+  setAtt(att); setWA(wa);
+  const r = {id:uid(), examId:ex.id, exam:ex.exam, title:ex.title, kind:ex.kind, score, total:qs.length, date:Date.now(), secs:Math.round((Date.now()-E.start)/1000), qids:qs.map(q=>q.id), ans};
+  const R = getRes(); R.unshift(r); setRes(R);
+  E = null; sTab = 'results'; sSide(); showResult(r.id);
+}
+function showResult(rid){
+  const r = getRes().find(x=>x.id===rid); if(!r) return;
+  const p = pct(r.score, r.total), col = p>=70 ? 'var(--brand)' : p>=50 ? '#f59e0b' : '#ef4444';
+  const msg = `BioPrep Academy result\nStudent: ${me.name}\nExam: ${r.title}\nScore: ${r.score}/${r.total} (${p}%)\nDate: ${fmtDate(r.date)}`;
+  $('#sMain').innerHTML = sTop('📈 Exam Result', esc(r.title)) + `
+    <div class="panel" style="text-align:center">
+      <div class="ring" style="background:conic-gradient(${col} ${p}%, var(--line) 0)"><span>${p}%</span></div>
+      <h3>${r.score} out of ${r.total} correct</h3>
+      <p class="muted">${fmtDate(r.date)} · ${Math.floor(r.secs/60)} min ${r.secs%60} s</p>
+      ${(r.kind==='Mock'||r.kind==='Real') && (r.exam||(testById(r.examId)||{}).exam) ? (() => { const ex = r.exam||testById(r.examId).exam, e = estScore(ex,p); return `<p style="margin-top:6px">📈 Estimated ${ex} score: <b>${e.lo}–${e.hi}</b></p>`; })() : ''}<br>
+      <div class="filters" style="justify-content:center">
+        ${r.kind==='Mock' ? `<button class="sbtn g" onclick="certificate('${r.id}')">🎓 Download certificate</button>` : ''}
+        <a class="sbtn ${r.kind==='Mock'?'':'g'}" target="_blank" href="${waLink(C.settings.whatsapp, msg)}">💬 Send result on WhatsApp</a>
+        ${testById(r.examId)?`<button class="sbtn" onclick="openTest('${r.examId}')">↻ Retake</button>`:''}
+        ${r.score<r.total?`<button class="sbtn" onclick="sGo('mistakes')">🔁 My mistakes</button>`:''}
+        <button class="sbtn" onclick="sGo('${r.kind==='Mock'?'mocks':'exams'}')">All ${r.kind==='Mock'?'mocks':'exams'}</button>
+      </div>
+    </div>
+    ${r.kind==='Mock' ? `<div class="panel"><h3>🏆 Join the leaderboard</h3>
+      <p class="muted" style="margin-bottom:12px">Send your score to the academy. The top 10 for each mock appear on the Mocks page.</p>
+      <div class="row"><div><label>Name to show on the leaderboard</label><input id="lbName" value="${esc(shortName(me.name))}"></div>
+      <div style="display:flex;align-items:flex-end"><button class="sbtn g" style="margin-bottom:14px" onclick="sendBoard('${r.id}')">🏆 Send my score</button></div></div>
+    </div>` : ''}
+    <div class="panel"><h3>🔍 Review answers</h3>
+      ${r.qids.map((qid,k) => { const q = C.questions.find(x=>x.id===qid); if(!q) return ''; const a = r.ans[k];
+        return `<div style="padding:16px 0;border-bottom:1px solid var(--line)">
+          <div class="navrow" style="margin:0;align-items:center"><p class="qnum">Question ${k+1} · ${a===q.answer?'✅ Correct':a===null?'⚪ Not answered':'❌ Wrong'}</p>${starBtn(q.id)}</div>
+          <div class="qtext" style="margin:6px 0 12px">${fmtText(q.text)}</div>${qImgHTML(q)}
+          ${q.options.map((o,j)=> hasOpt(q,j) ? `<div class="opt ${j===q.answer?'ok':j===a?'no':''}" style="cursor:default">${optInner(q,j)}</div>` : '').join('')}
+          ${explBox(q,'Explanation')}${notesHTML(q)}
+          ${a!==null && a!==q.answer ? `<div class="ask"><button class="sbtn g" onclick="askHelp('${q.id}')">💬 Ask an assistant about this</button></div>` : ''}</div>`; }).join('')}
+    </div>`;
+  window.scrollTo(0,0);
+}
+/* ---------- #9 CERTIFICATE ---------- */
+async function certificate(rid){
+  const r = getRes().find(x=>x.id===rid); if(!r) return;
+  try{ await document.fonts.ready; }catch(e){}
+  const W = 1600, H = 1130, c = document.createElement('canvas'); c.width = W; c.height = H;
+  const x = c.getContext('2d'), F = "'Plus Jakarta Sans', Arial, sans-serif", p = pct(r.score, r.total);
+  x.fillStyle = '#06110d'; x.fillRect(0,0,W,H);
+  let g = x.createRadialGradient(180,120,10,180,120,600); g.addColorStop(0,'rgba(16,185,129,.55)'); g.addColorStop(1,'rgba(16,185,129,0)'); x.fillStyle = g; x.fillRect(0,0,W,H);
+  g = x.createRadialGradient(W-160,H-120,10,W-160,H-120,620); g.addColorStop(0,'rgba(6,182,212,.5)'); g.addColorStop(1,'rgba(6,182,212,0)'); x.fillStyle = g; x.fillRect(0,0,W,H);
+  x.fillStyle = '#ffffff'; roundRect(x,60,60,W-120,H-120,40); x.fill();
+  g = x.createLinearGradient(0,0,W,0); g.addColorStop(0,'#10b981'); g.addColorStop(1,'#06b6d4');
+  x.strokeStyle = g; x.lineWidth = 8; roundRect(x,90,90,W-180,H-180,30); x.stroke();
+  x.textAlign = 'center'; x.fillStyle = '#0c1a14';
+  x.font = `800 44px ${F}`; x.fillText('🧬 BioPrep Academy', W/2, 210);
+  x.fillStyle = g; x.font = `800 92px ${F}`; x.fillText('Certificate of Completion', W/2, 340);
+  x.fillStyle = '#5f6f68'; x.font = `500 34px ${F}`; x.fillText('This certifies that', W/2, 430);
+  x.fillStyle = '#0c1a14'; x.font = `800 84px ${F}`; x.fillText(fit(x, me.name, W-400), W/2, 540);
+  x.strokeStyle = '#e3ebe7'; x.lineWidth = 3; x.beginPath(); x.moveTo(W/2-380,575); x.lineTo(W/2+380,575); x.stroke();
+  x.fillStyle = '#5f6f68'; x.font = `500 34px ${F}`; x.fillText('has successfully completed', W/2, 650);
+  x.fillStyle = '#0c1a14'; x.font = `700 48px ${F}`; x.fillText(fit(x, r.title, W-360), W/2, 720);
+  x.fillStyle = g; roundRect(x, W/2-190, 770, 380, 110, 55); x.fill();
+  x.fillStyle = '#fff'; x.font = `800 56px ${F}`; x.fillText(`Score: ${p}%`, W/2, 845);
+  x.fillStyle = '#5f6f68'; x.font = `500 30px ${F}`; x.fillText(`${r.score} of ${r.total} correct  ·  ${fmtDate(r.date)}`, W/2, 950);
+  const a = document.createElement('a'); a.href = c.toDataURL('image/png');
+  a.download = 'certificate-' + r.title.replace(/[^a-z0-9]+/gi,'-').toLowerCase() + '.png'; document.body.appendChild(a); a.click(); a.remove();
+  toast('Certificate downloaded 🎓 — share it!');
+}
+function roundRect(x, X, Y, w, h, rad){ x.beginPath(); x.moveTo(X+rad,Y); x.arcTo(X+w,Y,X+w,Y+h,rad); x.arcTo(X+w,Y+h,X,Y+h,rad); x.arcTo(X,Y+h,X,Y,rad); x.arcTo(X,Y,X+w,Y,rad); x.closePath(); }
+function fit(x, t, max){ while(x.measureText(t).width > max && t.length > 4) t = t.slice(0,-2); return t; }
+
+/* ---------- #14 LEADERBOARD (via WhatsApp, admin posts it) ---------- */
+const shortName = n => { const p = String(n).trim().split(/\s+/); return p[0] + (p[1] ? ' ' + p[1].charAt(0).toUpperCase() + '.' : ''); };
+function sendBoard(rid){
+  const r = getRes().find(x=>x.id===rid), name = (v('#lbName').trim() || shortName(me.name)).slice(0,30);
+  const msg = `🏆 Leaderboard - BioPrep Academy\nStudent: ${name}\nMock ID: ${r.examId}\nMock: ${r.title}\nScore: ${pct(r.score,r.total)}%\nDate: ${fmtDate(r.date)}`;
+  window.open(waLink(C.settings.whatsapp, msg), '_blank'); toast('Opening WhatsApp — send it to the academy');
+}
+const boardOf = id => ((C.boards||{})[id] || []).slice().sort((a,b) => b.score-a.score || a.date-b.date);
+function boardHTML(id){
+  const b = boardOf(id).slice(0,10), mine = shortName(me ? me.name : '');
+  if(!b.length) return '<p class="muted">No scores posted yet. Be the first — finish the mock and send your score!</p>';
+  return b.map((e,i) => `<div class="prow" style="grid-template-columns:44px 1fr auto;${e.name===mine?'background:#ecfdf5;border-radius:10px;padding:8px':''}"><span style="font-size:1.2rem">${['🥇','🥈','🥉'][i]||'#'+(i+1)}</span><span>${esc(e.name)}${e.name===mine?' <small class="muted">(you?)</small>':''}</span><b>${e.score}%</b></div>`).join('');
+}
+
+function sResults(){
+  const res = getRes();
+  $('#sMain').innerHTML = sTop('📈 My Results', 'All your exam attempts') + `
+    <div class="list">${res.map(r => `<div class="item"><span class="fi">${kindIcon(r.kind)}</span>
+      <div class="t"><b>${esc(r.title)}</b><span class="badge ${r.kind==='Real'?'r':'k'}">${kindName(r.kind)}</span><br><small>${fmtDate(r.date)} · ${r.score}/${r.total}</small></div>
+      <span class="badge ${pct(r.score,r.total)>=70?'':'r'}" style="font-size:.9rem">${pct(r.score,r.total)}%</span>
+      <button class="sbtn" onclick="showResult('${r.id}')">Review</button></div>`).join('') || '<p class="empty">No results yet. Take an exam to see it here.</p>'}</div>`;
+}
+
+/* =====================================================================
+   ADMIN PANEL
+   ===================================================================== */
+let aTab = 'overview', ED = {}, AF = {pExam:'',qExam:'',qUnit:'',qDiff:'',qSearch:'',xExam:'',qSkill:''};
+let lastQ = {exam:'EST',unit:'',lesson:'',diff:'Easy',source:'Practice',year:''};
+function openAdmin(){ show('vAdmin'); aTab='overview'; aRender(); }
+function aGo(k){
+  if(k==='logout'){ if(SYNC!=='ok' && !confirm('Some changes are not saved yet. Logout anyway?')) return; clearTok(); location.reload(); return; }
+  if(k==='students') refreshStudents().then(() => { if(aTab==='students') aRender(); });
+  if(k!==aTab) ED = {};
+  aTab = k; aRender();
+}
+function aRender(){
+  const items = [['overview','📊','Overview'],['units','🗂️','Units'],['pdfs','📄','PDFs'],['questions','❓','Questions'],['exams','⏱️','Exams'],['mocks','📝','Mocks'],['board','🏆','Leaderboard'],['assistants','👩‍🏫','Assistants'],['students','🎓','Students'],['settings','⚙️','Settings'],['publish','💾','Backup']];
+  const pc = pendingCount();
+  $('#aSide').innerHTML = `<a class="logo">🧬 Admin<b>Panel</b></a>` +
+    items.map(([k,ic,l]) => `<button class="${k===aTab?'active':''}" onclick="aGo('${k}')"><span>${ic}</span><span>${l}</span>${k==='students'&&pc?`<span class="cnt">${pc}</span>`:''}</button>`).join('') +
+    `<div class="grow"></div><button onclick="previewStudent()"><span>👁️</span><span>Open student panel</span></button><button onclick="aGo('logout')"><span>🚪</span><span>Logout</span></button>`;
+  ({overview:aOverview, units:aUnits, pdfs:aPdfs, questions:aQuestions, exams:()=>aTests('exams'), mocks:()=>aTests('mocks'), board:aBoard, assistants:aAssistants, students:aStudents, settings:aSettings, publish:aPublish})[aTab]();
+}
+const aTop = (t,s) => `<div class="topbar"><div><p class="muted">${s||'Admin panel'}</p><h1>${t}</h1></div></div>` +
+  `<div id="syncSt" style="margin:-6px 0 14px">${syncHTML()}</div>`;
+function upsert(k,o){ const i = C[k].findIndex(x=>x.id===o.id); if(i>=0) C[k][i]=o; else if(k==='questions') C[k].push(o); else C[k].unshift(o); saveDraft(); }
+function fillLessons(sel, unit){ const el = $(sel); if(el) el.innerHTML = opts([['','— No skill (General) —'], ...lessonsOf(unit).map(l=>[l.id,l.name])]); }
+function del(k,id){
+  if(!confirm('Delete this item?')) return;
+  C[k] = C[k].filter(x=>x.id!==id);
+  if(k==='questions') allTests().forEach(x => x.qids = x.qids.filter(q=>q!==id));
+  saveDraft(); ED = {}; aRender(); toast('Deleted');
+}
+function fillUnits(sel, exam, all){ $(sel).innerHTML = opts(unitOpts(exam, all)); }
+
+function aOverview(){
+  const active = C.students.filter(r=>['active','soon'].includes(stState(r))).length, pc = pendingCount(), soon = C.students.filter(r=>stState(r)==='soon').length;
+  $('#aMain').innerHTML = aTop('📊 Overview') + (!(C.settings.notifyEmail||'').trim() && !waOk() ? `<div class="notice">⚠️ <b>Registrations can't reach you yet.</b> Add your email (automatic) and WhatsApp number in <a style="text-decoration:underline;cursor:pointer" onclick="aGo('settings')">Settings</a>, then publish.</div>` : '') + (pc||soon ? `<div class="notice" style="background:#eef6ff;border-color:#cfe3ff;color:#1e3a8a">🎓 ${pc?`<b>${pc} student request${pc>1?'s':''}</b> waiting for approval. `:''}${soon?`<b>${soon}</b> account${soon>1?'s':''} closing within 7 days. `:''}<a style="text-decoration:underline;cursor:pointer" onclick="SF='${pc?'pending':'soon'}';aGo('students')">Open Students</a></div>` : '') + `
+    <div class="kpis">
+      <div class="kpi g"><b>${C.questions.length}</b><span>Questions</span></div>
+      <div class="kpi"><b>${C.pdfs.length}</b><span>PDFs</span></div>
+      <div class="kpi"><b>${C.exams.filter(x=>x.kind==='Classified').length} / ${C.exams.filter(x=>x.kind==='Real').length}</b><span>Classified / Real exams</span></div>
+      <div class="kpi d"><b>${active}</b><span>Active students</span></div>
+      <div class="kpi"><b>${C.mocks.length}</b><span>Mock tests</span></div>
+      <div class="kpi"><b>${C.assistants.length}</b><span>Assistants</span></div>
+      <div class="kpi"><b>${C.questions.reduce((s,q)=>s+(q.notes||[]).length,0)}</b><span>Assistant explanations</span></div>
+      <div class="kpi"><b>${C.units.length}</b><span>Units</span></div>
+    </div>
+    <div class="grid2" style="gap:18px">
+      <div class="panel"><h3>Content per unit</h3>
+        ${C.units.map(u => `<div class="prow" style="grid-template-columns:1fr auto auto"><span><span class="badge c">${u.exam}</span> ${esc(u.name)}</span><small class="muted">${C.pdfs.filter(p=>p.unit===u.id).length} PDFs</small><small class="muted">${C.questions.filter(q=>q.unit===u.id).length} Qs</small></div>`).join('')}
+      </div>
+      <div class="panel"><h3>How to add content</h3>
+        <ol style="padding-left:20px;line-height:2">
+          <li>Add your <a style="color:var(--brand);font-weight:700;cursor:pointer" onclick="aGo('units')">units</a></li>
+          <li>Add <a style="color:var(--brand);font-weight:700;cursor:pointer" onclick="aGo('pdfs')">PDFs</a> and <a style="color:var(--brand);font-weight:700;cursor:pointer" onclick="aGo('questions')">questions</a></li>
+          <li>Build <a style="color:var(--brand);font-weight:700;cursor:pointer" onclick="aGo('exams')">classified & real exams</a> and <a style="color:var(--brand);font-weight:700;cursor:pointer" onclick="aGo('mocks')">mock tests</a></li>
+          <li>Add your <a style="color:var(--brand);font-weight:700;cursor:pointer" onclick="aGo('assistants')">assistants</a> to explain student mistakes</li>
+          <li>Approve paying <a style="color:var(--brand);font-weight:700;cursor:pointer" onclick="aGo('students')">students</a> and set their account period</li>
+          <li>Everything you change is <b>saved automatically</b> — students see it right away</li>
+        </ol>
+      </div>
+    </div>`;
+}
+
+function aUnits(){
+  $('#aMain').innerHTML = aTop('🗂️ Units & Skills', 'Units hold skills; each skill holds its questions') + `
+    <div class="panel"><h3>Add a unit</h3>
+      <div class="grid3"><div><label>Exam</label><select id="fuE">${opts(['EST','ACT'])}</select></div>
+      <div style="grid-column:span 2"><label>Unit name</label><input id="fuN" placeholder="e.g. Cell Biology"></div></div>
+      <button class="sbtn g" onclick="addUnit()">+ Add unit</button>
+    </div>
+    ${['EST','ACT'].map(ex => `<div class="panel"><h3>${ex}</h3><div class="list">${C.units.filter(u=>u.exam===ex).map(u => `
+      <div class="item" style="flex-direction:column;align-items:stretch">
+        <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><div class="t"><b>${esc(u.name)}</b><small>${lessonsOf(u.id).length} skills · ${C.questions.filter(q=>q.unit===u.id).length} questions · ${C.pdfs.filter(p=>p.unit===u.id).length} PDFs</small></div>
+          <div class="acts"><button class="sbtn" onclick="renameUnit('${u.id}')">Rename</button><button class="sbtn d" onclick="delUnit('${u.id}')">Delete</button></div></div>
+        <div style="border-top:1px solid var(--line);padding-top:10px">
+          ${lessonsOf(u.id).map((l,i) => `<div class="prow" style="grid-template-columns:1fr auto auto;padding:4px 0"><span>🎯 ${i+1}. ${esc(l.name)} <small class="muted">· ${lessonQs(l.id).length} questions</small></span>
+            <button class="sbtn" style="padding:5px 12px" onclick="renameLesson('${l.id}')">Rename</button><button class="sbtn d" style="padding:5px 12px" onclick="delLesson('${l.id}')">Delete</button></div>`).join('')}
+          <div style="display:flex;gap:8px;margin-top:8px"><input id="nl_${u.id}" placeholder="New skill name, e.g. Identify cell organelles" style="margin:0"><button class="sbtn p" style="flex:none" onclick="addLesson('${u.id}')">+ Skill</button></div>
+        </div>
+      </div>`).join('') || '<p class="muted">No units yet.</p>'}</div></div>`).join('')}`;
+}
+function addLesson(unit){ const el = document.getElementById('nl_'+unit), n = el.value.trim(); if(!n) return toast('Write a skill name'); C.lessons.push({id:uid(), unit, name:n}); saveDraft(); aRender(); toast('Skill added'); }
+function renameLesson(id){ const l = C.lessons.find(x=>x.id===id), n = prompt('New skill name:', l.name); if(n && n.trim()){ l.name = n.trim(); saveDraft(); aRender(); } }
+function delLesson(id){
+  const n = lessonQs(id).length;
+  if(!confirm(n ? `This skill has ${n} question(s). They will move to "General questions" of the unit. Delete the skill?` : 'Delete this skill?')) return;
+  C.questions.forEach(q => { if(q.lesson===id) q.lesson = ''; }); C.lessons = C.lessons.filter(l=>l.id!==id); saveDraft(); aRender();
+}
+function addUnit(){ const n = v('#fuN').trim(); if(!n) return toast('Write a unit name'); C.units.push({id:uid(),exam:v('#fuE'),name:n}); saveDraft(); aRender(); toast('Unit added'); }
+function renameUnit(id){ const u = C.units.find(x=>x.id===id), n = prompt('New name:', u.name); if(n && n.trim()){ u.name = n.trim(); saveDraft(); aRender(); } }
+function delUnit(id){
+  if(C.pdfs.some(p=>p.unit===id) || C.questions.some(q=>q.unit===id)) return alert('This unit still has PDFs or questions. Move or delete them first.');
+  if(!confirm('Delete this unit?')) return;
+  C.units = C.units.filter(u=>u.id!==id); C.lessons = C.lessons.filter(l=>l.unit!==id); C.exams.forEach(x=>{ if(x.unit===id) x.unit=''; }); saveDraft(); aRender();
+}
+
+function aPdfs(){
+  const ed = C.pdfs.find(p=>p.id===ED.pdf) || {exam:'EST',unit:'',type:'Notes',title:'',url:''};
+  const list = C.pdfs.filter(p=>!AF.pExam||p.exam===AF.pExam);
+  $('#aMain').innerHTML = aTop('📄 PDFs', 'Notes, homework, summaries and real exam papers') + `
+    <div class="panel"><h3>${ED.pdf?'✏️ Edit PDF':'+ Add a PDF'}</h3>
+      <label>Title</label><input id="fpT" value="${esc(ed.title)}" placeholder="e.g. Genetics — Homework 2">
+      <label>PDF link</label><input id="fpL" value="${esc(ed.url)}" placeholder="https://drive.google.com/...  or  pdfs/genetics-hw2.pdf">
+      <p class="hint">Use a Google Drive link (set to "Anyone with the link"), or upload the PDF to a <b>pdfs</b> folder in your GitHub repo and write <b>pdfs/file-name.pdf</b>.</p>
+      <div class="grid3">
+        <div><label>Exam</label><select id="fpE" onchange="fillUnits('#fpU',this.value)">${opts(['EST','ACT'],ed.exam)}</select></div>
+        <div><label>Unit</label><select id="fpU">${opts(unitOpts(ed.exam),ed.unit)}</select></div>
+        <div><label>Type</label><select id="fpTy">${opts(PDF_TYPES,ed.type)}</select></div>
+      </div>
+      <button class="sbtn g" onclick="savePdf()">${ED.pdf?'Save changes':'+ Add PDF'}</button>
+      ${ED.pdf?`<button class="sbtn" onclick="ED={};aRender()">Cancel</button>`:''}
+    </div>
+    <div class="panel"><h3>All PDFs (${list.length})</h3>
+      <div class="filters"><select onchange="AF.pExam=this.value;aRender()">${opts([['','All exams'],'EST','ACT'],AF.pExam)}</select></div>
+      <div class="list">${list.map(p => `<div class="item"><span class="fi">📄</span>
+        <div class="t"><b>${esc(p.title)}</b><span class="badge c">${p.exam}</span><span class="badge">${esc(unitName(p.unit))}</span><span class="badge y">${esc(p.type)}</span>${p.url?'':'<span class="badge r">no link</span>'}</div>
+        <div class="acts">${p.url?`<a class="sbtn" href="${esc(p.url)}" target="_blank" rel="noopener">Open</a>`:''}<button class="sbtn" onclick="ED={pdf:'${p.id}'};aRender()">Edit</button><button class="sbtn d" onclick="del('pdfs','${p.id}')">Delete</button></div></div>`).join('') || '<p class="muted">No PDFs yet.</p>'}</div>
+    </div>`;
+}
+function savePdf(){
+  const o = {id:ED.pdf||uid(), title:v('#fpT').trim(), url:v('#fpL').trim(), exam:v('#fpE'), unit:v('#fpU'), type:v('#fpTy')};
+  if(!o.title) return toast('Add a title');
+  if(!o.unit) return toast('Add a unit first (Units page)');
+  upsert('pdfs', o); ED = {}; aRender(); toast('PDF saved');
+}
+
+function skillInfo(sid){
+  if(!sid) return null;
+  if(sid.startsWith('gen_')){ const u = C.units.find(x=>x.id===sid.slice(4)); return u ? {id:sid, name:'General questions', unit:u.id, exam:u.exam, lesson:''} : null; }
+  const l = C.lessons.find(x=>x.id===sid); if(!l) return null; const u = C.units.find(x=>x.id===l.unit) || {};
+  return {id:sid, name:l.name, unit:l.unit, exam:u.exam||'EST', lesson:l.id};
+}
+const photoCount = q => (q.img?1:0) + (q.optImgs||[]).filter(Boolean).length + (q.explImg?1:0);
+function aQuestions(){
+  const sk = skillInfo(AF.qSkill); if(AF.qSkill && !sk) AF.qSkill = '';
+  const skName = sk ? sk.name : '';
+  if(ED.q || ED.add){
+    const base = Object.assign({}, lastQ, sk ? {exam:sk.exam, unit:sk.unit, lesson:sk.lesson} : {});
+    const ed = C.questions.find(q=>q.id===ED.q) || Object.assign({text:'',img:'',options:['','','','',''],answer:0,explanation:''}, base);
+    if(!IMG || IMG.for !== (ED.q||'new')) IMG = {for:ED.q||'new', q:ed.img||'', o:[0,1,2,3,4].map(k=>optImg(ed,k)), x:ed.explImg||''};
+    IMGACT = 'q';
+    $('#aMain').innerHTML = aTop('❓ Questions', sk ? '🎯 ' + esc(sk.name) + ' · ' + esc(unitName(sk.unit)) : 'Your classified question bank') + `
+    <div class="panel"><div class="navrow" style="margin:0 0 14px;align-items:center"><h3 style="margin:0">${ED.q?'✏️ Edit question':'+ Add a question'}${skName?` <small class="muted" style="font-weight:600">· ${esc(skName)}</small>`:''}</h3><button class="sbtn" onclick="ED={};IMG=null;aRender()">← Back${AF.qSkill?' to the skill':''}</button></div>
+      <div class="grid3">
+        <div><label>Exam</label><select id="fqE" onchange="fillUnits('#fqU',this.value);fillLessons('#fqL',v('#fqU'))">${opts(['EST','ACT'],ed.exam)}</select></div>
+        <div><label>Unit</label><select id="fqU" onchange="fillLessons('#fqL',this.value)">${opts(unitOpts(ed.exam),ed.unit)}</select></div>
+        <div><label>Skill</label><select id="fqL">${opts([['','— No skill (General) —'], ...lessonsOf(ed.unit || (unitOpts(ed.exam)[0]||[])[0]).map(l=>[l.id,l.name])], ed.lesson||'')}</select></div>
+        <div><label>Difficulty</label><select id="fqD">${opts(DIFFS,ed.diff)}</select></div>
+        <div><label>Source</label><select id="fqS">${opts(['Practice','Real exam'],ed.source)}</select></div>
+        <div><label>Real exam year / session</label><input id="fqY" value="${esc(ed.year)}" placeholder="e.g. June 2025"></div>
+      </div>
+      <details style="margin:0 0 14px;padding:12px 16px;background:#eef6ff;border:1px solid #cfe3ff">
+        <summary>📋 Copy & paste a whole question to fill this form</summary>
+        <p class="hint" style="margin:10px 0">Copy a question from Word, a PDF or WhatsApp and paste it here. Lines starting with A) B) C) D) E) become the options; “Answer: B” and “Explanation:” are optional.</p>
+        <textarea id="fqPaste" style="background:#fff;min-height:110px" placeholder="Which organelle makes proteins?&#10;A) Ribosome&#10;B) Lysosome&#10;C) Vacuole&#10;D) Nucleolus&#10;Answer: A"></textarea>
+        <button class="sbtn p" onclick="smartFill()">✨ Fill the form</button>
+      </details>
+      <p class="hint" style="margin:0 0 12px">🖼️ <b>To add a photo:</b> copy it (screenshot or picture), click the box where it belongs, then press <b>Ctrl+V</b> (on Mac ⌘+V). You can also drag a photo in, upload one, or paste while typing in an answer box to attach it to that answer.</p>
+      <label>Question</label><textarea id="fqT" onfocus="setAct('q')">${esc(ed.text)}</textarea>
+      ${imgBox('q')}
+      <div class="grid2">${[0,1,2,3,4].map(k=>`<div><label>Option ${'ABCDE'[k]}</label><input id="fqO${k}" value="${esc(ed.options[k])}" onfocus="setAct('o${k}')" placeholder="${k===4?'Optional — leave empty for 4 choices':'Text, a photo, or both'}">${imgBox('o'+k)}</div>`).join('')}</div>
+      <div class="grid3"><div><label>Correct answer</label><select id="fqA">${opts([[0,'A'],[1,'B'],[2,'C'],[3,'D'],[4,'E']],ed.answer)}</select></div></div>
+      <label>Explanation</label><textarea id="fqX" style="min-height:70px" onfocus="setAct('x')">${esc(ed.explanation)}</textarea>
+      ${imgBox('x')}
+      ${(ed.notes||[]).length ? `<label>Assistant explanations attached to this question</label>${ed.notes.map(n=>`<div class="anote"><b>👩‍🏫 ${esc(n.name)}</b> <small>${fmtDate(n.date)}</small> <button class="sbtn d" style="float:right;padding:4px 12px" onclick="delNote('${ed.id}','${n.id}')">Remove</button><p>${fmtText(n.text)}</p></div>`).join('')}<br>` : ''}
+      <button class="sbtn g" onclick="saveQ()">${ED.q?'💾 Save changes':'+ Add question'}</button>
+      ${ED.q?'':`<button class="sbtn p" onclick="saveQ(true)">+ Add & add another</button>`}
+      <button class="sbtn" onclick="ED={};IMG=null;aRender()">Cancel</button>
+      <details style="margin-top:18px;background:var(--bg);border:none">
+        <summary>📋 Add many questions at once (paste)</summary>
+        <p>Uses the exam, unit, difficulty and source chosen above. Leave an empty line between questions. Format:</p>
+        <pre class="expl" style="white-space:pre-wrap;font-size:.85rem">Q: Which organelle makes proteins?
+A) Ribosome
+B) Lysosome
+C) Vacuole
+D) Nucleolus
+Answer: A
+Explanation: Ribosomes translate mRNA into proteins.</pre><br>
+        <textarea id="bulkT" style="min-height:160px;background:#fff" placeholder="Paste questions here..."></textarea>
+        <button class="sbtn p" onclick="bulkAdd()">Import questions</button>
+      </details>
+    </div>
+`;
+    return;
+  }
+  if(sk) return aSkillView(sk);
+  const ex = AF.qExam, srch = (AF.qSearch||'').trim().toLowerCase();
+  const head = `<div class="filters">
+      <select onchange="AF.qExam=this.value;aRender()">${opts([['','EST + ACT'],'EST','ACT'],ex)}</select>
+      <input placeholder="🔍 Search all questions (text or ID)" style="min-width:260px" value="${esc(AF.qSearch||'')}" onchange="AF.qSearch=this.value;aRender()">
+      <button class="sbtn g" onclick="ED={add:true};IMG=null;aRender()">+ Add a question</button>
+      <button class="sbtn" onclick="aGo('units')">🎯 Add / edit skills</button>
+    </div>`;
+  if(srch){
+    const found = C.questions.filter(q => (!ex||q.exam===ex) && (q.text.toLowerCase().includes(srch) || q.id.toLowerCase()===srch));
+    $('#aMain').innerHTML = aTop('❓ Questions', 'Search results') + head + `<div class="panel"><h3>${found.length} question${found.length===1?'':'s'} found <button class="sbtn" style="float:right" onclick="AF.qSearch='';aRender()">✕ Clear search</button></h3>
+      <div class="list">${found.slice(0,300).map(q => `<div class="item"><div class="t"><b>${esc(q.text.length>160?q.text.slice(0,160)+'…':q.text)}</b>${qBadges(q)}</div>
+        <div class="acts"><button class="sbtn" onclick="AF.qSkill='${q.lesson&&lessonName(q.lesson)?q.lesson:'gen_'+q.unit}';AF.qSearch='';aRender()">Open skill</button><button class="sbtn" onclick="ED={q:'${q.id}'};aRender();window.scrollTo(0,0)">Edit</button></div></div>`).join('') || '<p class="muted">Nothing matches.</p>'}</div></div>`;
+    return;
+  }
+  const units = C.units.filter(u => !ex || u.exam===ex);
+  $('#aMain').innerHTML = aTop('❓ Questions', 'Tap a skill to see and manage all its questions') + head + (units.map(u => {
+    const cards = lessonsOf(u.id).map(l => ({id:l.id, name:l.name, qs:lessonQs(l.id)}));
+    const gen = lessonQs('gen_'+u.id); if(gen.length) cards.push({id:'gen_'+u.id, name:'General questions', qs:gen});
+    const total = C.questions.filter(q=>q.unit===u.id).length;
+    return `<div class="panel"><div class="navrow" style="margin:0 0 14px;align-items:center"><h3 style="margin:0"><span class="badge c">${u.exam}</span> ${esc(u.name)}</h3><small class="muted">${lessonsOf(u.id).length} skills · ${total} questions</small></div>
+      <div class="units">${cards.map((c,i) => { const ph = c.qs.reduce((s,q)=>s+photoCount(q),0), hd = c.qs.filter(q=>q.diff==='Hard').length;
+        return `<div class="unit" style="cursor:pointer" onclick="AF.qSkill='${c.id}';aRender();window.scrollTo(0,0)">
+          <span class="num">${c.id.startsWith('gen_')?'•':String(i+1).padStart(2,'0')}</span>
+          <div style="flex:1;min-width:0"><b>${esc(c.name)}</b><small>${c.qs.length} question${c.qs.length===1?'':'s'}${ph?` · 🖼️ ${ph}`:''}${hd?` · ${hd} hard`:''}</small></div>
+          <span class="sbtn ${c.qs.length?'p':''}" style="flex:none">${c.qs.length?'Open':'Add'} →</span></div>`; }).join('') || `<p class="muted">No skills yet. <a style="color:var(--brand);font-weight:700;cursor:pointer" onclick="aGo('units')">Add skills</a></p>`}</div></div>`;
+  }).join('') || '<div class="panel"><p class="empty">No units yet.</p></div>');
+}
+function aSkillView(sk){
+  const qs = lessonQs(sk.id), others = [['gen_'+sk.unit,'General questions'], ...lessonsOf(sk.unit).map(l=>[l.id,l.name])].filter(x=>x[0]!==sk.id);
+  $('#aMain').innerHTML = aTop('🎯 ' + esc(sk.name), `<a style="cursor:pointer;color:var(--brand);font-weight:700" onclick="AF.qSkill='';aRender()">← All skills</a> · ${esc(sk.exam)} · ${esc(unitName(sk.unit))}`) + `
+    <div class="panel" style="padding:16px 20px"><div class="navrow" style="margin:0;align-items:center">
+      <span><b>${qs.length} question${qs.length===1?'':'s'}</b> <small class="muted">· ${qs.filter(q=>q.diff==='Easy').length} easy · ${qs.filter(q=>q.diff==='Medium').length} medium · ${qs.filter(q=>q.diff==='Hard').length} hard · 🖼️ ${qs.reduce((s,q)=>s+photoCount(q),0)} photos</small></span>
+      <span class="filters" style="margin:0">
+        <button class="sbtn g" onclick="ED={add:true};IMG=null;aRender();window.scrollTo(0,0)">+ Add question to this skill</button>
+        ${sk.lesson ? `<button class="sbtn" onclick="renameLesson('${sk.lesson}')">✏️ Rename skill</button>` : ''}
+      </span></div></div>
+    ${qs.map((q,i) => `<div class="panel" style="margin-bottom:12px">
+      <div class="navrow" style="margin:0 0 6px;align-items:center">
+        <p class="qnum"><b>Question ${i+1}</b> · <span class="badge y">${esc(q.diff)}</span>${q.source==='Real exam'?`<span class="badge r">Real exam ${esc(q.year)}</span>`:''}${(q.notes||[]).length?`<span class="badge c">👩‍🏫 ${q.notes.length}</span>`:''} ${q.gen?'<span class="badge c">✨ Extra</span>':''} <small class="code">${q.id}</small></p>
+        <span class="filters" style="margin:0">
+          <button class="sbtn" title="Move up" ${i?'':'disabled'} onclick="moveQ('${q.id}',-1)">↑</button>
+          <button class="sbtn" title="Move down" ${i<qs.length-1?'':'disabled'} onclick="moveQ('${q.id}',1)">↓</button>
+          <button class="sbtn p" onclick="ED={q:'${q.id}'};aRender();window.scrollTo(0,0)">✏️ Edit</button>
+          <button class="sbtn d" onclick="del('questions','${q.id}')">Delete</button>
+        </span></div>
+      <div class="qtext" style="margin:6px 0 10px">${fmtText(q.text)}</div>${q.img?`<img class="qimg zoom" style="max-height:220px" src="${esc(q.img)}" alt="" onclick="zoomImg(this.src)">`:''}
+      ${q.options.map((o,k) => hasOpt(q,k) ? `<div class="opt ${k===q.answer?'ok':''}" style="cursor:default;padding:10px 14px;margin-bottom:6px">${optInner(q,k)}${k===q.answer?' <small>✓ correct</small>':''}</div>` : '').join('')}
+      ${q.explanation||q.explImg ? `<details style="margin:8px 0 0;padding:10px 14px;background:var(--bg);border:none"><summary style="font-size:.92rem">Explanation</summary><div style="margin-top:6px">${explBody(q)}</div></details>` : '<p class="hint" style="margin:8px 0 0">⚠️ No explanation yet</p>'}
+      <div style="margin-top:10px;display:flex;gap:8px;align-items:center;flex-wrap:wrap"><small class="muted">Move to:</small>
+        <select style="width:auto;margin:0;padding:7px 12px" onchange="if(this.value)moveQSkill('${q.id}',this.value)">${opts([['','— another skill —'],...others])}</select></div>
+    </div>`).join('') || `<div class="panel"><p class="empty">No questions in this skill yet.<br><br><button class="sbtn g" onclick="ED={add:true};IMG=null;aRender()">+ Add the first question</button></p></div>`}`;
+}
+function moveQ(id, dir){
+  const qs = lessonQs(AF.qSkill), i = qs.findIndex(q=>q.id===id), j = i + dir; if(j<0 || j>=qs.length) return;
+  const a = C.questions.indexOf(qs[i]), b = C.questions.indexOf(qs[j]);
+  [C.questions[a], C.questions[b]] = [C.questions[b], C.questions[a]]; saveDraft(); aRender();
+}
+function moveQSkill(id, sid){
+  const q = qById(id), t = skillInfo(sid); if(!q || !t) return;
+  q.lesson = t.lesson; q.unit = t.unit; q.exam = t.exam; saveDraft(); aRender(); toast('Moved to ' + t.name);
+}
+function qMeta(){ return {exam:v('#fqE'), unit:v('#fqU'), lesson:v('#fqL'), diff:v('#fqD'), source:v('#fqS'), year:v('#fqY').trim()}; }
+function saveQ(again){
+  const m = qMeta();
+  const o = Object.assign({id:ED.q||uid(), img:IMG.q, text:v('#fqT').trim(), options:[0,1,2,3,4].map(k=>v('#fqO'+k).trim()), optImgs:IMG.o.slice(), answer:+v('#fqA'), explanation:v('#fqX').trim(), explImg:IMG.x}, m);
+  if(!o.optImgs.some(Boolean)) delete o.optImgs;
+  if(!o.img) o.img = ''; if(!o.explImg) delete o.explImg;
+  if(!o.unit) return toast('Add a unit first (Units page)');
+  if(!o.text && !o.img) return toast('Write the question or add a photo');
+  if([0,1,2,3,4].filter(k=>hasOpt(o,k)).length < 2) return toast('Add at least 2 options (text or photo)');
+  if(!hasOpt(o,o.answer)) return toast('The correct answer option is empty');
+  const old = qById(o.id); if(old && old.notes) o.notes = old.notes; if(old) o.edited = true;
+  lastQ = m; upsert('questions', o); AF.qSkill = o.lesson || ('gen_'+o.unit); ED = again ? {add:true} : {}; IMG = null; aRender(); window.scrollTo(0,0); toast(again ? 'Saved — add the next one' : 'Question saved');
+}
+
+/* ---------- photo boxes in the question form (paste / drag / upload / link) ---------- */
+let IMG = null, IMGACT = 'q';
+const IMG_LABEL = {q:'the question', x:'the explanation', o0:'answer A', o1:'answer B', o2:'answer C', o3:'answer D', o4:'answer E'};
+const getImg = key => key==='q' ? IMG.q : key==='x' ? IMG.x : IMG.o[+key.slice(1)];
+function putImg(key, src){ if(key==='q') IMG.q = src; else if(key==='x') IMG.x = src; else IMG.o[+key.slice(1)] = src; }
+function imgBox(key){
+  const src = getImg(key), sm = key.startsWith('o');
+  return `<div class="imgbox ${sm?'sm':''} ${IMGACT===key?'act':''}" id="ib_${key}" tabindex="0" onclick="setAct('${key}')" onfocus="setAct('${key}')"
+      ondragover="event.preventDefault();this.classList.add('act')" ondrop="dropImg(event,'${key}')">
+    ${src ? `<img src="${esc(src)}" alt=""><small class="muted">${src.startsWith('data:') ? kb(src)+' KB' : 'linked photo'}</small>` : `<span class="ph">🖼️ ${sm?'Photo for this answer':'Photo for '+IMG_LABEL[key]} — click here, then <b>Ctrl+V</b> to paste</span>`}
+    <div class="acts2">
+      <label class="sbtn" onclick="event.stopPropagation()">📁 Upload<input type="file" accept="image/*" class="hidden" onchange="fileImg(this.files[0],'${key}')"></label>
+      <button type="button" class="sbtn" onclick="event.stopPropagation();clipImg('${key}')">📋 Paste</button>
+      <button type="button" class="sbtn" onclick="event.stopPropagation();linkImg('${key}')">🔗 Link</button>
+      ${src ? `<button type="button" class="sbtn d" onclick="event.stopPropagation();setImg('${key}','')">✕ Remove</button>` : ''}
+    </div></div>`;
+}
+function setAct(key){ IMGACT = key; document.querySelectorAll('.imgbox').forEach(b => b.classList.toggle('act', b.id==='ib_'+key)); }
+function setImg(key, src){ putImg(key, src); const el = document.getElementById('ib_'+key); if(el) el.outerHTML = imgBox(key); }
+async function addImgBlob(blob, key){
+  try{ const d = await imgToData(blob, key.startsWith('o') ? 700 : 1200); setImg(key, d); setAct(key); toast('🖼️ Photo added to ' + IMG_LABEL[key]); }
+  catch(e){ toast('Could not read this photo'); }
+}
+function fileImg(file, key){ if(file) addImgBlob(file, key); }
+function dropImg(e, key){ e.preventDefault(); const f = [...(e.dataTransfer.files||[])].find(f=>f.type.startsWith('image/')); if(f) addImgBlob(f, key); else toast('Drop a photo file'); }
+function linkImg(key){ const u = prompt('Paste the photo link (https://... or images/file-name.png):', getImg(key).startsWith('data:') ? '' : getImg(key)); if(u!==null){ setImg(key, u.trim()); } }
+async function clipImg(key){
+  try{
+    const items = await navigator.clipboard.read();
+    for(const it of items){ const t = it.types.find(t=>t.startsWith('image/')); if(t) return addImgBlob(await it.getType(t), key); }
+    toast('No photo copied. Copy a photo first, then try again');
+  }catch(e){ setAct(key); toast('Press Ctrl+V now to paste the photo'); }
+}
+document.addEventListener('paste', e => {
+  if(aTab!=='questions' || $('#vAdmin').classList.contains('hidden') || !IMG) return;
+  const f = [...((e.clipboardData && e.clipboardData.items) || [])].find(i => i.kind==='file' && i.type.startsWith('image/'));
+  if(!f) return;                       // normal text paste
+  e.preventDefault();
+  const id = (document.activeElement||{}).id || '', m = id.match(/^fqO(\d)$/);
+  const key = m ? 'o'+m[1] : id==='fqX' ? 'x' : id==='fqT' ? 'q' : IMGACT;
+  addImgBlob(f.getAsFile(), key);
+});
+function smartFill(){
+  const q = parseQBlock(v('#fqPaste'), {});
+  if(!q.text && !q.options.some(Boolean)) return toast('Nothing found — check the pasted text');
+  $('#fqT').value = q.text; q.options.forEach((o,k) => $('#fqO'+k).value = o);
+  $('#fqA').value = q.answer; if(q.explanation) $('#fqX').value = q.explanation;
+  toast('✨ Form filled — check it, add photos if needed, then save');
+}
+function delNote(qid, nid){
+  const q = qById(qid); if(!q || !confirm('Remove this assistant explanation?')) return;
+  q.notes = (q.notes||[]).filter(n=>n.id!==nid); saveDraft(); aRender(); toast('Removed');
+}
+
+/* ---------- LEADERBOARD (admin) ---------- */
+let BM = '';
+function aBoard(){
+  if(!C.mocks.some(m=>m.id===BM)) BM = (C.mocks[0]||{}).id || '';
+  const b = BM ? boardOf(BM) : [];
+  $('#aMain').innerHTML = aTop('🏆 Leaderboard', 'Students send their mock scores on WhatsApp — paste them here') + (!C.mocks.length ? '<div class="panel"><p class="empty">Create a mock first.</p></div>' : `
+    <div class="panel"><h3>1. Paste students' leaderboard messages</h3>
+      <p class="hint" style="margin:0 0 10px">Paste one or many WhatsApp messages that start with “🏆 Leaderboard”. Each student keeps their best score.</p>
+      <textarea id="lbPaste" style="min-height:120px" placeholder="🏆 Leaderboard - BioPrep Academy&#10;Student: Sara A.&#10;Mock ID: m1&#10;..."></textarea>
+      <button class="sbtn g" onclick="pasteBoard()">➕ Add scores</button>
+    </div>
+    <div class="panel"><h3>2. Leaderboard for a mock</h3>
+      <div class="filters"><select onchange="BM=this.value;aBoard()">${opts(C.mocks.map(m=>[m.id,m.exam+' · '+m.title]),BM)}</select></div>
+      <div class="row"><div><label>Add by hand: name</label><input id="lbN" placeholder="e.g. Omar K."></div><div><label>Score %</label><input id="lbS" type="number" min="0" max="100"></div></div>
+      <button class="sbtn" onclick="addBoard(BM, v('#lbN').trim(), +v('#lbS'))">+ Add</button>
+      <div class="list" style="margin-top:16px">${b.map((e,i) => `<div class="item"><span class="fi">${['🥇','🥈','🥉'][i]||'#'+(i+1)}</span><div class="t"><b>${esc(e.name)}</b><small>${e.score}% · ${fmtDate(e.date)}</small></div><button class="sbtn d" onclick="delBoard('${BM}','${esc(e.name).replace(/'/g,"\\'")}')">Remove</button></div>`).join('') || '<p class="muted">No scores yet.</p>'}</div>
+      <p class="hint" style="margin-top:12px">Students see the top 10 on the Mocks page.</p>
+    </div>`);
+}
+function addBoard(mid, name, score, date, quiet){
+  if(!mid || !name || isNaN(score) || score<0 || score>100){ if(!quiet) toast('Add a name and a score from 0 to 100'); return 0; }
+  C.boards = C.boards || {}; const b = C.boards[mid] = C.boards[mid] || [];
+  const old = b.find(e => e.name.toLowerCase()===name.toLowerCase());
+  if(old){ if(score <= old.score){ if(!quiet) toast('This student already has an equal or better score'); return 0; } old.score = score; old.date = date||Date.now(); }
+  else b.push({name, score, date:date||Date.now()});
+  saveDraft(); if(!quiet){ aBoard(); toast('Added'); } return 1;
+}
+function pasteBoard(){
+  const t = v('#lbPaste'), re = /Student:\s*(.+?)\s*\n\s*Mock ID:\s*(\S+)[\s\S]*?Score:\s*(\d+)\s*%/g; let m, n = 0, bad = 0;
+  while((m = re.exec(t))){ if(C.mocks.some(x=>x.id===m[2])) n += addBoard(m[2], m[1].trim().slice(0,30), +m[3], Date.now(), true); else bad++; }
+  aBoard(); toast(n ? `${n} score${n>1?'s':''} added` : bad ? 'Mock not found (maybe deleted)' : 'No new scores found');
+}
+function delBoard(mid, name){ if(!confirm('Remove ' + name + '?')) return; C.boards[mid] = (C.boards[mid]||[]).filter(e=>e.name!==name); saveDraft(); aBoard(); }
+
+/* ---------- ASSISTANTS (admin) ---------- */
+function aAssistants(){
+  $('#aMain').innerHTML = aTop('👩‍🏫 Assistants', 'Assistants explain student mistakes — their explanations are attached to the questions') + `
+    <div class="grid2" style="gap:18px">
+      <div class="panel"><h3>+ Add an assistant</h3>
+        <label>Name</label><input id="fsN" placeholder="e.g. Ms. Nour">
+        <label>Phone (their login)</label><input id="fsPh" placeholder="01X XXXX XXXX">
+        <label>Password</label><input id="fsPw" placeholder="at least 6 characters">
+        <button class="sbtn g" onclick="addAsst()">+ Add assistant</button>
+      </div>
+      <div class="panel"><h3>How it works</h3>
+        <ol class="steps-mini">
+          <li>A student taps <b>Ask an assistant</b> on a mistake → a message goes to your help WhatsApp number (set it in <a style="color:var(--brand);font-weight:700;cursor:pointer" onclick="aGo('settings')">Settings</a>).</li>
+          <li>The assistant logs in (Login → <b>Assistant</b>), pastes that message, and writes the explanation.</li>
+          <li>It's sent to the student on WhatsApp right away.</li>
+          <li>The assistant sends you their <b>explanations file</b>. You open it in <a style="color:var(--brand);font-weight:700;cursor:pointer" onclick="aGo('publish')">Backup</a> — the explanation then shows under the question for every student.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="panel"><h3>Your assistants (${C.assistants.length})</h3><div class="list">${C.assistants.map(a => {
+      const n = C.questions.reduce((s,q)=>s+(q.notes||[]).filter(x=>x.aid===a.id).length,0);
+      return `<div class="item"><span class="fi">👩‍🏫</span><div class="t"><b>${esc(a.name)}</b><small>📞 ${esc(a.phone)} · ${n} published explanation${n===1?'':'s'}</small></div>
+        <div class="acts"><button class="sbtn" onclick="resetAsst('${a.id}')">New password</button><button class="sbtn d" onclick="del('assistants','${a.id}')">Delete</button></div></div>`; }).join('') || '<p class="muted">No assistants yet.</p>'}</div>
+      <p class="hint" style="margin-top:12px">Assistant logins work as soon as you add them.</p></div>`;
+}
+function sendAsstLogin(a, pw){
+  const msg = `Welcome to the BioPrep Academy team, ${a.name}! 👩‍🏫\nOpen the website → Login → Assistant\nPhone: ${a.phone}\nPassword: ${pw}`;
+  if(confirm('Send the login details to the assistant on WhatsApp?')) window.open(waLink(a.phone, msg), '_blank');
+}
+function addAsst(){
+  const name = v('#fsN').trim(), phone = v('#fsPh').trim(), pw = v('#fsPw');
+  if(!name || !phone) return toast('Add name and phone');
+  if(pw.length < 6) return toast('Password: at least 6 characters');
+  if(C.assistants.some(a=>waNum(a.phone)===waNum(phone))) return toast('This phone is already an assistant');
+  const a = {id:uid(), name, phone, pass:hash(pw)}; C.assistants.push(a); saveDraft(); aRender(); toast('Assistant added');
+  sendAsstLogin(a, pw);
+}
+function resetAsst(id){
+  const a = C.assistants.find(x=>x.id===id), pw = prompt('New password for ' + a.name + ' (at least 6 characters):');
+  if(!pw) return; if(pw.length < 6) return toast('Too short');
+  a.pass = hash(pw); saveDraft(); aRender(); toast('Password changed'); sendAsstLogin(a, pw);
+}
+function parseQBlock(block, m){
+  const q = Object.assign({id:uid(), img:'', text:'', options:['','','','',''], answer:0, explanation:''}, m);
+  String(block).replace(/\r/g,'').split('\n').map(s=>s.replace(/ /g,' ').trim()).filter(Boolean).forEach(l => {
+    let r;
+    if((r = l.match(/^(?:Correct\s+)?(?:Answer|Ans)\s*[:\-.]?\s*\(?([A-E])\)?\b/i))) q.answer = 'ABCDE'.indexOf(r[1].toUpperCase());
+    else if((r = l.match(/^(?:Explanation|Reason|Why)\s*[:\-]\s*(.*)/i))) q.explanation = r[1];
+    else if((r = l.match(/^\(?([A-Ea-e])\s*[).:\-]\s*(.+)/)) && (q.text || q.options.some(Boolean))) q.options['ABCDE'.indexOf(r[1].toUpperCase())] = r[2].trim();
+    else if(q.explanation) q.explanation += ' ' + l;
+    else if(!q.options.some(Boolean)) q.text += (q.text?'\n':'') + l.replace(/^(?:Q(?:uestion)?\s*)?\d*\s*[:.)\-]\s*/i, (s) => /\d|Q/i.test(s) ? '' : s);
+  });
+  return q;
+}
+function bulkAdd(){
+  const m = qMeta(); if(!m.unit) return toast('Choose a unit first');
+  const qs = v('#bulkT').split(/\n\s*\n/).map(block => parseQBlock(block, m))
+    .filter(q => q.text && q.options.filter(Boolean).length >= 2 && q.options[q.answer]);
+  if(!qs.length) return toast('No questions found — check the format');
+  C.questions.push(...qs); lastQ = m; saveDraft(); AF.qSkill = m.lesson || ('gen_'+m.unit); ED = {}; IMG = null; aRender(); toast(qs.length + ' questions imported' + (m.lesson ? ' into ' + lessonName(m.lesson) : ''));
+}
+
+function aTests(store){
+  const M = store==='mocks', word = M ? 'mock' : 'exam';
+  const ed = C[store].find(x=>x.id===ED.exam) || {title:'',kind:M?'Mock':'Classified',exam:'EST',unit:'',year:'',minutes:M?60:20,pdf:'',instructions:'',qids:[]};
+  if(!ED.sel) ED.sel = new Set(ed.qids);
+  const list = C[store].filter(x=>!AF.xExam||x.exam===AF.xExam);
+  $('#aMain').innerHTML = aTop(M?'📝 Mocks':'⏱️ Exams', M?'Full mock tests you build yourself — separate from exams':'Build classified exams by unit and real past exams') + `
+    <div class="panel"><h3>${ED.exam?'✏️ Edit '+word:'+ Create a '+word}</h3>
+      <label>${M?'Mock':'Exam'} title</label><input id="feT" value="${esc(ed.title)}" placeholder="${M?'e.g. EST Biology — Mock Test 3':'e.g. Genetics — Unit Exam 1  /  EST II Biology — June 2025'}">
+      <div class="grid3">
+        ${M ? '' : `<div><label>Type</label><select id="feK">${opts([['Classified','🗂️ Classified (by unit)'],['Real','🏆 Real past exam']],ed.kind)}</select></div>`}
+        <div><label>Exam</label><select id="feE" onchange="fillUnits('#feU',this.value,true);renderPick()">${opts(['EST','ACT'],ed.exam)}</select></div>
+        <div><label>${M?'Show questions from unit':'Unit'}</label><select id="feU" onchange="renderPick()">${opts(unitOpts(ed.exam,true),ed.unit)}</select></div>
+        ${M ? '' : `<div><label>Year / session (real exams)</label><input id="feY" value="${esc(ed.year)}" placeholder="e.g. June 2025"></div>`}
+        <div><label>Time limit (minutes, 0 = none)</label><input id="feM" type="number" min="0" value="${ed.minutes}"></div>
+        <div><label>Paper PDF link (optional)</label><input id="feP" value="${esc(ed.pdf)}" placeholder="https://..."></div>
+      </div>
+      <label>Instructions shown before starting (optional)</label><textarea id="feI" style="min-height:70px" placeholder="e.g. This mock covers all units. Answer every question.">${esc(ed.instructions||'')}</textarea>
+      <label>Choose questions</label>
+      <div id="pick"></div>
+      <button class="sbtn g" onclick="saveExam('${store}')">${ED.exam?'Save changes':'+ Create '+word}</button>
+      ${ED.exam?`<button class="sbtn" onclick="ED={};aRender()">Cancel</button>`:''}
+    </div>
+    <div class="panel"><h3>All ${word}s (${list.length})</h3>
+      <div class="filters"><select onchange="AF.xExam=this.value;aRender()">${opts([['','All exams'],'EST','ACT'],AF.xExam)}</select></div>
+      <div class="list">${list.map(x => `<div class="item"><span class="fi">${kindIcon(x.kind)}</span>
+        <div class="t"><b>${esc(x.title)}</b><span class="badge ${x.kind==='Real'?'r':'k'}">${kindName(x.kind)}</span><span class="badge c">${x.exam}</span>${M?'':`<span class="badge">${esc(unitName(x.unit))}</span>`}${x.year?`<span class="badge y">${esc(x.year)}</span>`:''}<br><small>${x.qids.length} questions · ${x.minutes||'no'} min${x.pdf?' · has paper PDF':''}${x.instructions?' · has instructions':''}</small></div>
+        <div class="acts"><button class="sbtn" onclick="ED={exam:'${x.id}'};aRender();window.scrollTo(0,0)">Edit</button><button class="sbtn d" onclick="del('${store}','${x.id}')">Delete</button></div></div>`).join('') || `<p class="muted">No ${word}s yet.</p>`}</div>
+    </div>`;
+  renderPick();
+}
+function pickShown(){ const ex = v('#feE'), u = v('#feU'); return C.questions.filter(q => q.exam===ex && (!u || q.unit===u)); }
+function renderPick(){
+  const qs = pickShown();
+  $('#pick').innerHTML = `<div class="filters"><b id="selN">${ED.sel.size} selected</b>
+      <button class="sbtn" onclick="pickAll(true)">Select all shown</button><button class="sbtn" onclick="pickAll(false)">Clear shown</button><button class="sbtn" onclick="pickRandom()">🎲 Random</button></div>
+    <div class="picklist">${qs.map(q => `<label class="pick"><input type="checkbox" ${ED.sel.has(q.id)?'checked':''} onchange="togQ('${q.id}',this.checked)"><span>${esc(q.text.slice(0,150))}${q.text.length>150?'…':''}<br><span class="badge">${esc(unitName(q.unit))}</span>${lessonName(q.lesson)?`<span class="badge k">🎯 ${esc(lessonName(q.lesson))}</span>`:''}<span class="badge y">${q.diff}</span>${q.source==='Real exam'?`<span class="badge r">Real ${esc(q.year)}</span>`:''}</span></label>`).join('') || '<p class="empty">No questions for this exam/unit yet. Add some in Questions.</p>'}</div>`;
+}
+function togQ(id, on){ on ? ED.sel.add(id) : ED.sel.delete(id); $('#selN').textContent = ED.sel.size + ' selected'; }
+function pickAll(on){ pickShown().forEach(q => on ? ED.sel.add(q.id) : ED.sel.delete(q.id)); renderPick(); }
+function pickRandom(){
+  const shown = pickShown(), n = parseInt(prompt(`How many random questions? (${shown.length} available)`, Math.min(10, shown.length)));
+  if(!n) return; shuffle(shown).slice(0,n).forEach(q => ED.sel.add(q.id)); renderPick();
+}
+function saveExam(store){
+  const M = store==='mocks';
+  const o = {id:ED.exam||uid(), title:v('#feT').trim(), kind:M?'Mock':v('#feK'), exam:v('#feE'), unit:M?'':v('#feU'), year:M?'':v('#feY').trim(),
+             minutes:Math.max(0,parseInt(v('#feM'))||0), pdf:v('#feP').trim(), instructions:v('#feI').trim(), qids:[...ED.sel]};
+  if(!o.title) return toast('Add a title');
+  if(!o.qids.length && !o.pdf) return toast('Choose questions or add a paper PDF');
+  upsert(store, o); ED = {}; aRender(); toast(M ? 'Mock saved' : 'Exam saved');
+}
+
+/* ---------- STUDENTS: approve / reject / period ---------- */
+let SF = 'pending';
+const today = () => new Date().toISOString().slice(0,10);
+function addMonths(ds, m){ const d = new Date((ds||today())+'T12:00:00'); const day = d.getDate(); d.setMonth(d.getMonth()+m); if(d.getDate()<day) d.setDate(0); return d.toISOString().slice(0,10); }
+const PLAN_M = {'Monthly':1, 'Term':3, 'Full Year':12};
+function stState(r){
+  if(r.status==='pending') return 'pending';
+  if(r.status==='rejected') return 'rejected';
+  const end = new Date(r.until+'T23:59:59');
+  if(r.status==='closed' || end < new Date()) return 'ended';
+  return Math.ceil((end-new Date())/864e5) <= 7 ? 'soon' : 'active';
+}
+const stDays = r => Math.ceil((new Date(r.until+'T23:59:59') - new Date())/864e5);
+const pendingCount = () => C.students.filter(r => r.status==='pending' || r.renew).length;
+function previewStudent(){
+  me = {id:'admin_preview', reqId:'PREVIEW', preview:true, name:'Admin Preview', email:'', phone:'', exam:'Both', plan:'Full Year'};
+  openStudent(); toast('You are viewing the student panel — Logout returns to admin');
+}
+async function createAcc(){
+  const name = v('#caN').trim(), em = v('#caE').trim().toLowerCase(), pw = v('#caP'), end = v('#caU');
+  if(!name || !em) return toast('Add the student name and email');
+  if(pw.length < 6) return toast('Password: at least 6 characters');
+  if(!end || new Date(end+'T23:59:59') < new Date()) return toast('Choose an end date in the future');
+  try{
+    const r = await rpc('bio_admin_create_student', {p_token:getTok().token, p:{name, email:em, pass:pw, phone:v('#caPh').trim(), exam:v('#caX'), plan:v('#caPl'), until:end}});
+    C.students.unshift(r); SNAP.st.set(r.id, JSON.stringify(stPatch(r))); SF = 'active'; aRender();
+    toast('Account created — the student can log in now');
+    if(r.phone && confirm('Send the login details to the student on WhatsApp?'))
+      openWA(waLink(r.phone, `Hi ${r.first} 👋\nYour BioPrep Academy account is ready ✅\nOpen the website → Login\nEmail: ${em}\nPassword: ${pw}\nOpen until: ${fmtDate(end)}`));
+  }catch(e){ toast(errMsg(e)); }
+}
+function aStudents(){
+  const groups = {pending:r=>r.status==='pending'||r.renew, active:r=>['active','soon'].includes(stState(r)) && !r.renew, soon:r=>stState(r)==='soon', ended:r=>stState(r)==='ended' && !r.renew, rejected:r=>r.status==='rejected', all:()=>true};
+  const n = k => C.students.filter(groups[k]).length;
+  const list = C.students.filter(groups[SF]).sort((a,b)=>(b.requested||0)-(a.requested||0));
+  const tabs = [['pending','⏳ Requests'],['active','✅ Active'],['soon','⚠️ Ending in 7 days'],['ended','🔒 Ended'],['rejected','✋ Rejected'],['all','All']];
+  $('#aMain').innerHTML = aTop('🎓 Students', 'Approve registrations and set how long each account stays open') + `
+    <div class="panel"><h3>➕ Create a student account</h3>
+      <p class="hint" style="margin:0 0 10px">Make the account yourself — no registration or approval needed. The student can log in right away with this email and password from any phone or computer.</p>
+      <div class="grid3">
+        <div><label>Student name</label><input id="caN" placeholder="e.g. Sara Ali"></div>
+        <div><label>Email (login)</label><input id="caE" type="email" placeholder="sara@gmail.com"></div>
+        <div><label>Password</label><input id="caP" placeholder="at least 6 characters"></div>
+        <div><label>Phone (optional)</label><input id="caPh" placeholder="01X XXXX XXXX"></div>
+        <div><label>Exam</label><select id="caX">${opts(['EST','ACT','Both'])}</select></div>
+        <div><label>Plan</label><select id="caPl" onchange="document.getElementById('caU').value=addMonths(today(),PLAN_M[this.value])">${opts(['Monthly','Term','Full Year'])}</select></div>
+        <div><label>Account open until</label><input id="caU" type="date" value="${addMonths(today(),1)}"></div>
+      </div>
+      <button class="sbtn g" onclick="createAcc()">➕ Create account</button>
+      <button class="sbtn" onclick="previewStudent()">👁️ Open the student panel myself</button>
+    </div>
+    <div class="panel"><h3>📥 New registrations</h3><p class="hint" style="margin:0 0 10px">When a student registers on the website, the request appears here automatically under <b>⏳ Requests</b>.</p>
+      <button class="sbtn" onclick="refreshStudents().then(aRender)">🔄 Refresh list</button></div>
+    <div class="tabs" style="justify-content:flex-start;margin-bottom:16px">${tabs.map(([k,l]) => `<button class="tab ${SF===k?'active':''}" onclick="SF='${k}';aRender()">${l} (${n(k)})</button>`).join('')}</div>
+    <div class="list">${list.map(stItem).join('') || '<div class="panel"><p class="empty">Nobody here.</p></div>'}</div>`;
+}
+function stItem(r){
+  const st = stState(r), ask = r.status==='pending' || r.renew;
+  const base = r.renew && st!=='ended' && r.until ? r.until : today();
+  const m = PLAN_M[r.plan] || 1, end = addMonths(base, m);
+  const badge = {pending:'<span class="badge y">Waiting</span>', active:'<span class="badge">Active</span>', soon:'<span class="badge y">Ending soon</span>', ended:'<span class="badge r">Ended</span>', rejected:'<span class="badge r">Rejected</span>'}[st];
+  return `<div class="panel" style="margin:0"><div class="navrow" style="margin:0;align-items:flex-start">
+      <div><b style="font-size:1.05rem">${esc(r.name||'(name in private backup)')}</b> ${badge}${r.renew?' <span class="badge c">🔄 Renewal</span>':''}
+        <br><small class="muted">${r.manual?'🔑 created by you · ':''}${r.email?'✉️ '+esc(r.email)+' · ':''}${r.id?`<span class="code">${esc(r.id)}</span> · `:''}${r.phone?'📞 '+esc(r.phone)+' · ':''}${esc(r.exam||'')} · plan: <b>${esc(r.plan||'-')}</b>${r.requested?' · requested '+fmtDate(r.requested):''}</small>
+        ${r.until && r.status!=='pending' ? `<br><small>${st==='ended'?'Ended':'Open until'} <b>${fmtDate(r.until)}</b>${['active','soon'].includes(st)?` · ${stDays(r)} day${stDays(r)===1?'':'s'} left`:''}${r.start?' · started '+fmtDate(r.start):''}</small>` : ''}
+      </div>
+      ${r.phone?`<a class="sbtn" target="_blank" href="${waLink(r.phone,'')}">💬 Chat</a>`:''}
+    </div>
+    ${ask || st==='ended' ? `<div class="ask"><div class="row" style="align-items:end">
+        <div><label>Period</label><select id="per_${r.h}" onchange="document.getElementById('end_${r.h}').value=addMonths('${base}',+this.value)">${opts([[1,'1 month'],[2,'2 months'],[3,'3 months'],[6,'6 months'],[12,'1 year']],m)}</select></div>
+        <div><label>Account closes on</label><input id="end_${r.h}" type="date" value="${end}"></div></div>
+        <button class="sbtn g" onclick="approveSt('${r.h}')">✅ ${st==='ended'||r.renew?'Renew':'Approve'}</button>
+        ${r.status==='pending'?`<button class="sbtn d" onclick="rejectSt('${r.h}')">✋ Reject</button>`:''}
+        ${r.renew?`<button class="sbtn" onclick="ignoreRenew('${r.h}')">Ignore renewal</button>`:''}
+      </div>` : ''}
+    ${['active','soon'].includes(st) && !r.renew ? `<div class="filters" style="margin:12px 0 0">
+        <button class="sbtn" onclick="extendSt('${r.h}',1)">+1 month</button><button class="sbtn" onclick="extendSt('${r.h}',3)">+3 months</button>
+        <button class="sbtn" onclick="setEndSt('${r.h}')">📅 Change end date</button><button class="sbtn d" onclick="closeSt('${r.h}')">🔒 Close now</button></div>` : ''}
+    ${st==='rejected' ? `<div class="filters" style="margin:12px 0 0"><button class="sbtn" onclick="stByH('${r.h}').status='pending';saveDraft();aRender()">↩️ Move back to requests</button><button class="sbtn d" onclick="delSt('${r.h}')">Delete</button></div>` : ''}
+  </div>`;
+}
+const stByH = h => C.students.find(x=>x.h===h || x.id===h);
+function pasteStudents(){
+  const blocks = v('#stPaste').split(/(?=(?:📝|🔄)\s*(?:Registration|Renewal))/); let added = 0, renew = 0;
+  blocks.forEach(b => {
+    const g = re => { const m = b.match(re); return m ? m[1].trim() : ''; };
+    const id = g(/Request ID:\s*(S-[A-Z0-9]+)/i).toUpperCase(); if(!id) return;
+    const d = {name:g(/Name:\s*(.+)/i), phone:g(/Phone:\s*(.+)/i), email:g(/Email:\s*(.+)/i), exam:g(/Exam:\s*(\S+)/i), plan:g(/Plan:\s*(.+)/i)||'Monthly'};
+    const old = C.students.find(x=>x.h===hash(id));
+    if(!old){ C.students.push(Object.assign({id, h:hash(id), status:'pending', requested:Date.now()}, d)); added++; }
+    else { Object.keys(d).forEach(k => { if(d[k]) old[k] = d[k]; }); old.id = id; old.requested = Date.now();
+      if(old.status==='rejected') old.status = 'pending'; else if(old.status!=='pending'){ old.renew = true; renew++; } }
+  });
+  saveDraft(); SF = 'pending'; aRender(); toast(added||renew ? `${added} new request${added===1?'':'s'}${renew?`, ${renew} renewal${renew>1?'s':''}`:''}` : 'No new requests found');
+}
+function tellSt(r, text){ if(r.phone && confirm('Send a WhatsApp message to the student?')) window.open(waLink(r.phone, text), '_blank'); }
+function approveSt(h){
+  const r = stByH(h), end = document.getElementById('end_'+h).value; if(!end) return toast('Choose an end date');
+  if(new Date(end+'T23:59:59') < new Date()) return toast('The end date is in the past');
+  const wasRenew = r.renew || r.status!=='pending';
+  if(!r.start || stState(r)==='ended') r.start = today();
+  r.status = 'active'; r.until = end; r.renew = false; saveDraft(); aRender();
+  toast((wasRenew?'Renewed':'Approved') + ' — the account is open now');
+  tellSt(r, `Hi ${r.name||''} 👋\nYour BioPrep Academy account is ${wasRenew?'renewed':'approved'}! ✅\nOpen until: ${fmtDate(end)}\nLog in on the website with your email and password. (It may take a few minutes to open.)`);
+}
+function rejectSt(h){
+  const r = stByH(h); if(!confirm('Reject ' + (r.name||'this request') + '?')) return;
+  r.status = 'rejected'; saveDraft(); aRender();
+  tellSt(r, `Hi ${r.name||''}, we couldn't approve your BioPrep Academy registration yet. Please reply to this message so we can help.`);
+}
+function ignoreRenew(h){ stByH(h).renew = false; saveDraft(); aRender(); }
+function extendSt(h, m){ const r = stByH(h); r.until = addMonths(r.until, m); saveDraft(); aRender(); toast('Extended to ' + fmtDate(r.until)); }
+function setEndSt(h){
+  const r = stByH(h), n = prompt('New end date (YYYY-MM-DD):', r.until);
+  if(!n) return; if(!/^\d{4}-\d{2}-\d{2}$/.test(n)) return toast('Use the format YYYY-MM-DD');
+  r.until = n; if(r.status==='closed') r.status = 'active'; saveDraft(); aRender();
+}
+function closeSt(h){ const r = stByH(h); if(!confirm('Close ' + (r.name||'this account') + ' now?')) return; r.status = 'closed'; r.until = addMonths(today(), 0); saveDraft(); aRender(); toast('Closed'); }
+async function delSt(h){ if(!confirm('Delete this student record?')) return; const r = stByH(h); try{ if(r.db) await rpc('bio_admin_delete_student', {p_token:getTok().token, p_id:r.id}); C.students = C.students.filter(x=>x!==r); SNAP.st.delete(r.id); aRender(); }catch(e){ toast(errMsg(e)); } }
+
+function aSettings(){
+  $('#aMain').innerHTML = aTop('⚙️ Settings') + `
+    <div class="panel"><h3>💬 WhatsApp number</h3>
+      <label>Country code + number, no + or spaces (e.g. 201012345678)</label><input id="fsW" value="${esc(C.settings.whatsapp)}">
+      <label>Help number for student mistakes (assistants' WhatsApp). Leave empty to use the number above.</label><input id="fsH" value="${esc(C.settings.helpWhatsapp||'')}" placeholder="e.g. 201098765432">
+      <button class="sbtn g" onclick="C.settings.whatsapp=waNum(v('#fsW'));C.settings.helpWhatsapp=waNum(v('#fsH'));saveDraft();aRender();toast('Saved')">Save numbers</button>
+    </div>
+    <div class="panel"><h3>📧 Get new registrations by email (automatic)</h3>
+      <p class="muted" style="margin-bottom:12px">When a student registers or asks to renew, the request is emailed to you automatically — the student doesn't need to do anything.</p>
+      <label>Your email</label><input id="fsE" type="email" value="${esc(C.settings.notifyEmail||'')}" placeholder="you@gmail.com">
+      <button class="sbtn g" onclick="C.settings.notifyEmail=v('#fsE').trim();saveDraft();aRender();toast('Saved')">Save email</button>
+      <button class="sbtn" onclick="testNotify()">✉️ Send a test email</button>
+      <ol class="steps-mini" style="margin-top:12px">
+        <li>Save your email, then press <b>Send a test email</b>.</li>
+        <li>The first time, you get an email from <b>FormSubmit</b> asking you to <b>activate</b> — click <b>Activate</b> (check Spam too).</li>
+        <li>From then on you also get an email for every registration. Approve it in <b>Students</b>.</li>
+      </ol>
+    </div>
+    <div class="panel"><h3>🔒 Admin password</h3>
+      <div class="grid2"><div><label>New password</label><input id="fsP1" type="password"></div><div><label>Repeat new password</label><input id="fsP2" type="password"></div></div>
+      <button class="sbtn g" onclick="changePass()">Change password</button>
+    </div>`;
+}
+async function testNotify(){
+  const e = v('#fsE').trim(); if(!e) return toast('Write your email first');
+  C.settings.notifyEmail = e; saveDraft(); toast('Sending…');
+  const r = await notifyAdmin('✅ Test from BioPrep Academy', 'This is a test. If this is the first time, FormSubmit sends you an activation email — click Activate.');
+  alert(r==='sent' ? 'Sent! Check your inbox (and Spam). The first time, click "Activate" in the FormSubmit email.' : 'Could not send. Check the email address and your internet connection, then try again.');
+}
+function changePass(){
+  const a = v('#fsP1'), b = v('#fsP2');
+  if(a.length < 6) return toast('Use at least 6 characters');
+  if(a !== b) return toast('Passwords do not match');
+  rpc('bio_admin_password', {p_token:getTok().token, p_pass:a}).then(() => { $('#fsP1').value = $('#fsP2').value = ''; toast('Password changed'); }).catch(e => toast(errMsg(e)));
+}
+
+function aPublish(){
+  const ph = C.questions.reduce((s,q)=>s+(q.img?1:0)+(q.optImgs||[]).filter(Boolean).length+(q.explImg?1:0),0);
+  $('#aMain').innerHTML = aTop('💾 Backup', 'Your changes are saved to the database automatically — students see them right away') + `
+    <div class="panel"><h3>📦 Your academy</h3><p><b>${C.questions.length}</b> questions · ${ph} photo${ph===1?'':'s'} · ${C.students.length} student account${C.students.length===1?'':'s'}</p></div>
+    <div class="panel"><h3>👩‍🏫 Add assistant explanations</h3>
+      <p class="muted" style="margin-bottom:12px">When an assistant sends you their <b>explanations file</b>, open it here. The explanations are attached to their questions and saved automatically.</p>
+      <label class="sbtn p" style="margin:0">📥 Open an explanations file<input type="file" accept=".json,application/json" class="hidden" onchange="importNotes(this.files[0])"></label>
+    </div>
+    <div class="panel"><h3>Backup & import</h3>
+      <p class="muted" style="margin-bottom:12px">Download a backup now and then and keep it safe — <b>don't upload it to GitHub</b>. Opening a backup or question-bank file adds its questions and settings to the database (student accounts are not changed).</p>
+      <div class="filters">
+        <button class="sbtn p" onclick="exportPrivate()">🔐 Download backup</button>
+        <label class="sbtn" style="margin:0">📂 Open a backup / question-bank file<input type="file" accept=".json,application/json" class="hidden" onchange="importJSON(this.files[0])"></label>
+      </div>
+    </div>`;
+}
+function exportJSON(){
+  const out = JSON.parse(JSON.stringify(C));
+  out.students = out.students.map(({id, name, phone, email, ...rest}) => rest);   // private student details never go in the public file
+  delete out.codes;
+  out.published = new Date().toISOString();
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(out, null, 1)], {type:'application/json'}));
+  a.download = 'content.json'; document.body.appendChild(a); a.click(); a.remove();
+  LS.set('bp_dirty', false); aRender(); toast('Downloaded — now upload it to GitHub');
+}
+function exportPrivate(){
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(Object.assign({}, C, {backup:new Date().toISOString()}), null, 1)], {type:'application/json'}));
+  a.download = 'PRIVATE-backup-' + today() + '.json'; document.body.appendChild(a); a.click(); a.remove();
+  toast('Private backup downloaded — keep it safe, do not upload it');
+}
+function importJSON(file){
+  if(!file) return;
+  const r = new FileReader();
+  r.onload = () => { try{ const d = JSON.parse(r.result);
+      if(d.type==='bp-notes') return mergeNotes(d);
+      if(!Array.isArray(d.questions)) throw 0;
+      KEYS.forEach(k=>d[k]=d[k]||[]); d.boards = d.boards||{}; d.settings = Object.assign({}, DEF().settings, d.settings||{});
+      if(!confirm('Add the ' + d.questions.length + ' questions and the settings from this file to the database?')) return;
+      const st = C.students; useMain(d); C.students = st; C.questions = d.questions; C.qcount = d.questions.length; saveDraft(); aRender(); toast('Uploading ' + d.questions.length + ' questions… keep this page open'); }catch(e){ alert('This file is not a valid backup'); } };
+  r.readAsText(file);
+}
+function importNotes(file){
+  if(!file) return;
+  const r = new FileReader();
+  r.onload = () => { try{ const d = JSON.parse(r.result); if(d.type!=='bp-notes') throw 0; mergeNotes(d); }catch(e){ alert('This is not an assistant explanations file.'); } };
+  r.readAsText(file);
+}
+function mergeNotes(d){
+  let added = 0, updated = 0, missing = 0;
+  (d.notes||[]).forEach(n => {
+    const q = qById(n.qid); if(!q){ missing++; return; }
+    q.notes = q.notes || [];
+    const old = q.notes.find(x=>x.id===n.id);
+    if(old){ if(old.text!==n.text){ old.text = n.text; updated++; } }
+    else { q.notes.push({id:n.id, aid:d.assistant.id, name:d.assistant.name, text:n.text, date:n.date}); added++; }
+  });
+  saveDraft(); aRender();
+  alert(`From ${d.assistant.name}:\n${added} new explanation(s) added\n${updated} updated${missing?`\n${missing} skipped (question no longer exists)`:''}\n\nThey are saved automatically.`);
+}
+
+/* =====================================================================
+   ASSISTANT PANEL
+   ===================================================================== */
+let A = null, tTab = 'answer', AQ = null, TF = {exam:'',unit:'',q:''};
+const myNotes = () => LS.get('bp_anotes_'+A.id, []);
+const setMyNotes = n => LS.set('bp_anotes_'+A.id, n);
+const localNotesFor = qid => myNotes().filter(n => n.qid===qid && !(qById(qid).notes||[]).some(x=>x.id===n.id)).map(n => ({name:A.name+' (you)', text:n.text, local:true}));
+function openAsst(){ show('vAsst'); tTab = 'answer'; AQ = null; tRender(); }
+function tGo(k){ if(k==='logout'){ clearTok(); A = null; location.reload(); return; } tTab = k; tRender(); }
+function tRender(){
+  const unsent = myNotes().filter(n=>!n.exported).length;
+  const items = [['answer','💬','Answer a mistake'],['bank','❓','Question Bank'],['mine','🗂️','My Explanations']];
+  $('#tSide').innerHTML = `<a class="logo">🧬 Assistant<b>Panel</b></a>` +
+    items.map(([k,ic,l]) => `<button class="${k===tTab?'active':''}" onclick="tGo('${k}')"><span>${ic}</span><span>${l}</span>${k==='mine'&&unsent?`<span class="cnt">${unsent}</span>`:''}</button>`).join('') +
+    `<div class="grow"></div><button onclick="tGo('logout')"><span>🚪</span><span>Logout</span></button>`;
+  ({answer:tAnswer, bank:tBank, mine:tMine})[tTab]();
+  window.scrollTo(0,0);
+}
+const tTop = (t,s) => `<div class="topbar"><div><p class="muted">${s}</p><h1>${t}</h1></div><div class="avatar" title="${esc(A.name)}">${esc(A.name.charAt(0).toUpperCase())}</div></div>`;
+function parseAsk(t){
+  const g = re => { const m = t.match(re); return m ? m[1].trim() : ''; };
+  return {qid:g(/Question ID:\s*(\S+)/i), student:g(/Student:\s*(.+)/i), phone:g(/Phone:\s*(.+)/i), my:g(/My answer:\s*(.+)/i), ask:g(/My question:\s*([\s\S]+)$/i)};
+}
+function findAsk(){
+  const p = parseAsk(v('#tPaste'));
+  if(!p.qid) return toast("Couldn't find a Question ID in the message");
+  if(!qById(p.qid)) return toast('This question is not in the academy (maybe deleted)');
+  AQ = p; tAnswer();
+}
+function tAnswer(){
+  const q = AQ && qById(AQ.qid);
+  const myL = AQ && AQ.my ? 'ABCDE'.indexOf(AQ.my.charAt(0).toUpperCase()) : -1;
+  $('#tMain').innerHTML = tTop('💬 Answer a mistake', `Welcome, ${esc(A.name)}`) + `
+    <div class="panel"><h3>1. Paste the student's WhatsApp message</h3>
+      <textarea id="tPaste" placeholder="Paste the full message that starts with “❓ Mistake help - BioPrep Academy”">${''}</textarea>
+      <button class="sbtn g" onclick="findAsk()">🔍 Find the question</button>
+      <span class="muted" style="font-size:.88rem;margin-left:6px">or open any question from the <a style="color:var(--brand);font-weight:700;cursor:pointer" onclick="tGo('bank')">Question Bank</a></span>
+    </div>
+    ${q ? `<div class="panel"><h3>2. ${AQ.student?'The student’s mistake':'The question'}</h3>
+      ${AQ.student ? `<div class="who"><span>🎓 <b>${esc(AQ.student)}</b></span><span>📞 ${esc(AQ.phone)}</span></div>
+        ${AQ.ask ? `<div class="expl" style="margin-bottom:14px"><b>The student asks:</b><p>${fmtText(AQ.ask)}</p></div>` : ''}` : ''}
+      <div>${qBadges(q)} <span class="code">${q.id}</span></div>
+      <div class="qtext">${fmtText(q.text)}</div>${qImgHTML(q)}
+      ${q.options.map((o,k) => hasOpt(q,k) ? `<div class="opt ${k===q.answer?'ok':k===myL?'mine':''}" style="cursor:default">${optInner(q,k)}${k===myL?' <small>← student’s answer</small>':''}${k===q.answer?' <small>✓ correct</small>':''}</div>` : '').join('')}
+      ${explBox(q,'Official explanation')}
+      ${notesHTML(q, localNotesFor(q.id))}
+    </div>
+    <div class="panel"><h3>3. Write your explanation</h3>
+      <textarea id="tNote" style="min-height:140px" placeholder="Explain step by step why the correct answer is right and why the student's answer is wrong..."></textarea>
+      ${AQ.phone ? `<button class="sbtn g" onclick="saveNote(true)">💬 Save & send to ${esc(AQ.student||'student')} on WhatsApp</button>` : ''}
+      <button class="sbtn ${AQ.phone?'':'g'}" onclick="saveNote(false)">💾 Save explanation</button>
+      <p class="hint" style="margin-top:12px">Your explanation is attached to this question. It shows for every student after you send your explanations file to the admin and they publish.</p>
+    </div>` : ''}`;
+}
+function saveNote(send){
+  const text = v('#tNote').trim(); if(!text) return toast('Write your explanation first');
+  const q = qById(AQ.qid);
+  const n = {id:uid(), qid:q.id, text, date:Date.now(), student:AQ.student||'', phone:AQ.phone||'', sent:!!send, exported:false};
+  const all = myNotes(); all.unshift(n); setMyNotes(all);
+  if(send){
+    const msg = `Hi ${AQ.student||''} 👋\nBioPrep Academy — explanation from ${A.name}\n\n📌 Question (${unitName(q.unit)}): ${q.text}\n✅ Correct answer: ${'ABCDE'[q.answer]}. ${optLabel(q,q.answer)}\n\n${text}\n\nThis explanation will also be added under the question in your academy account.`;
+    window.open(waLink(AQ.phone, msg), '_blank');
+  }
+  toast(send ? 'Saved — WhatsApp is opening' : 'Explanation saved');
+  AQ = null; tRender();
+}
+function tBank(){
+  const list = C.questions.filter(q => (!TF.exam||q.exam===TF.exam) && (!TF.unit||q.unit===TF.unit) && (!TF.q||q.text.toLowerCase().includes(TF.q.toLowerCase()) || q.id===TF.q.trim()));
+  $('#tMain').innerHTML = tTop('❓ Question Bank', 'Add explanations to any question') + `
+    <div class="filters">
+      <select onchange="TF.exam=this.value;TF.unit='';tBank()">${opts([['','All exams'],'EST','ACT'],TF.exam)}</select>
+      <select onchange="TF.unit=this.value;tBank()">${opts(unitOpts(TF.exam,true),TF.unit)}</select>
+      <input placeholder="🔍 Search text or question ID" value="${esc(TF.q)}" onchange="TF.q=this.value;tBank()">
+    </div>
+    <div class="list">${list.slice(0,300).map(q => { const n = (q.notes||[]).length + localNotesFor(q.id).length;
+      return `<div class="item"><div class="t"><b>${esc(q.text.length>160?q.text.slice(0,160)+'…':q.text)}</b>${qBadges(q)}${n?`<span class="badge c">👩‍🏫 ${n} explanation${n>1?'s':''}</span>`:''}<br><small>ID: <span class="code">${q.id}</span></small></div>
+        <button class="sbtn g" onclick="AQ={qid:'${q.id}'};tTab='answer';tRender()">✍️ Explain</button></div>`; }).join('') || '<p class="empty">No questions match.</p>'}</div>`;
+}
+function tMine(){
+  const all = myNotes(), unsent = all.filter(n=>!n.exported).length;
+  $('#tMain').innerHTML = tTop('🗂️ My Explanations', 'Everything you have written') + `
+    <div class="panel"><h3>📤 Send your explanations to the admin</h3>
+      <p class="muted">${unsent ? `<b>${unsent}</b> new explanation${unsent>1?'s':''} not sent to the admin yet.` : 'All your explanations have been sent to the admin.'} Download the file and send it to the admin on WhatsApp. When they publish, your explanations appear under the questions for all students.</p><br>
+      <button class="sbtn g" onclick="exportNotes()">⬇️ Download explanations file</button>
+    </div>
+    <div class="list">${all.map(n => { const q = qById(n.qid), live = q && (q.notes||[]).some(x=>x.id===n.id);
+      return `<div class="item"><span class="fi">✍️</span><div class="t">
+        <b>${q ? esc(q.text.length>120?q.text.slice(0,120)+'…':q.text) : '(question deleted)'}</b>
+        <span class="badge ${live?'':'y'}">${live?'✓ Live for students':n.exported?'Sent to admin':'Not sent to admin'}</span>${n.student?`<span class="badge c">🎓 ${esc(n.student)}${n.sent?' · sent on WhatsApp':''}</span>`:''}
+        <p style="margin-top:6px;color:var(--muted);font-size:.92rem">${fmtText(n.text)}</p><small>${fmtDate(n.date)}</small></div>
+        <div class="acts"><button class="sbtn" onclick="editNote('${n.id}')">Edit</button><button class="sbtn d" onclick="delMyNote('${n.id}')">Delete</button></div></div>`; }).join('') || '<p class="empty">You haven’t written any explanations yet.</p>'}</div>`;
+}
+function editNote(id){
+  const all = myNotes(), n = all.find(x=>x.id===id), t = prompt('Edit your explanation:', n.text);
+  if(t===null || !t.trim()) return; n.text = t.trim(); n.exported = false; setMyNotes(all); tRender();
+}
+function delMyNote(id){ if(!confirm('Delete this explanation from your list?')) return; setMyNotes(myNotes().filter(x=>x.id!==id)); tRender(); }
+function exportNotes(){
+  const all = myNotes(); if(!all.length) return toast('No explanations yet');
+  const out = {type:'bp-notes', assistant:{id:A.id, name:A.name}, created:new Date().toISOString(), notes:all.map(({id,qid,text,date})=>({id,qid,text,date}))};
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(out, null, 1)], {type:'application/json'}));
+  a.download = 'explanations-' + A.name.replace(/[^a-z0-9]+/gi,'-').toLowerCase() + '-' + new Date().toISOString().slice(0,10) + '.json';
+  document.body.appendChild(a); a.click(); a.remove();
+  all.forEach(n => n.exported = true); setMyNotes(all); tRender();
+  toast('Downloaded — send this file to the admin on WhatsApp');
+}
+
+/* =====================================================================
+   START
+   ===================================================================== */
+document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.links').classList.remove('open')));
+const io = new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); } }),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+(async () => {
+  await load();
+  renderLanding();
+  window.__bpReady = true;
+  const T = getTok();
+  if(T){
+    try{
+      if(T.kind==='admin'){ await loadAdmin(); openAdmin(); }
+      else if(T.kind==='assistant'){ A = T.a; await loadFull(); openAsst(); }
+      else { const r = await rpc('bio_me', {p_token:T.token}); me = r.me; me.sent = LS.get('bp_sent_'+me.id, ''); progressIn(r.progress); await enterStudent(); }
+    }catch(e){ if(/not_allowed/.test(e.message)) LS.del('bp_tok'); else toast(errMsg(e)); }
+  }
+
+})();
+</script>
+</body>
+</html>
