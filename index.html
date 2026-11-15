@@ -363,6 +363,11 @@ window.addEventListener('load',function(){setTimeout(function(){if(!window.__bpR
       <h2>Simple subscription plans</h2>
       <p>Full access on every plan.</p>
     </div>
+    <div class="info reveal" style="max-width:760px;margin:0 auto 28px;text-align:center">
+      <h3>🎁 Try it free for 7 days</h3>
+      <p style="opacity:.85;margin:6px 0 14px">Register with the <b>Free trial</b> plan and send your request. Once we approve it, you get full access for 7 days: every question, real past exam and mock test.</p>
+      <a class="btn btn-main" style="position:relative;margin:0" onclick="pickPlan('Free trial')">Start my free trial →</a>
+    </div>
     <!-- EDIT: prices -->
     <div class="cards">
       <div class="card reveal">
@@ -392,14 +397,14 @@ window.addEventListener('load',function(){setTimeout(function(){if(!window.__bpR
     <div class="head reveal">
       <span class="eyebrow">Subscribe</span>
       <h2>Join the academy</h2>
-      <p>Register, send your request on WhatsApp, and we'll approve your account after payment.</p>
+      <p>Register, send your request on WhatsApp, and we'll approve your account. Start with a free 7-day trial or a paid plan.</p>
     </div>
     <div class="info reveal" style="max-width:640px;margin:auto">
       <div class="blob b2" style="opacity:.3;width:250px;height:250px"></div>
       <h3>💡 How joining works</h3>
       <div class="info-item"><span>📝</span><div><b>1. Register</b><small>Your name, phone, exam and plan — takes 1 minute</small></div></div>
       <div class="info-item"><span>💬</span><div><b>2. Send your request</b><small>Your request opens in WhatsApp — just press send</small></div></div>
-      <div class="info-item"><span>✅</span><div><b>3. Get approved</b><small>After payment your account opens for your plan's period</small></div></div>
+      <div class="info-item"><span>✅</span><div><b>3. Get approved</b><small>Free trial: open for 7 days. Paid plans: open for your plan's period after payment</small></div></div>
       <a class="btn btn-main" style="position:relative;margin:14px 0 0" onclick="openAuth('register')">Register now →</a>
     </div>
   </div>
@@ -414,6 +419,7 @@ window.addEventListener('load',function(){setTimeout(function(){if(!window.__bpR
       <details><summary>How long is my account open?</summary><p>For your plan's period (for example one month or three months). When it ends your account closes, and you can renew anytime from the login screen.</p></details>
       <details><summary>Is ACT Science only biology?</summary><p>No — it mixes biology, chemistry, physics and earth science, but biology passages are very common. Our ACT units train the data skills that work for all of them.</p></details>
       <details><summary>Can I use it on my phone?</summary><p>Yes. Note that your account and scores are saved on the device you register on, so use the same phone or browser each time.</p></details>
+      <details><summary>Is there a free trial?</summary><p>Yes. Choose the <b>Free trial</b> plan when you register. After we approve your request you get full access for 7 days. Before it ends, choose a plan to keep your progress and scores.</p></details>
       <details><summary>How do I pay?</summary><p>Send your request on WhatsApp and we'll share the payment options.</p></details>
     </div>
   </div>
@@ -464,7 +470,7 @@ window.addEventListener('load',function(){setTimeout(function(){if(!window.__bpR
         <div><label>Exam</label><select id="rExam"><option>EST</option><option>ACT</option><option>Both</option></select></div>
         <div><label>Password</label><input id="rPass" type="password" minlength="6" required></div>
       </div>
-      <label>Plan</label><select id="rPlan"><option>Monthly</option><option>Term</option><option>Full Year</option></select>
+      <label>Plan</label><select id="rPlan"><option value="Free trial">🎁 Free trial — 7 days</option><option>Monthly</option><option>Term</option><option>Full Year</option></select>
       <button class="btn btn-main" type="submit">Register & send request →</button>
       <p class="note">Your account opens after the academy approves it. It is saved on this device and browser.</p>
     </form>
@@ -834,7 +840,7 @@ async function enterStudent(){
     catch(e){ if(e.message!=='not_active'){ show('vLanding'); return toast(errMsg(e)); } }
   }
   show('vGate');
-  const planSel = `<label style="text-align:left">Plan</label><select id="gPlan">${opts(['Monthly','Term','Full Year'], me.plan||'Monthly')}</select>`;
+  const planSel = `<label style="text-align:left">Plan</label><select id="gPlan">${opts(['Monthly','Term','Full Year'], me.plan===TRIAL?'Monthly':(me.plan||'Monthly'))}</select>`;
   const body = {
     pending: `<div class="ic" style="margin:0 auto 14px">⏳</div><h2 style="font-size:1.6rem">Waiting for approval</h2>
       <p class="muted">Thanks ${esc(me.name.split(' ')[0])}! We received your registration. Your account opens as soon as the academy approves it (after payment).</p>
@@ -1035,7 +1041,7 @@ function sDash(){
   const best = res.length ? Math.max(...res.map(r=>pct(r.score,r.total))) : 0;
   const acc = accessOf(me), days = acc.days;
   const units = C.units.filter(u=>myEx().includes(u.exam));
-  $('#sMain').innerHTML = sTop(`Welcome back, ${esc(me.name.split(' ')[0])} 👋`, `${myEx().join(' + ')} Biology`) + `
+  $('#sMain').innerHTML = sTop(`Welcome back, ${esc(me.name.split(' ')[0])} 👋`, `${myEx().join(' + ')} Biology`) + (me.plan===TRIAL && acc.state==='active' ? `<div class="notice" style="background:#ecfdf5;border-color:#a7f3d0;color:#065f46">🎁 <b>Free trial: ${days} day${days===1?'':'s'} left</b> (until ${fmtDate(acc.r.until)}). Try a real past exam to see your estimated EST score! To keep going after your trial, choose a plan in <b>Your access</b> below.</div>` : '') + `
     <div class="kpis">
       <div class="kpi g"><b>${tried}/${qs.length}</b><span>Questions practiced</span></div>
       <div class="kpi"><b>${pct(right,tried)}%</b><span>Accuracy</span></div>
@@ -1051,8 +1057,9 @@ function sDash(){
       </div>
       <div>
         <div class="panel"><h3>🔑 Your access</h3>
-          <p>${acc.state==='active' ? `Active until <b>${fmtDate(acc.r.until)}</b> · ${days} day${days===1?'':'s'} left` : 'Closed'}</p>
-          ${acc.state==='active' && days <= 7 ? `<div class="notice" style="margin:12px 0 0">⚠️ <b>Your account closes in ${days} day${days===1?'':'s'}.</b> Renew now to keep studying.<br><button class="sbtn g" style="margin-top:8px" onclick="sendReq(true)">🔄 Send renewal request</button></div>` : ''}
+          <p>${me.plan===TRIAL?'🎁 <b>Free trial</b> · ':''}${acc.state==='active' ? `Active until <b>${fmtDate(acc.r.until)}</b> · ${days} day${days===1?'':'s'} left` : 'Closed'}</p>
+          ${acc.state==='active' && me.plan===TRIAL ? `<div class="notice" style="margin:12px 0 0">🎁 <b>Your free trial ends in ${days} day${days===1?'':'s'}.</b> Choose a plan to keep your progress, scores and mistakes list.<br><select id="gPlan" style="margin-top:8px;max-width:200px">${opts(['Monthly','Term','Full Year'],'Monthly')}</select> <button class="sbtn g" style="margin-top:8px" onclick="sendReq(true)">⭐ Request this plan</button></div>`
+            : acc.state==='active' && days <= 7 ? `<div class="notice" style="margin:12px 0 0">⚠️ <b>Your account closes in ${days} day${days===1?'':'s'}.</b> Renew now to keep studying.<br><button class="sbtn g" style="margin-top:8px" onclick="sendReq(true)">🔄 Send renewal request</button></div>` : ''}
           <p class="muted" style="margin-top:6px">Best exam score: <b>${best}%</b></p>
         </div>
         <div class="panel"><h3>⚡ Continue</h3>
@@ -1964,7 +1971,10 @@ function saveExam(store){
 let SF = 'pending';
 const today = () => new Date().toISOString().slice(0,10);
 function addMonths(ds, m){ const d = new Date((ds||today())+'T12:00:00'); const day = d.getDate(); d.setMonth(d.getMonth()+m); if(d.getDate()<day) d.setDate(0); return d.toISOString().slice(0,10); }
-const PLAN_M = {'Monthly':1, 'Term':3, 'Full Year':12};
+const TRIAL = 'Free trial', TRIAL_DAYS = 7;
+const PLAN_M = {'Free trial':'d7', 'Monthly':1, 'Term':3, 'Full Year':12};
+function addPeriod(ds, p){ p = String(p); if(p[0]==='d'){ const d = new Date((ds||today())+'T12:00:00'); d.setDate(d.getDate()+(+p.slice(1))-1); /* 7-day trial = today + 6 more days */ return d.toISOString().slice(0,10); } return addMonths(ds, +p); }
+const PERIODS = [['d7','7-day free trial'],[1,'1 month'],[2,'2 months'],[3,'3 months'],[6,'6 months'],[12,'1 year']];
 function stState(r){
   if(r.status==='pending') return 'pending';
   if(r.status==='rejected') return 'rejected';
@@ -2005,7 +2015,7 @@ function aStudents(){
         <div><label>Password</label><input id="caP" placeholder="at least 6 characters"></div>
         <div><label>Phone (optional)</label><input id="caPh" placeholder="01X XXXX XXXX"></div>
         <div><label>Exam</label><select id="caX">${opts(['EST','ACT','Both'])}</select></div>
-        <div><label>Plan</label><select id="caPl" onchange="document.getElementById('caU').value=addMonths(today(),PLAN_M[this.value])">${opts(['Monthly','Term','Full Year'])}</select></div>
+        <div><label>Plan</label><select id="caPl" onchange="document.getElementById('caU').value=addPeriod(today(),PLAN_M[this.value])">${opts([TRIAL,'Monthly','Term','Full Year'],'Monthly')}</select></div>
         <div><label>Account open until</label><input id="caU" type="date" value="${addMonths(today(),1)}"></div>
       </div>
       <button class="sbtn g" onclick="createAcc()">➕ Create account</button>
@@ -2019,7 +2029,7 @@ function aStudents(){
 function stItem(r){
   const st = stState(r), ask = r.status==='pending' || r.renew;
   const base = r.renew && st!=='ended' && r.until ? r.until : today();
-  const m = PLAN_M[r.plan] || 1, end = addMonths(base, m);
+  const m = (r.plan===TRIAL && (r.renew || st==='ended')) ? 1 : (PLAN_M[r.plan] || 1), end = addPeriod(base, m);
   const badge = {pending:'<span class="badge y">Waiting</span>', active:'<span class="badge">Active</span>', soon:'<span class="badge y">Ending soon</span>', ended:'<span class="badge r">Ended</span>', rejected:'<span class="badge r">Rejected</span>'}[st];
   return `<div class="panel" style="margin:0"><div class="navrow" style="margin:0;align-items:flex-start">
       <div><b style="font-size:1.05rem">${esc(r.name||'(name in private backup)')}</b> ${badge}${r.renew?' <span class="badge c">🔄 Renewal</span>':''}
@@ -2029,7 +2039,7 @@ function stItem(r){
       ${r.phone?`<a class="sbtn" target="_blank" href="${waLink(r.phone,'')}">💬 Chat</a>`:''}
     </div>
     ${ask || st==='ended' ? `<div class="ask"><div class="row" style="align-items:end">
-        <div><label>Period</label><select id="per_${r.h}" onchange="document.getElementById('end_${r.h}').value=addMonths('${base}',+this.value)">${opts([[1,'1 month'],[2,'2 months'],[3,'3 months'],[6,'6 months'],[12,'1 year']],m)}</select></div>
+        <div><label>Period</label><select id="per_${r.h}" onchange="document.getElementById('end_${r.h}').value=addPeriod('${base}',this.value)">${opts(PERIODS,m)}</select></div>
         <div><label>Account closes on</label><input id="end_${r.h}" type="date" value="${end}"></div></div>
         <button class="sbtn g" onclick="approveSt('${r.h}')">✅ ${st==='ended'||r.renew?'Renew':'Approve'}</button>
         ${r.status==='pending'?`<button class="sbtn d" onclick="rejectSt('${r.h}')">✋ Reject</button>`:''}
@@ -2061,9 +2071,13 @@ function approveSt(h){
   if(new Date(end+'T23:59:59') < new Date()) return toast('The end date is in the past');
   const wasRenew = r.renew || r.status!=='pending';
   if(!r.start || stState(r)==='ended') r.start = today();
+  const per = (document.getElementById('per_'+h)||{}).value, isTrial = per==='d7';
+  if(isTrial) r.plan = TRIAL; else if(r.plan===TRIAL) r.plan = 'Monthly';
   r.status = 'active'; r.until = end; r.renew = false; saveDraft(); aRender();
-  toast((wasRenew?'Renewed':'Approved') + ' — the account is open now');
-  tellSt(r, `Hi ${r.name||''} 👋\nYour BioPrep Academy account is ${wasRenew?'renewed':'approved'}! ✅\nOpen until: ${fmtDate(end)}\nLog in on the website with your email and password. (It may take a few minutes to open.)`);
+  toast(isTrial ? 'Free trial opened — the account is open now' : (wasRenew?'Renewed':'Approved') + ' — the account is open now');
+  tellSt(r, isTrial
+    ? `Hi ${r.name||''} 👋\nYour BioPrep Academy free trial is open! 🎁✅\nYou have full access for ${TRIAL_DAYS} days, until ${fmtDate(end)}.\nLog in on the website with your email and password. (It may take a few minutes to open.)\nTry a real past EST exam and see your estimated score!`
+    : `Hi ${r.name||''} 👋\nYour BioPrep Academy account is ${wasRenew?'renewed':'approved'}! ✅\nOpen until: ${fmtDate(end)}\nLog in on the website with your email and password. (It may take a few minutes to open.)`);
 }
 function rejectSt(h){
   const r = stByH(h); if(!confirm('Reject ' + (r.name||'this request') + '?')) return;
